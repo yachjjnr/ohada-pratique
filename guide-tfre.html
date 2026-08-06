@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Le Tableau Financier des Ressources et Emplois (TFRE) — Guide transversal | OHADA Pratique</title>
+<meta name="description" content="Comprendre le TFRE SYSCOHADA : ressources durables et emplois stables, fonds de roulement, BFR, CAFG, différence avec le TFT, méthode de construction et lecture de l'équilibre financier. Cas chiffré ouest-africain." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-tfre.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-tfre.html" />
+<meta property="og:title" content="Le Tableau Financier des Ressources et Emplois (TFRE) — Guide transversal" />
+<meta property="og:description" content="Comprendre le TFRE SYSCOHADA : ressources durables et emplois stables, fonds de roulement, BFR, CAFG, différence avec le TFT, méthode de construction et lecture de l'équilibre financier. Cas chiffré ouest-africain." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Le Tableau Financier des Ressources et Emplois (TFRE) — Guide transversal" />
+<meta name="twitter:description" content="Comprendre le TFRE SYSCOHADA : ressources durables et emplois stables, fonds de roulement, BFR, CAFG, différence avec le TFT, méthode de construction et lecture de l'équilibre financier. Cas chiffré ouest-africain." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Guide transversal · États financiers</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>Le TFRE</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Le TFRE</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Transversal</span>
+      <span class="badge badge-outline">États financiers</span>
+      <span class="badge badge-outline">Niveau 3</span>
+      <span class="badge badge-outline">15 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Le Tableau Financier des Ressources et Emplois (TFRE)</h1>
+    <p class="lead">D'où viennent les fonds de l'entreprise sur l'exercice, et à quoi ont-ils servi ? Le TFRE répond à cette question en mettant face à face les ressources mobilisées et les emplois réalisés. C'est l'outil de diagnostic de l'équilibre financier, très attendu des banques.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="170" y="36" width="100" height="80" rx="7"/>
+        <rect x="290" y="36" width="100" height="80" rx="7"/>
+        <text x="220" y="60" text-anchor="middle" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">RESSOURCES</text>
+        <text x="340" y="60" text-anchor="middle" font-size="11" font-weight="700" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">EMPLOIS</text>
+        <path d="M186 78h68M186 96h50" opacity="0.5"/>
+        <path d="M306 78h68M306 96h50" opacity="0.5"/>
+        <path d="M270 124q10 12 20 0" class="accent" style="fill:none"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#role">Ressources et emplois : l'idée</a></li>
+      <li><a href="#typologie">Ressources durables, emplois stables</a></li>
+      <li><a href="#fr-bfr">FR, BFR et trésorerie</a></li>
+      <li><a href="#tft">TFRE ou TFT : ne pas confondre</a></li>
+      <li><a href="#construction">Construire le TFRE</a></li>
+      <li><a href="#lecture">Lire l'équilibre financier</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>Le TFRE complète le bilan et le compte de résultat. Là où le bilan est une photo statique, le TFRE explique le <em>mouvement</em> : comment la structure financière a évolué d'un exercice à l'autre, en confrontant ce qui a financé l'entreprise (ressources) et ce dans quoi elle a investi (emplois).</p>
+
+  <h2 id="role">1. Ressources et emplois : l'idée</h2>
+  <p>Le principe est celui, déjà vu, des emplois-ressources, mais appliqué à la variation du bilan sur un exercice. Toute ressource nouvelle (bénéfice, emprunt, apport) finance un emploi nouveau (investissement, remboursement, hausse du BFR). Les deux colonnes s'équilibrent.</p>
+  <div class="formula-box">
+    <p class="formula">Total des ressources = Total des emplois</p>
+  </div>
+
+  <h2 id="typologie">2. Ressources durables, emplois stables</h2>
+  <div class="two-col">
+    <div class="concept-card">
+      <h4>Ressources durables</h4>
+      <p>La CAFG (capacité d'autofinancement globale), les augmentations de capital, les nouveaux emprunts long terme, les subventions d'investissement, les cessions d'immobilisations.</p>
+    </div>
+    <div class="concept-card">
+      <h4>Emplois stables</h4>
+      <p>Les acquisitions d'immobilisations, les remboursements d'emprunts, les distributions de dividendes, les réductions de capitaux propres.</p>
+    </div>
+  </div>
+
+  <h2 id="fr-bfr">3. FR, BFR et trésorerie</h2>
+  <p>Le TFRE s'articule autour de trois grandeurs financières clés.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Grandeur</th><th>Formule</th><th>Ce qu'elle dit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Fonds de roulement (FR)</td><td>Ressources durables − Emplois stables</td><td>Marge de sécurité du financement long terme</td></tr>
+      <tr><td>Besoin en fonds de roulement (BFR)</td><td>(Stocks + Créances) − Dettes d'exploitation</td><td>L'argent immobilisé par le cycle d'exploitation</td></tr>
+      <tr><td>Trésorerie nette</td><td>FR − BFR</td><td>Le cash réellement disponible</td></tr>
+    </tbody>
+  </table>
+  <div class="callout callout-accent">
+    <p><strong>L'équilibre fondamental :</strong> les ressources durables doivent couvrir les emplois stables (FR positif). Si l'entreprise finance ses immobilisations avec des dettes court terme (FR négatif), sa structure est fragile.</p>
+  </div>
+
+  <h2 id="tft">4. TFRE ou TFT : ne pas confondre</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Critère</th><th>TFRE</th><th>TFT</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Objet</td><td>Structure du financement</td><td>Flux de liquidités</td></tr>
+      <tr><td>Logique</td><td>Ressources vs emplois</td><td>Encaissements vs décaissements</td></tr>
+      <tr><td>Analyse</td><td>Structurelle (FR, BFR)</td><td>Dynamique (cash par activité)</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le <a href="guide-tft.html">guide TFT</a> traite l'autre angle, celui des flux de trésorerie classés par activité. Les deux états se complètent.</p>
+
+  <h2 id="construction">5. Construire le TFRE</h2>
+  <p>Quatre étapes : collecter les soldes d'ouverture et de clôture du bilan, calculer les variations, les répartir entre ressources et emplois, vérifier l'équilibre. Exemple synthétique :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Ressources</th><th class="num">FCFA</th><th>Emplois</th><th class="num">FCFA</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>CAFG</td><td class="num">20 000 000</td><td>Investissements</td><td class="num">50 000 000</td></tr>
+      <tr><td>Nouvel emprunt</td><td class="num">30 000 000</td><td>Remboursement d'emprunt</td><td class="num">5 000 000</td></tr>
+      <tr><td>Augmentation de capital</td><td class="num">10 000 000</td><td>Hausse du BFR</td><td class="num">5 000 000</td></tr>
+      <tr><td class="strong">Total ressources</td><td class="num strong">60 000 000</td><td class="strong">Total emplois</td><td class="num strong">60 000 000</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="lecture">6. Lire l'équilibre financier</h2>
+  <ul class="styled-list">
+    <li><strong>FR positif et stable</strong> : le financement long terme couvre les investissements durables. Sain.</li>
+    <li><strong>BFR maîtrisé</strong> : les stocks et créances ne dévorent pas la trésorerie ; les délais clients/fournisseurs sont équilibrés.</li>
+    <li><strong>Trésorerie nette positive</strong> : le FR couvre le BFR, l'entreprise n'a pas besoin du découvert pour fonctionner.</li>
+  </ul>
+  <div class="callout">
+    <p><strong>Note technique.</strong> Un FR négatif n'est pas toujours alarmant : la grande distribution fonctionne structurellement avec un BFR négatif (on encaisse les clients comptant avant de payer les fournisseurs), donc un FR faible suffit. L'analyse doit toujours être rapportée au secteur d'activité.</p>
+  </div>
+
+  <h2 id="a-retenir">7. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Le TFRE confronte les ressources mobilisées et les emplois réalisés sur l'exercice.</li>
+      <li>Ressources durables (CAFG, capital, emprunts) vs emplois stables (investissements, remboursements).</li>
+      <li>Trois grandeurs clés : fonds de roulement, besoin en fonds de roulement, trésorerie nette.</li>
+      <li>Le TFRE est structurel ; le TFT est dynamique (flux de cash). Les deux se complètent.</li>
+      <li>L'équilibre sain : ressources durables couvrant les emplois stables (FR positif), BFR maîtrisé.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Guide lié</p>
+    <a href="guide-tft.html" class="guide-next-link">
+      <span>Le Tableau des Flux de Trésorerie (TFT)</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Un dossier bancaire à monter ?</h3>
+    <p>Le TFRE et l'analyse du fonds de roulement sont souvent décisifs pour obtenir un crédit. Si tu prépares un dossier, je peux t'aider à le construire et à l'interpréter.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-tft.html">Tableau des flux</a></li>
+          <li><a href="guide-sig.html">Soldes de gestion</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

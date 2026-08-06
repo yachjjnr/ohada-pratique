@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Le Tableau des Flux de Trésorerie (TFT) en SYSCOHADA — Guide 5.2 | OHADA Pratique</title>
+<meta name="description" content="Construire et lire le TFT SYSCOHADA : les trois catégories de flux (opérationnel, investissement, financement), la CAFG, la variation du BFR, le modèle officiel ZA à ZF et l'interprétation des profils de trésorerie. Cas chiffré ouest-africain." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-tft.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-tft.html" />
+<meta property="og:title" content="Le Tableau des Flux de Trésorerie (TFT) en SYSCOHADA — Guide 5.2" />
+<meta property="og:description" content="Construire et lire le TFT SYSCOHADA : les trois catégories de flux (opérationnel, investissement, financement), la CAFG, la variation du BFR, le modèle officiel ZA à ZF et l'interprétation des profils de trésorerie. Cas chiffré ouest-africain." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Le Tableau des Flux de Trésorerie (TFT) en SYSCOHADA — Guide 5.2" />
+<meta name="twitter:description" content="Construire et lire le TFT SYSCOHADA : les trois catégories de flux (opérationnel, investissement, financement), la CAFG, la variation du BFR, le modèle officiel ZA à ZF et l'interprétation des profils de trésorerie. Cas chiffré ouest-africain." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Chapitre 05 · États financiers · TFT</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:66%"></div>
+</div>
+    <span>Tableau des flux de trésorerie</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Tableau des flux de trésorerie</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide · Chapitre 5</span>
+      <span class="badge badge-outline">États financiers</span>
+      <span class="badge badge-outline">Niveau 3</span>
+      <span class="badge badge-outline">17 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Le Tableau des Flux de Trésorerie (TFT)</h1>
+    <p class="lead">Le bilan et le compte de résultat ne disent pas où est passé le cash. Le TFT, lui, retrace tous les mouvements de trésorerie de l'année et les range en trois familles : exploitation, investissement, financement. C'est l'état qui réconcilie « faire du bénéfice » et « avoir de l'argent ».</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="330" y="46" width="96" height="62" rx="7"/>
+        <path d="M330 66h96" opacity="0.5"/>
+        <path d="M154 46h60q24 0 38 16M236 56l18 8-20 6" class="accent" style="fill:none"/>
+        <path d="M154 78h132M270 70l16 8-16 8"/>
+        <path d="M154 110h60q24 0 38 -16M236 100l18 -8-20 -6" opacity="0.7"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#role">Le rôle du TFT</a></li>
+      <li><a href="#categories">Les trois catégories de flux</a></li>
+      <li><a href="#cafg">La CAFG, point de départ</a></li>
+      <li><a href="#modele">Le modèle officiel ZA à ZF</a></li>
+      <li><a href="#exemple">Un TFT construit pas à pas</a></li>
+      <li><a href="#profils">Lire les profils de trésorerie</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>Une entreprise peut afficher un beau bénéfice et pourtant manquer de liquidités, ou l'inverse. Le résultat intègre des éléments non monétaires (amortissements, provisions) et ignore les décalages d'encaissement. Le TFT remet le cash au centre : il explique précisément pourquoi la trésorerie a augmenté ou diminué entre deux bilans.</p>
+
+  <h2 id="role">1. Le rôle du TFT</h2>
+  <p>Le TFT est un état financier <strong>obligatoire</strong> du Système Normal SYSCOHADA, au même titre que le bilan et le compte de résultat. Il sert à juger la liquidité, la solvabilité et la qualité du résultat (un bénéfice adossé à de vrais flux de trésorerie est plus solide qu'un bénéfice purement comptable).</p>
+
+  <h2 id="categories">2. Les trois catégories de flux</h2>
+  <div class="two-col">
+    <div class="concept-card">
+      <h4>Activités opérationnelles</h4>
+      <p>Les flux générés par l'activité courante : encaissements clients, décaissements fournisseurs et personnel, impôts. Le cœur du métier.</p>
+    </div>
+    <div class="concept-card">
+      <h4>Activités d'investissement</h4>
+      <p>Les acquisitions et cessions d'immobilisations et de titres. La politique de croissance.</p>
+    </div>
+  </div>
+  <p>Et la troisième : les <strong>activités de financement</strong> (augmentations de capital, nouveaux emprunts, remboursements, dividendes). La somme des trois donne la variation de trésorerie de l'année.</p>
+
+  <h2 id="cafg">3. La CAFG, point de départ</h2>
+  <p>Le SYSCOHADA construit le flux opérationnel à partir de la <strong>Capacité d'Autofinancement Globale</strong> : les ressources internes que l'entreprise dégage par son activité, avant variation du besoin en fonds de roulement.</p>
+  <div class="formula-box">
+    <p class="formula">CAFG = EBE + produits encaissables − charges décaissables − impôt sur le résultat</p>
+  </div>
+  <p>Exemple : EBE 8 000 000 + revenus financiers 500 000 − frais financiers 2 600 000 − impôt 925 000 = CAFG <strong>4 975 000 FCFA</strong>.</p>
+
+  <h2 id="modele">4. Le modèle officiel ZA à ZF</h2>
+  <p>Le TFT SYSCOHADA suit une trame codifiée, de la trésorerie d'ouverture (ZA) à celle de clôture (ZF).</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Réf</th><th>Rubrique</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>ZA</td><td>Trésorerie nette au 1<sup>er</sup> janvier</td></tr>
+      <tr><td>ZB</td><td>Flux de trésorerie des activités opérationnelles (CAFG ± variation du BFR)</td></tr>
+      <tr><td>ZC</td><td>Flux de trésorerie des activités d'investissement</td></tr>
+      <tr><td>ZD</td><td>Flux de trésorerie des activités de financement</td></tr>
+      <tr><td>ZE</td><td>Variation de la trésorerie (ZB + ZC + ZD)</td></tr>
+      <tr><td>ZF</td><td>Trésorerie nette au 31 décembre (ZA + ZE)</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>Note technique.</strong> La trésorerie nette se calcule comme les disponibilités (comptes 52 à 57) diminuées des découverts et crédits de trésorerie (comptes 561/565). La variation du BFR vient ajuster la CAFG : une hausse des stocks et créances consomme du cash, une hausse des dettes fournisseurs en libère.</p>
+  </div>
+
+  <h2 id="exemple">5. Un TFT construit pas à pas</h2>
+  <p>PME ouest-africaine, trésorerie d'ouverture 5 000 000 FCFA, CAFG 4 975 000 FCFA.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Rubrique</th><th class="num">FCFA</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Trésorerie au 1<sup>er</sup> janvier (ZA)</td><td class="num">5 000 000</td></tr>
+      <tr><td>CAFG</td><td class="num">4 975 000</td></tr>
+      <tr><td>Variation des stocks</td><td class="num">− 2 000 000</td></tr>
+      <tr><td>Variation des créances</td><td class="num">− 2 000 000</td></tr>
+      <tr><td>Variation des dettes fournisseurs</td><td class="num">+ 2 000 000</td></tr>
+      <tr><td class="strong">Flux opérationnels (ZB)</td><td class="num strong">2 975 000</td></tr>
+      <tr><td>Acquisitions d'immobilisations</td><td class="num">− 10 000 000</td></tr>
+      <tr><td class="strong">Flux d'investissement (ZC)</td><td class="num strong">− 10 000 000</td></tr>
+      <tr><td>Augmentation de capital</td><td class="num">+ 5 000 000</td></tr>
+      <tr><td>Nouveaux emprunts</td><td class="num">+ 5 000 000</td></tr>
+      <tr><td>Remboursements d'emprunts</td><td class="num">− 2 000 000</td></tr>
+      <tr><td class="strong">Flux de financement (ZD)</td><td class="num strong">8 000 000</td></tr>
+      <tr><td class="strong">Variation de trésorerie (ZE)</td><td class="num strong">975 000</td></tr>
+      <tr><td class="strong">Trésorerie au 31 décembre (ZF)</td><td class="num strong">5 975 000</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="profils">6. Lire les profils de trésorerie</h2>
+  <p>La combinaison des signes des trois flux raconte une histoire sur la santé de l'entreprise.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Opérationnel</th><th>Investissement</th><th>Financement</th><th>Profil</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>+</td><td>−</td><td>−</td><td>Entreprise mature et saine</td></tr>
+      <tr><td>+</td><td>−</td><td>+</td><td>Entreprise en croissance</td></tr>
+      <tr><td>+</td><td>+</td><td>−</td><td>Entreprise en désinvestissement</td></tr>
+      <tr><td>−</td><td>−</td><td>+</td><td>Entreprise en démarrage</td></tr>
+      <tr><td>−</td><td>+</td><td>+</td><td>Entreprise en difficulté</td></tr>
+    </tbody>
+  </table>
+  <div class="callout callout-accent">
+    <p><strong>Le signal le plus important :</strong> un flux opérationnel (ZB) durablement positif. C'est la preuve que l'activité elle-même génère du cash. Une entreprise qui ne tient que par l'emprunt et la cession d'actifs est sur un terrain fragile.</p>
+  </div>
+
+  <h2 id="a-retenir">7. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Le TFT est un état obligatoire du Système Normal ; il explique la variation de trésorerie de l'année.</li>
+      <li>Trois familles de flux : opérationnel, investissement, financement.</li>
+      <li>Le flux opérationnel part de la CAFG, ajustée de la variation du BFR.</li>
+      <li>La trame officielle va de ZA (trésorerie d'ouverture) à ZF (trésorerie de clôture).</li>
+      <li>Un flux opérationnel durablement positif est la marque d'une entreprise saine.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Continuer</p>
+    <a href="bibliotheque.html" class="guide-next-link">
+      <span>Explorer la bibliothèque</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Un TFT à construire pour un dossier bancaire ?</h3>
+    <p>Le TFT est souvent demandé par les banques. Si tu dois en bâtir un à partir de tes deux derniers bilans, je peux t'accompagner pas à pas.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-sig.html">Soldes de gestion (SIG)</a></li>
+          <li><a href="guide-compte-resultat.html">Compte de résultat</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

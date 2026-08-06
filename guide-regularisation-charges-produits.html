@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Régularisation des charges et produits en SYSCOHADA | OHADA Pratique</title>
+<meta name="description" content="Rattacher les charges et produits au bon exercice en SYSCOHADA : charges constatées d'avance (476), produits constatés d'avance (477), charges à payer (408, factures non parvenues), produits à recevoir (418, factures à établir), intérêts courus. Écritures d'inventaire, TVA en attente (4455 / 4435) et contre-passation. Exemples chiffrés en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-regularisation-charges-produits.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-regularisation-charges-produits.html" />
+<meta property="og:title" content="Régularisation des charges et produits en SYSCOHADA" />
+<meta property="og:description" content="Rattacher les charges et produits au bon exercice en SYSCOHADA : charges constatées d'avance (476), produits constatés d'avance (477), charges à payer (408, factures non parvenues), produits à recevoir (418, factures à établir), intérêts courus. Écritures d'inventaire, TVA en attente (4455 / 4435) et contre-passation. Exemples chiffrés en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Régularisation des charges et produits en SYSCOHADA" />
+<meta name="twitter:description" content="Rattacher les charges et produits au bon exercice en SYSCOHADA : charges constatées d'avance (476), produits constatés d'avance (477), charges à payer (408, factures non parvenues), produits à recevoir (418, factures à établir), intérêts courus. Écritures d'inventaire, TVA en attente (4455 / 4435) et contre-passation. Exemples chiffrés en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Travaux d'inventaire · Régularisation</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>Charges &amp; produits constatés d'avance</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Régularisation des charges et produits</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide transversal</span>
+      <span class="badge badge-outline">Travaux d'inventaire</span>
+      <span class="badge badge-outline">Niveau 2</span>
+      <span class="badge badge-outline">15 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Régularisation des charges et des produits</h1>
+    <p class="lead">À la clôture, le résultat ne doit contenir que les charges et les produits qui concernent <em>cet</em> exercice, ni plus ni moins. Or certaines factures payées d'avance débordent sur l'année suivante, et certaines charges de l'année ne seront facturées qu'après le 31 décembre. Les écritures de régularisation remettent chaque flux dans le bon exercice. C'est l'application directe du principe de séparation des exercices.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="180" y="36" width="92" height="80" rx="7"/>
+        <rect x="288" y="36" width="92" height="80" rx="7"/>
+        <path d="M180 58h92M288 58h92" opacity="0.6"/>
+        <text x="226" y="98" text-anchor="middle" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">N</text>
+        <text x="334" y="98" text-anchor="middle" font-size="12" font-weight="700" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">N+1</text>
+        <path d="M280 22v110" stroke-dasharray="5 6" class="accent" style="fill:none"/>
+        <path d="M252 128q28 14 56 0" opacity="0.6"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#principe">Pourquoi régulariser : le principe de séparation des exercices</a></li>
+      <li><a href="#quatre">Les cas de rattachement et leurs comptes SYSCOHADA</a></li>
+      <li><a href="#cca">Charges constatées d'avance (476)</a></li>
+      <li><a href="#pca">Produits constatés d'avance (477)</a></li>
+      <li><a href="#cap">Charges à payer (408 et factures non parvenues)</a></li>
+      <li><a href="#par">Produits à recevoir (418 et factures à établir)</a></li>
+      <li><a href="#avoirs">Les avoirs attendus (4098 et 4198)</a></li>
+      <li><a href="#interets">Intérêts courus</a></li>
+      <li><a href="#contrepassation">La contre-passation à l'ouverture</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>La société Diallo Distribution, à Bamako, clôture au 31 décembre. Le 1er octobre, elle a payé d'avance une prime d'assurance de 1 200 000 FCFA couvrant douze mois, du 1er octobre au 30 septembre suivant. Au 31 décembre, seuls trois mois sont « consommés » : les neuf autres concernent l'exercice à venir. Laisser la totalité en charge fausserait le résultat. Il faut sortir la part qui déborde. C'est exactement ce que font les écritures de régularisation.</p>
+
+  <h2 id="principe">1. Pourquoi régulariser : le principe de séparation des exercices</h2>
+  <p>Le SYSCOHADA impose que le résultat d'un exercice soit déterminé à partir des charges et des produits qui s'y rattachent <strong>économiquement</strong>, indépendamment de leur date de paiement ou de facturation. Une charge payée d'avance, un produit encaissé d'avance, une charge non encore facturée, un produit non encore facturé : dans les quatre cas, il y a un décalage entre le flux comptable déjà enregistré et l'exercice réellement concerné.</p>
+  <div class="callout">
+    <p><strong>L'idée commune :</strong> on compare ce qui a été enregistré pendant l'exercice et ce qui le concerne vraiment. La différence est isolée dans un compte de régularisation, le temps de la « rendre » au bon exercice. Ces écritures se passent uniquement à l'inventaire (31/12) et sont, pour la plupart, contre-passées à l'ouverture de l'exercice suivant. Le cut-off n'est d'ailleurs qu'une étape de la clôture : pour la feuille de route complète, voir <a href="guide-travaux-inventaire.html">la checklist des travaux d'inventaire</a>.</p>
+  </div>
+
+  <h2 id="quatre">2. Les cas de rattachement et leurs comptes SYSCOHADA</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Situation</th><th>Sens</th><th>Compte de régularisation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Charge payée d'avance (déborde sur N+1)</td><td>On <em>retire</em> une charge de N</td><td>476 — Charges constatées d'avance</td></tr>
+      <tr><td>Produit encaissé d'avance (déborde sur N+1)</td><td>On <em>retire</em> un produit de N</td><td>477 — Produits constatés d'avance</td></tr>
+      <tr><td>Charge de N non encore facturée</td><td>On <em>ajoute</em> une charge à N</td><td>408 — Fournisseurs, factures non parvenues</td></tr>
+      <tr><td>Produit de N non encore facturé</td><td>On <em>ajoute</em> un produit à N</td><td>418 — Clients, factures à établir</td></tr>
+      <tr><td>Ristourne acquise ou due, avoir non établi</td><td>On corrige les achats ou ventes de N</td><td>4098 — Avoirs à obtenir / 4198 — Avoirs à accorder</td></tr>
+    </tbody>
+  </table>
+  <div class="callout callout-warning">
+    <p><strong>Attention, piège PCG :</strong> on rencontre souvent dans les supports français les comptes « 4081 », « 4181 » ou « 4458 TCA à régulariser ». <strong>Ce ne sont pas les comptes SYSCOHADA.</strong> En SYSCOHADA révisé : les charges à payer passent par le <strong>408</strong> (Fournisseurs, factures non parvenues), les produits à recevoir par le <strong>418</strong> (Clients, factures à établir), et la TVA en attente par le <strong>4455</strong> (TVA récupérable sur factures non parvenues) ou le <strong>4435</strong> (TVA sur factures à établir).</p>
+  </div>
+
+  <h2 id="cca">3. Charges constatées d'avance (476)</h2>
+  <p>Reprenons la prime d'assurance de Diallo Distribution : 1 200 000 FCFA payés le 1er octobre pour douze mois. Au 31 décembre, trois mois sont consommés (octobre, novembre, décembre), neuf mois concernent N+1.</p>
+  <p>Part à reporter sur N+1 : 1 200 000 × 9/12 = <strong>900 000 FCFA</strong>.</p>
+  <p><strong>Au 31/12/N</strong> — on sort de la charge la part qui concerne l'exercice suivant</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>476</td><td>Charges constatées d'avance</td><td class="num">900 000</td><td class="num">—</td></tr>
+      <tr><td>625</td><td>Primes d'assurance</td><td class="num">—</td><td class="num">900 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le compte de charge (625) est crédité : on le diminue de 900 000, il ne reste que les 300 000 consommés en N. Le 476 figure à l'actif du bilan : c'est une sorte de créance, l'exercice N a « avancé » une charge à l'exercice N+1.</p>
+
+  <h2 id="pca">4. Produits constatés d'avance (477)</h2>
+  <p>C'est l'opération en miroir. Diallo Distribution loue un local et a encaissé le 1er décembre un loyer trimestriel d'avance de 900 000 FCFA (décembre, janvier, février). Au 31 décembre, seul décembre est acquis ; janvier et février concernent N+1.</p>
+  <p>Part à reporter sur N+1 : 900 000 × 2/3 = <strong>600 000 FCFA</strong>.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>706</td><td>Services vendus (loyers)</td><td class="num">600 000</td><td class="num">—</td></tr>
+      <tr><td>477</td><td>Produits constatés d'avance</td><td class="num">—</td><td class="num">600 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le compte de produit est débité : on le diminue de la part non encore acquise. Le 477 figure au passif : c'est une sorte de dette, l'exercice N a encaissé un produit qui « appartient » à N+1.</p>
+
+  <h2 id="cap">5. Charges à payer (408 et factures non parvenues)</h2>
+  <p>Cas inverse du report : ici, une charge concerne bien l'exercice N, mais la facture n'est pas encore arrivée à la clôture. Il faut quand même la rattacher à N.</p>
+  <p>Diallo Distribution a reçu le 22 décembre une livraison de marchandises évaluée à 2 000 000 FCFA HT d'après le bon de livraison, mais la facture du fournisseur n'arrivera qu'en janvier.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>601</td><td>Achats de marchandises</td><td class="num">2 000 000</td><td class="num">—</td></tr>
+      <tr><td>4455</td><td>TVA récupérable sur factures non parvenues <span class="muted">(18 %)</span></td><td class="num">360 000</td><td class="num">—</td></tr>
+      <tr><td>408</td><td>Fournisseurs, factures non parvenues</td><td class="num">—</td><td class="num">2 360 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">La charge est bien enregistrée en N. Le 408 est un sous-compte de la classe 40 (Fournisseurs) : la dette existe, seule la facture manque. La TVA en attente passe par le 4455, et non par un compte « TCA à régulariser ». À réception de la facture en N+1, on contre-passe et on enregistre la vraie facture (compte 401 + 4452).</p>
+
+  <h2 id="par">6. Produits à recevoir (418 et factures à établir)</h2>
+  <p>Symétrique : un produit concerne N, mais la facture client n'est pas encore établie au 31 décembre. Diallo Distribution a livré le 28 décembre des marchandises pour 1 500 000 FCFA HT, la facture partira en janvier.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>418</td><td>Clients, factures à établir</td><td class="num">1 770 000</td><td class="num">—</td></tr>
+      <tr><td>701</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">1 500 000</td></tr>
+      <tr><td>4435</td><td>TVA sur factures à établir <span class="muted">(18 %)</span></td><td class="num">—</td><td class="num">270 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le produit est rattaché à N. Le 418 est un sous-compte de la classe 41 (Clients) : la créance existe, seule la facture manque. La TVA collectée en attente passe par le 4435. À l'établissement de la facture en N+1, on contre-passe et on enregistre la vraie facture (compte 411 + 4431).</p>
+
+  <h2 id="avoirs">7. Les avoirs attendus : RRR à obtenir et à accorder</h2>
+  <p>Un cas de rattachement que beaucoup oublient à l'inventaire : les <strong>ristournes</strong> acquises sur l'exercice mais dont l'avoir n'est établi qu'en janvier. La ristourne annuelle négociée avec un fournisseur se calcule sur les achats de N : elle appartient au résultat de N, avoir reçu ou pas.</p>
+  <p><strong>Côté acheteur.</strong> Diallo Distribution a droit, par contrat, à une ristourne de 2 % sur ses achats annuels chez son grossiste : 50 000 000 FCFA d'achats en N, soit 1 000 000 FCFA HT acquis au 31/12, avoir attendu en janvier :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4098</td><td>Rabais, Remises, Ristournes et autres avoirs à obtenir</td><td class="num">1 000 000</td><td class="num">—</td></tr>
+      <tr><td>6019</td><td>RRR obtenus sur achats de marchandises</td><td class="num">—</td><td class="num">1 000 000</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Côté vendeur.</strong> Symétriquement, si Diallo Distribution doit une ristourne de fin d'année à un client fidèle (600 000 FCFA HT sur les ventes de N), elle constate la dette d'avoir :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>7019</td><td>RRR accordés sur ventes de marchandises</td><td class="num">600 000</td><td class="num">—</td></tr>
+      <tr><td>4198</td><td>Rabais, Remises, Ristournes et autres avoirs à accorder</td><td class="num">—</td><td class="num">600 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Les montants se constatent <strong>hors taxes</strong> : la TVA ne se régularise qu'à l'établissement effectif de la facture d'avoir, en N+1. Comme les autres écritures de ce guide, ces deux-là se contre-passent au 1er janvier, et l'avoir réel vient ensuite s'enregistrer normalement. Pour la mécanique des RRR sur facture et hors facture en cours d'année, voir le guide <a href="guide-achats-ventes.html">Achats, ventes et réductions</a>.</p>
+
+  <h2 id="interets">8. Intérêts courus</h2>
+  <p>Les emprunts et les prêts produisent des intérêts qui « courent » jour après jour, mais ne sont payés qu'à l'échéance. À la clôture, il faut rattacher à N la fraction d'intérêts courue jusqu'au 31 décembre, même si l'échéance tombe en N+1.</p>
+  <p>Exemple : emprunt de 10 000 000 FCFA contracté le 1er juin N au taux de 9 % l'an, première échéance le 31 mai N+1. Au 31/12/N, sept mois d'intérêts sont courus : 10 000 000 × 9 % × 7/12 = <strong>525 000 FCFA</strong>.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>671</td><td>Intérêts des emprunts</td><td class="num">525 000</td><td class="num">—</td></tr>
+      <tr><td>1662</td><td>Intérêts courus (sur emprunts)</td><td class="num">—</td><td class="num">525 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Côté prêt accordé, c'est l'inverse : les intérêts courus à recevoir se constatent au débit d'un compte d'intérêts courus rattaché (par exemple 2768 / 4186 selon la nature) par le crédit d'un produit financier (compte 77). Pour les intérêts courus sur la banque, SYSCOHADA prévoit les comptes 5561 (charges à payer) et 5667 (produits à recevoir).</p>
+
+  <h2 id="contrepassation">9. La contre-passation à l'ouverture</h2>
+  <p>La plupart de ces écritures sont des écritures « techniques » de clôture, destinées à n'exister qu'au 31/12. Au 1er janvier N+1, on les <strong>contre-passe</strong> (on les inverse) pour repartir sur des comptes propres. Ainsi, quand la vraie facture arrive ou quand la charge se consomme réellement en N+1, l'écriture courante normale s'enregistre sans double comptage.</p>
+  <div class="callout callout-accent">
+    <p><strong>Exemple de bouclage sur la prime d'assurance :</strong></p>
+    <ul class="check-list">
+      <li><strong>31/12/N</strong> : on a sorti 900 000 de la charge (débit 476, crédit 625).</li>
+      <li><strong>01/01/N+1</strong> : on contre-passe (débit 625, crédit 476). La charge de 900 000 « rentre » d'office dans l'exercice N+1, qui est bien celui qu'elle concerne.</li>
+    </ul>
+  </div>
+  <p>Pour les charges à payer (408) et produits à recevoir (418), la contre-passation au 1er janvier solde le compte de régularisation ; l'écriture définitive (facture réelle) vient ensuite l'effacer proprement, sans risque de compter deux fois la même opération.</p>
+
+  <h2 id="a-retenir">10. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Objectif unique : ne laisser dans le résultat de N que les charges et produits qui concernent N (principe de séparation des exercices).</li>
+      <li>Charge payée d'avance → compte 476 (à l'actif). Produit encaissé d'avance → compte 477 (au passif).</li>
+      <li>Charge de N non facturée → compte 408 + TVA en attente au 4455. Produit de N non facturé → compte 418 + TVA en attente au 4435.</li>
+      <li>Ristournes acquises ou dues sans avoir établi → comptes 4098 (à obtenir) et 4198 (à accorder), constatées hors taxes.</li>
+      <li>Intérêts courus : on rattache à N la fraction écoulée jusqu'au 31/12 (1662 côté emprunt, comptes d'intérêts courus à recevoir côté prêt).</li>
+      <li>Comptes SYSCOHADA, pas PCG : 408 / 418 / 4455 / 4435 — jamais « 4081 », « 4181 » ou « 4458 TCA à régulariser ».</li>
+      <li>Ces écritures se contre-passent au 1er janvier pour rebasculer le flux sur le bon exercice.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Pour aller plus loin</p>
+    <a href="guide-cessions-actifs.html" class="guide-next-link">
+      <span>Les cessions d'éléments d'actif</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Un loyer ou une assurance à cheval sur deux exercices ?</h3>
+    <p>Charge constatée d'avance, facture non parvenue, intérêts courus, contre-passation : décris-moi ton cas de clôture, je t'aide à passer les bonnes écritures de régularisation.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-stocks.html">Les stocks</a></li>
+          <li><a href="guide-amortissements.html">Amortissements</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clôture et réouverture des comptes en SYSCOHADA | OHADA Pratique</title>
+<meta name="description" content="Clôturer un exercice et rouvrir les comptes en SYSCOHADA : arrêté du journal et du grand-livre, détermination du résultat, report des soldes à nouveau (compte 89 — bilan d'ouverture/de clôture), journal des à-nouveaux, contre-passation des écritures de régularisation. Différences avec le PCG français (890 / 891). Exemple chiffré en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-cloture-reouverture.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-cloture-reouverture.html" />
+<meta property="og:title" content="Clôture et réouverture des comptes en SYSCOHADA" />
+<meta property="og:description" content="Clôturer un exercice et rouvrir les comptes en SYSCOHADA : arrêté du journal et du grand-livre, détermination du résultat, report des soldes à nouveau (compte 89 — bilan d'ouverture/de clôture), journal des à-nouveaux, contre-passation des écritures de régularisation. Différences avec le PCG français (890 / 891). Exemple chiffré en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Clôture et réouverture des comptes en SYSCOHADA" />
+<meta name="twitter:description" content="Clôturer un exercice et rouvrir les comptes en SYSCOHADA : arrêté du journal et du grand-livre, détermination du résultat, report des soldes à nouveau (compte 89 — bilan d'ouverture/de clôture), journal des à-nouveaux, contre-passation des écritures de régularisation. Différences avec le PCG français (890 / 891). Exemple chiffré en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Passage d'un exercice à l'autre</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>Clôture et réouverture des comptes</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Clôture et réouverture des comptes</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide transversal</span>
+      <span class="badge badge-outline">Passage d'un exercice à l'autre</span>
+      <span class="badge badge-outline">Niveau 2</span>
+      <span class="badge badge-outline">14 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Clôture et réouverture des comptes</h1>
+    <p class="lead">Quand toutes les écritures d'inventaire sont passées (voir <a href="guide-travaux-inventaire.html">la checklist complète des travaux d'inventaire</a>), l'exercice n'est pas encore « fermé ». Il faut arrêter le journal et le grand-livre, déterminer le résultat, puis, au début de l'exercice suivant, rouvrir les comptes pour repartir avec les bons soldes. Ce mouvement de bascule, du 31 décembre au 1er janvier, obéit à une mécanique précise que les logiciels exécutent en un clic, mais qu'un comptable doit comprendre pour la contrôler.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="160" y="50" width="86" height="60" rx="6"/>
+        <path d="M160 64h86" opacity="0.6"/>
+        <path d="M270 80h56M312 72l14 8-14 8" class="accent" style="fill:none"/>
+        <path d="M420 50q-30 -10-62 -5v60q32 -5 62 5z"/>
+        <path d="M372 64h32M372 78h24" opacity="0.45"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#balance">Le point de départ : la balance après inventaire</a></li>
+      <li><a href="#resultat">Solder les comptes de gestion : faire apparaître le résultat</a></li>
+      <li><a href="#cloture">Clôturer le journal et le grand-livre</a></li>
+      <li><a href="#reouverture">Rouvrir les comptes : les à-nouveaux</a></li>
+      <li><a href="#contre-passation">Contre-passer les régularisations</a></li>
+      <li><a href="#exemple">Exemple complet : l'entreprise Diarra</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>À Bamako, l'exercice de l'entreprise Diarra se termine le 31 décembre. Le comptable a passé l'amortissement, ajusté les stocks, rattaché les charges et produits au bon exercice. Tout est en ordre. Mais que faire de ces comptes maintenant ? Comment passe-t-on de cette situation figée au 31/12 à un grand-livre prêt à recevoir les opérations du 1er janvier suivant ? C'est exactement ce que recouvrent la <strong>clôture</strong> et la <strong>réouverture</strong>.</p>
+
+  <h2 id="balance">1. Le point de départ : la balance après inventaire</h2>
+  <p>La clôture commence toujours à partir de la <strong>balance après inventaire</strong>, c'est-à-dire après toutes les régularisations : amortissements, dépréciations, provisions, variations de stocks, charges et produits rattachés. C'est la dernière photo de l'exercice, et c'est elle qui alimente le bilan et le compte de résultat.</p>
+  <div class="callout">
+    <p>Pour le détail des écritures qui mènent à cette balance, voir les guides <a href="guide-amortissements.html">Amortissements</a>, <a href="guide-depreciations.html">Dépréciations</a>, <a href="guide-stocks.html">Stocks</a> et <a href="guide-regularisation-charges-produits.html">Régularisation des charges et produits</a>. Ce guide-ci part du moment où ces écritures sont déjà passées.</p>
+  </div>
+
+  <h2 id="resultat">2. Solder les comptes de gestion : faire apparaître le résultat</h2>
+  <p>Avant de clôturer, il faut « vider » les comptes de gestion (classes 6 et 7) dans le compte de résultat. En SYSCOHADA, le résultat de l'exercice se loge dans le compte <strong>13 — Résultat net de l'exercice</strong>. Tous les comptes de charges sont soldés par le débit du 13, tous les comptes de produits par son crédit.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="4" class="text-sm muted"><strong>Écriture 1 — solde des comptes de charges</strong></td></tr>
+      <tr><td>13</td><td>Résultat net de l'exercice</td><td class="num">X</td><td class="num">—</td></tr>
+      <tr><td>60 à 67</td><td>Comptes de charges <span class="muted">(soldés)</span></td><td class="num">—</td><td class="num">X</td></tr>
+      <tr><td colspan="4" class="text-sm muted"><strong>Écriture 2 — solde des comptes de produits</strong></td></tr>
+      <tr><td>70 à 77</td><td>Comptes de produits <span class="muted">(soldés)</span></td><td class="num">X</td><td class="num">—</td></tr>
+      <tr><td>13</td><td>Résultat net de l'exercice</td><td class="num">—</td><td class="num">X</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Après ces écritures de regroupement, le solde du compte 13 donne directement le résultat : créditeur s'il s'agit d'un bénéfice, débiteur s'il s'agit d'une perte. Une balance après inventaire <em>et</em> après regroupement ne comporte plus que des comptes de bilan (classes 1 à 5), le résultat figurant au 13.</p>
+  <div class="callout callout-accent">
+    <p><strong>Note pratique :</strong> en comptabilité informatisée, ce regroupement est généré automatiquement à la demande. On peut aussi calculer le résultat directement par différence sur la balance, sans passer les écritures de solde une à une, ce qui ne change rien au résultat final.</p>
+  </div>
+
+  <h2 id="cloture">3. Clôturer le journal et le grand-livre</h2>
+  <p>Clôturer le journal, c'est l'arrêter : totaliser les colonnes débit et crédit, vérifier leur égalité, et empêcher tout ajout d'écriture sur l'exercice clos. Clôturer le grand-livre, c'est arrêter chaque compte sur son solde au 31/12.</p>
+  <p>Le SYSCOHADA prévoit un compte de regroupement facultatif pour matérialiser cette bascule : le compte <strong>89 — Bilan d'ouverture / Bilan de clôture</strong>. À la clôture, on solde tous les comptes de bilan par ce compte 89 ; il joue le rôle de contrepartie unique le temps de la bascule.</p>
+  <div class="callout callout-warning">
+    <p><strong>Attention, piège PCG :</strong> les manuels français utilisent <strong>891 « Bilan de clôture »</strong> et <strong>890 « Bilan d'ouverture »</strong> comme deux comptes distincts. En SYSCOHADA, c'est le <strong>compte 89</strong> qui remplit ce rôle (avec ses subdivisions selon le plan retenu). Le numéro change ; le mécanisme, lui, est le même. Cette écriture de bascule reste <em>facultative</em> : beaucoup d'entités se contentent de reporter directement les soldes à nouveau (voir section suivante).</p>
+  </div>
+
+  <h2 id="reouverture">4. Rouvrir les comptes : les à-nouveaux</h2>
+  <p>Au 1er janvier de l'exercice suivant, le grand-livre est vide : il faut y réinscrire les soldes de clôture. C'est la <strong>réouverture</strong>, ou report des <strong>soldes à nouveau</strong>. Seuls les comptes de bilan sont concernés (les comptes de gestion repartent de zéro).</p>
+  <p>Concrètement, on reprend chaque compte de bilan dans le sens où il était au 31/12 : un compte qui était débiteur se rouvre au débit, un compte créditeur au crédit. La plupart des logiciels génèrent ces écritures dans un journal dédié, le <strong>journal des à-nouveaux</strong>.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2…, 3…, 4… (D), 5… (D)</td><td>Comptes d'actif <span class="muted">(soldes débiteurs repris)</span></td><td class="num">X</td><td class="num">—</td></tr>
+      <tr><td>10, 11, 13, 16…, 4… (C)</td><td>Comptes de capitaux et passif <span class="muted">(soldes créditeurs repris)</span></td><td class="num">—</td><td class="num">X</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le résultat de l'exercice clos (compte 13) est repris parmi les capitaux propres. Il y restera jusqu'à son affectation, qui interviendra plus tard dans l'exercice (voir le guide <a href="guide-affectation-resultat.html">Affectation du résultat</a>).</p>
+
+  <h2 id="contre-passation">5. Contre-passer les régularisations</h2>
+  <p>Certaines écritures d'inventaire ne valaient que pour l'exercice clos. Si on les laissait telles quelles, elles fausseraient le nouvel exercice. On les <strong>contre-passe</strong> donc dès la réouverture, c'est-à-dire qu'on passe l'écriture inverse pour les annuler. Sont principalement concernés :</p>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li><strong>Charges constatées d'avance (476)</strong> et <strong>produits constatés d'avance (477)</strong> : contre-passés, car la charge ou le produit doit désormais peser sur le nouvel exercice.</li>
+      <li><strong>Charges à payer (408, 428, 438…)</strong> et <strong>produits à recevoir (418, 428…)</strong> : contre-passés, car la facture ou l'encaissement réels arriveront sur le nouvel exercice.</li>
+      <li><strong>Intérêts courus</strong> sur emprunts et prêts : contre-passés pour la même raison.</li>
+      <li><strong>Écarts de conversion</strong> sur créances et dettes en devises : annulés, car les cours seront réévalués au prochain inventaire (voir <a href="guide-devises.html">Devises</a>).</li>
+    </ul>
+  </div>
+  <p class="text-sm muted">En revanche, on ne contre-passe <em>pas</em> les amortissements, dépréciations et provisions : ce sont des positions permanentes du bilan qui se cumulent d'un exercice à l'autre.</p>
+
+  <h2 id="exemple">6. Exemple complet : l'entreprise Diarra</h2>
+  <p>L'entreprise individuelle Diarra clôture au 31/12/N. À l'inventaire, parmi d'autres écritures, elle avait constaté des intérêts courus sur un emprunt (450 000 FCFA) et une charge constatée d'avance sur une prime d'assurance (600 000 FCFA). Voici le traitement à la réouverture.</p>
+
+  <p><strong>Réouverture</strong> — Report des soldes à nouveau (extrait, deux comptes pour l'illustration)</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>521</td><td>Banque <span class="muted">(à-nouveau, solde débiteur)</span></td><td class="num">X</td><td class="num">—</td></tr>
+      <tr><td>162</td><td>Emprunts <span class="muted">(à-nouveau, solde créditeur)</span></td><td class="num">—</td><td class="num">X</td></tr>
+      <tr><td colspan="4" class="text-sm muted">… et ainsi de suite pour tous les comptes de bilan, jusqu'à l'égalité débit = crédit.</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Contre-passation</strong> — Intérêts courus constatés au 31/12/N (compte 166 — intérêts courus)</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>166</td><td>Intérêts courus <span class="muted">(annulation)</span></td><td class="num">450 000</td><td class="num">—</td></tr>
+      <tr><td>671</td><td>Intérêts des emprunts <span class="muted">(contre-passé)</span></td><td class="num">—</td><td class="num">450 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">À l'échéance réelle, quand l'entreprise paiera la totalité des intérêts, la charge sera enregistrée normalement ; la contre-passation évite de la compter deux fois.</p>
+
+  <p><strong>Contre-passation</strong> — Charge constatée d'avance au 31/12/N (prime d'assurance)</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>625</td><td>Primes d'assurance <span class="muted">(reprise en charge sur N+1)</span></td><td class="num">600 000</td><td class="num">—</td></tr>
+      <tr><td>476</td><td>Charges constatées d'avance <span class="muted">(annulation)</span></td><td class="num">—</td><td class="num">600 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">La part de prime qui couvrait N+1 redevient une charge de N+1, là où elle doit peser.</p>
+
+  <div class="callout">
+    <p><strong>Le fil logique :</strong> balance après inventaire → regroupement (résultat en 13) → arrêté du journal et du grand-livre → report des soldes à nouveau au 1er janvier → contre-passation des régularisations temporaires. Cinq étapes, toujours dans cet ordre.</p>
+  </div>
+
+  <h2 id="a-retenir">7. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>La clôture part de la balance <strong>après inventaire</strong> ; on solde les classes 6 et 7 dans le compte <strong>13</strong> pour faire apparaître le résultat.</li>
+      <li>Après regroupement, la balance ne comporte plus que des comptes de bilan (classes 1 à 5), le résultat figurant au 13.</li>
+      <li>Le compte de bascule SYSCOHADA est le <strong>89</strong> (bilan d'ouverture / de clôture), et non les 890 / 891 du PCG français. Son usage est facultatif.</li>
+      <li>La réouverture reporte les <strong>soldes à nouveau</strong> des seuls comptes de bilan, dans leur sens d'origine, souvent via un journal des à-nouveaux.</li>
+      <li>On <strong>contre-passe</strong> à la réouverture les régularisations temporaires : CCA (476), PCA (477), charges à payer, produits à recevoir, intérêts courus, écarts de conversion.</li>
+      <li>On ne contre-passe <strong>jamais</strong> les amortissements, dépréciations et provisions : ce sont des positions permanentes du bilan.</li>
+      <li>Le résultat (13) repris à l'ouverture reste en capitaux propres jusqu'à son affectation.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Pour aller plus loin</p>
+    <a href="guide-affectation-resultat.html" class="guide-next-link">
+      <span>L'affectation du résultat</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Une clôture d'exercice à préparer et tu veux être sûr de l'ordre des étapes ?</h3>
+    <p>Regroupement des charges et produits, report des à-nouveaux, contre-passations : décris-moi ta situation, je t'aide à dérouler la clôture sans rien oublier.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-cycle-comptable.html">Cycle comptable</a></li>
+          <li><a href="guide-affectation-resultat.html">Affectation du résultat</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amortissements SYSCOHADA — Guide 03</title>
+<meta name="description" content="Amortissement linéaire et dégressif sous SYSCOHADA : taux, prorata 30/360, écritures comptables, calculatrice intégrée et quiz." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-amortissements.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-amortissements.html" />
+<meta property="og:title" content="Amortissements SYSCOHADA — Guide 03" />
+<meta property="og:description" content="Amortissement linéaire et dégressif sous SYSCOHADA : taux, prorata 30/360, écritures comptables, calculatrice intégrée et quiz." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Amortissements SYSCOHADA — Guide 03" />
+<meta name="twitter:description" content="Amortissement linéaire et dégressif sous SYSCOHADA : taux, prorata 30/360, écritures comptables, calculatrice intégrée et quiz." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org", "@type": "Article",
+  "headline": "Amortissements SYSCOHADA — Guide complet",
+  "author": { "@type": "Person", "name": "Ousmane Mangane" },
+  "datePublished": "2026-05-10",
+  "inLanguage": "fr-FR"
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html" class="active">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+  </nav>
+</header>
+
+<!-- BARRE DE PROGRESSION -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <a href="parcours.html" style="display:inline-flex; gap:8px; align-items:center; color:var(--text-muted)">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Chapitre 03 &middot; Immobilisations</span>
+    </a>
+    <div class="progress-track" aria-label="Progression"><div class="progress-fill" style="width:38%"></div></div>
+    <span><strong style="color:var(--text)">Guide 1</strong> / 4 du chapitre</span>
+  </div>
+</div>
+
+<div class="container">
+  <nav class="breadcrumbs">
+    <a href="index.html">Accueil</a><span class="sep">/</span>
+    <a href="parcours.html">Parcours</a><span class="sep">/</span>
+    <a href="parcours.html#chapitre-3">Chapitre 03</a><span class="sep">/</span>
+    <span>Amortissements</span>
+  </nav>
+</div>
+
+<section style="padding:16px 0 28px">
+  <div class="container">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge-num">Guide 03</span>
+      <span class="badge">Immobilisations</span>
+      <span class="badge">Niveau 2</span>
+      <span class="badge">22 min de lecture</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(34px, 4.4vw, 54px); margin-bottom:24px">Amortissements sous SYSCOHADA.</h1>
+    <p class="lead">Linéaire, dégressif, prorata 30/360, immobilisation décomposée. La mécanique complète, illustrée par un véhicule utilitaire acquis à Bamako en mars.</p>
+
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M150 44h64v20h64v20h64v20h64"/>
+        <path d="M140 124h300" opacity="0.4"/>
+        <circle cx="438" cy="104" r="6" class="accent" style="fill:var(--accent)"/>
+        <circle cx="176" cy="120" r="13"/>
+        <path d="M176 112v8l5 4" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="flex gap-3 mt-8 flex-wrap" style="align-items:center">
+      
+      <span class="text-sm muted">Choisis ton niveau de lecture. Les passages techniques sont masqués en mode débutant.</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding:24px 0 96px">
+  <div class="container">
+    <div class="article-layout">
+
+      <article class="article-body">
+
+        <section id="definition">
+          <h2>Qu'est-ce que l'amortissement ?</h2>
+          <p>L'amortissement constate, exercice après exercice, la perte de valeur d'une immobilisation. Cette perte vient de l'usage, du temps qui passe, ou de l'obsolescence technique. Sous SYSCOHADA, c'est une charge obligatoire dès qu'une immobilisation est mise en service.</p>
+          <div class="callout">
+            <strong>En clair :</strong> tu achètes un véhicule 6 000 000 FCFA. Tu ne peux pas dire que tu as « perdu » 6 millions le jour de l'achat. Tu vas étaler cette perte sur plusieurs années, parce que le véhicule te servira plusieurs années.
+          </div>
+          <div class="callout">
+            <strong>Au préalable : la valeur d'origine.</strong> Tout amortissement part de la valeur d'entrée de l'immobilisation, qui devient la base amortissable. Cette valeur se détermine selon le mode d'acquisition (achat, production interne, apport, don). Pour bien la fixer, voir le guide <a href="guide-valorisation-immobilisations.html">Valoriser une immobilisation à l'entrée</a>.
+          </div>
+        </section>
+
+        <section id="champ">
+          <h2>Quelles immobilisations s'amortissent ?</h2>
+          <p>Toutes les immobilisations corporelles et incorporelles dont l'usage est limité dans le temps :</p>
+          <ul>
+            <li>Bâtiments (compte 231) sur 20 à 50 ans</li>
+            <li>Matériel et outillage (compte 241) sur 5 à 10 ans</li>
+            <li>Matériel de transport (compte 245) sur 4 à 5 ans</li>
+            <li>Matériel et mobilier de bureau (compte 244) sur 5 à 10 ans</li>
+            <li>Logiciels (compte 213) sur 3 à 5 ans</li>
+          </ul>
+          <p>Les terrains (compte 22) ne s'amortissent pas, sauf carrières et terrains de gisement. Le fonds commercial (compte 215) ne s'amortit pas non plus, mais il peut être déprécié.</p>
+        </section>
+
+        <section id="lineaire">
+          <h2>L'amortissement linéaire.</h2>
+          <p>Le plus simple : la valeur d'origine est divisée en parts égales sur la durée d'utilisation. C'est la méthode par défaut sous SYSCOHADA.</p>
+          <blockquote>
+            <strong>Formule.</strong> Annuité = Valeur d'origine × Taux<br>
+            Taux = 1 / Durée d'utilisation en années
+          </blockquote>
+
+          <div class="example-box">
+            <span class="label-tiny">Cas pratique &middot; SOKAMEF Distribution, Bamako</span>
+            <h3>Véhicule utilitaire acquis le 1er avril 2026</h3>
+            <p>Valeur d'origine HT : <strong>6 000 000 FCFA</strong>. Durée d'utilisation : <strong>5 ans</strong>. Mise en service : <strong>1er avril 2026</strong>.</p>
+            <ul style="margin-top:12px">
+              <li>Taux linéaire = 1 / 5 = <strong>20 %</strong></li>
+              <li>Annuité pleine = 6 000 000 × 20 % = <strong>1 200 000 FCFA</strong></li>
+              <li>Prorata 1<sup>re</sup> année = 9 mois × 30 jours = 270 jours / 360 = <strong>75 %</strong></li>
+              <li>Annuité 2026 = 1 200 000 × 75 % = <strong>900 000 FCFA</strong></li>
+            </ul>
+          </div>
+
+          <!-- ====== CALCULATRICE INLINE ====== -->
+          <div class="calc calc-inline" id="amort-section">
+            <div class="calc-label">Calculatrice intégrée</div>
+            <h3>Saisis tes propres valeurs.</h3>
+            <p class="calc-desc">Modifie les chiffres ci-dessous, le tableau d'amortissement se recalcule en temps réel. Méthode OHADA, prorata 30/360.</p>
+
+            <form id="amort-form" class="calc-grid" onsubmit="event.preventDefault()">
+              <div class="calc-form">
+                <div>
+                  <label class="label" for="amort-valeur">Valeur d'origine HT (FCFA)</label>
+                  <input id="amort-valeur" class="input" type="number" step="1000" min="0" value="6000000" required />
+                </div>
+                <div>
+                  <label class="label" for="amort-duree">Durée d'utilisation (années)</label>
+                  <input id="amort-duree" class="input" type="number" min="1" max="50" value="5" required />
+                </div>
+                <div>
+                  <label class="label" for="amort-date">Date de mise en service</label>
+                  <input id="amort-date" class="input" type="date" value="2026-04-01" required />
+                </div>
+                <div>
+                  <label class="label" for="amort-mode">Mode</label>
+                  <select id="amort-mode" class="select">
+                    <option value="lineaire">Linéaire</option>
+                    <option value="degressif">Dégressif (coefficient OHADA)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calc-result" id="amort-summary"></div>
+            </form>
+
+            <div class="amort-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Exercice</th>
+                    <th style="text-align:right">Base</th>
+                    <th style="text-align:right">Taux</th>
+                    <th style="text-align:right">Annuité</th>
+                    <th style="text-align:right">Cumul</th>
+                    <th style="text-align:right">VNC fin</th>
+                  </tr>
+                </thead>
+                <tbody id="amort-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section id="degressif">
+          <h2>L'amortissement dégressif.</h2>
+          <p>Permet de constater une charge d'amortissement plus forte les premières années, plus faible ensuite. Sous SYSCOHADA, il reste autorisé pour certaines immobilisations (matériel productif notamment).</p>
+          <p>Le taux dégressif s'obtient en multipliant le taux linéaire par un coefficient OHADA :</p>
+          <ul>
+            <li><strong>1,5</strong> pour une durée de 3 ou 4 ans</li>
+            <li><strong>2</strong> pour une durée de 5 ou 6 ans</li>
+            <li><strong>2,5</strong> pour une durée supérieure à 6 ans</li>
+          </ul>
+          <p>Le taux s'applique à la VNC en début d'exercice (et non à la valeur d'origine). On bascule en linéaire dès que le linéaire sur la durée restante devient supérieur au dégressif.</p>
+          <div class="callout">
+            <strong>À retenir.</strong> Le dégressif n'est ni obligatoire ni systématique. Il doit être justifié par le rythme de consommation des avantages économiques, et son traitement fiscal au Mali peut différer du traitement comptable.
+          </div>
+        </section>
+
+        <section id="ecritures">
+          <h2>Écritures comptables.</h2>
+          <p>À la clôture de l'exercice, on enregistre la dotation au débit du compte 681 et au crédit du compte 28 correspondant :</p>
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>6813</td><td>Dotations aux amortissements des immobilisations corporelles</td><td class="num">900 000</td><td class="num">—</td></tr>
+              <tr><td>2845</td><td>Amortissement matériel de transport</td><td class="num">—</td><td class="num">900 000</td></tr>
+            </tbody>
+          </table>
+          <p>À la cession ultérieure, on solde le 2845 par le crédit du 245, puis on constate la valeur résiduelle en compte 812 (charges de cession) et le prix de vente en compte 822 (produits de cession).</p>
+        </section>
+
+        <section id="erreurs">
+          <h2>Erreurs fréquentes à Bamako.</h2>
+          <ol>
+            <li><strong>Oublier le prorata.</strong> On démarre l'amortissement à la date de mise en service, pas à la date de facturation.</li>
+            <li><strong>Confondre durée fiscale et durée comptable.</strong> La durée comptable reflète l'usage réel. La durée fiscale (admise par la DGI) peut être différente : un écart fait naître un amortissement dérogatoire.</li>
+            <li><strong>Oublier d'amortir la dernière année.</strong> Quand on a commencé avec un prorata, il faut finir avec un prorata complémentaire. La VNC doit revenir à 0.</li>
+            <li><strong>Amortir un terrain.</strong> Sauf cas spécifique, c'est interdit.</li>
+          </ol>
+        </section>
+
+        <!-- ====================== QUIZ ====================== -->
+        <div class="quiz" data-quiz>
+          <div class="quiz-header">
+            <h2 style="margin-top:0">Vérifie que tu as compris.</h2>
+            <span class="quiz-progress" data-quiz-progress>Question 0 / 4</span>
+          </div>
+          <p class="muted" style="font-size:15px; margin-bottom:24px">Quatre questions pour valider tes acquis. Correction immédiate. Pas de blocage : si tu te trompes, tu peux relire la section concernée.</p>
+
+          <div class="quiz-question" data-question>
+            <span class="quiz-question__num">Question 01 &middot; QCM</span>
+            <h3 class="quiz-question__title">Une entreprise malienne achète un logiciel de paie pour 1 800 000 FCFA, mise en service le 1er juillet 2026, durée d'utilisation 3 ans, mode linéaire. Quelle est l'annuité d'amortissement de l'exercice 2026 ?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-option><span class="mark">A</span><span>600 000 FCFA</span></button>
+              <button class="quiz-option" data-option data-correct><span class="mark">B</span><span>300 000 FCFA</span></button>
+              <button class="quiz-option" data-option><span class="mark">C</span><span>1 800 000 FCFA</span></button>
+              <button class="quiz-option" data-option><span class="mark">D</span><span>900 000 FCFA</span></button>
+            </div>
+            <div class="quiz-explain">
+              <strong>Bonne réponse : B.</strong> Le taux linéaire vaut 1/3 ≈ 33,33 %. L'annuité pleine vaut 1 800 000 × 33,33 % = 600 000 FCFA. Le prorata 2026 est de 6 mois × 30 = 180 jours sur 360, soit 50 %. L'annuité 2026 est donc 600 000 × 50 % = 300 000 FCFA.
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question>
+            <span class="quiz-question__num">Question 02 &middot; Vrai / Faux</span>
+            <h3 class="quiz-question__title">Un terrain situé dans la zone industrielle de Bamako, acheté pour la construction d'un atelier, doit être amorti sur 50 ans.</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-option><span class="mark">V</span><span>Vrai</span></button>
+              <button class="quiz-option" data-option data-correct><span class="mark">F</span><span>Faux</span></button>
+            </div>
+            <div class="quiz-explain">
+              <strong>Bonne réponse : Faux.</strong> Les terrains ne s'amortissent pas, sauf cas particulier des carrières et terrains de gisement (dont la valeur s'épuise avec l'extraction). Le bâtiment construit dessus s'amortira, mais pas le terrain lui-même.
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question>
+            <span class="quiz-question__num">Question 03 &middot; QCM</span>
+            <h3 class="quiz-question__title">Quel coefficient dégressif OHADA s'applique pour une immobilisation amortie sur 8 ans ?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-option><span class="mark">A</span><span>1,5</span></button>
+              <button class="quiz-option" data-option><span class="mark">B</span><span>2</span></button>
+              <button class="quiz-option" data-option data-correct><span class="mark">C</span><span>2,5</span></button>
+              <button class="quiz-option" data-option><span class="mark">D</span><span>3</span></button>
+            </div>
+            <div class="quiz-explain">
+              <strong>Bonne réponse : C.</strong> Le coefficient OHADA vaut 1,5 pour une durée de 3 à 4 ans, 2 pour 5 à 6 ans, et 2,5 au-delà de 6 ans. Pour 8 ans, on est donc à 2,5.
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question>
+            <span class="quiz-question__num">Question 04 &middot; Mini-cas pratique</span>
+            <h3 class="quiz-question__title">Une presse industrielle est achetée 12 000 000 FCFA, mise en service le 1er janvier 2026, durée 5 ans, mode dégressif. Quelle est l'annuité de l'exercice 2026 ?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-option><span class="mark">A</span><span>2 400 000 FCFA (linéaire pur)</span></button>
+              <button class="quiz-option" data-option data-correct><span class="mark">B</span><span>4 800 000 FCFA</span></button>
+              <button class="quiz-option" data-option><span class="mark">C</span><span>3 600 000 FCFA</span></button>
+              <button class="quiz-option" data-option><span class="mark">D</span><span>6 000 000 FCFA</span></button>
+            </div>
+            <div class="quiz-explain">
+              <strong>Bonne réponse : B.</strong> Taux linéaire = 1/5 = 20 %. Coefficient OHADA pour 5 ans = 2. Donc taux dégressif = 20 % × 2 = 40 %. La presse étant mise en service le 1er janvier, le prorata est de 360/360 = 100 %. Annuité 2026 = 12 000 000 × 40 % = 4 800 000 FCFA.
+            </div>
+          </div>
+
+          <div class="quiz-result" data-quiz-result>
+            <div class="quiz-result__score" data-quiz-score>0 / 4</div>
+            <div class="quiz-result__msg" data-quiz-msg></div>
+            <div class="flex gap-3 mt-6 flex-wrap">
+              <a href="bibliotheque.html" class="btn btn-secondary btn-sm">Guide suivant : Dépréciations →</a>
+              <a href="parcours.html#chapitre-3" class="btn btn-ghost btn-sm">Retour au chapitre 03</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation guide suivant / précédent -->
+        <nav style="display:flex; justify-content:space-between; gap:16px; margin-top:64px; padding-top:32px; border-top:1px solid var(--border-soft); flex-wrap:wrap" aria-label="Navigation entre guides">
+          <a href="parcours.html#chapitre-3" class="text-sm muted" style="display:flex; flex-direction:column; gap:4px">
+            <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase">Chapitre 03</span>
+            <span style="color:var(--text); font-weight:600; font-size:16px">← Retour au chapitre</span>
+          </a>
+          <a href="bibliotheque.html" class="text-sm muted" style="display:flex; flex-direction:column; gap:4px; text-align:right">
+            <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase">Guide suivant</span>
+            <span style="color:var(--text); font-weight:600; font-size:16px">Dépréciations →</span>
+          </a>
+        </nav>
+
+      </article>
+
+      <!-- SIDEBAR : TOC + autres guides du chapitre -->
+      <aside>
+        <nav class="toc" aria-label="Sommaire">
+          <h4>Sommaire du guide</h4>
+          <ol>
+            <li><a href="#definition">Définition</a></li>
+            <li><a href="#champ">Champ d'application</a></li>
+            <li><a href="#lineaire">Amortissement linéaire</a></li>
+            <li><a href="#degressif">Amortissement dégressif</a></li>
+            <li><a href="#ecritures">Écritures comptables</a></li>
+            <li><a href="#erreurs">Erreurs fréquentes</a></li>
+          </ol>
+
+          <div class="toc-section">
+            <h4>Chapitre 03 — Autres guides</h4>
+            <ol style="counter-reset:none">
+              <li><a href="guide-amortissements.html" class="active" style="font-weight:600; color:var(--text)">Amortissements</a></li>
+              <li><a href="bibliotheque.html">Dépréciations</a></li>
+              <li><a href="bibliotheque.html">Immobilisations incorporelles</a></li>
+              <li><a href="bibliotheque.html">Terrains et bâtiments</a></li>
+            </ol>
+          </div>
+
+          <div class="toc-section">
+            <a href="parcours.html#chapitre-3" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Retour au parcours
+            </a>
+          </div>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:16px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col"><h4>Apprendre</h4><ul><li><a href="parcours.html">Parcours, du niveau 0 au 6</a></li><li><a href="bibliotheque.html">Bibliothèque</a></li><li><a href="articles.html">Articles</a></li><li><a href="outils.html">Outils &amp; calculatrices</a></li></ul></div>
+      <div class="footer-col"><h4>Fiscalité Mali</h4><ul><li><a href="fiscalite-its.html">ITS Mali</a></li><li><a href="fiscalite-irf.html">IRF</a></li><li><a href="fiscalite-is.html">IS Mali</a></li><li><a href="guide-tva-mali.html">TVA Mali</a></li></ul></div>
+      <div class="footer-col"><h4>Le site</h4><ul><li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li><li><a href="#">Newsletter</a></li><li><a href="#">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span><span>Construit à Bamako</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

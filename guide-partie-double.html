@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La partie double — Guide 1.5 | OHADA Pratique</title>
+<meta name="description" content="La règle d'or de toute écriture comptable : la partie double expliquée pas à pas. Mécanique débit/crédit, équation fondamentale, cas pratique d'Awa au Grand Marché de Bamako en 6 écritures." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-partie-double.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-partie-double.html" />
+<meta property="og:title" content="La partie double — Guide 1.5" />
+<meta property="og:description" content="La règle d'or de toute écriture comptable : la partie double expliquée pas à pas. Mécanique débit/crédit, équation fondamentale, cas pratique d'Awa au Grand Marché de Bamako en 6 écritures." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="La partie double — Guide 1.5" />
+<meta name="twitter:description" content="La règle d'or de toute écriture comptable : la partie double expliquée pas à pas. Mécanique débit/crédit, équation fondamentale, cas pratique d'Awa au Grand Marché de Bamako en 6 écritures." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org", "@type": "Article",
+  "headline": "La partie double : la règle d'or de toute écriture",
+  "author": { "@type": "Person", "name": "Ousmane Mangane" },
+  "datePublished": "2026-05-23",
+  "inLanguage": "fr-FR"
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html" class="active">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- BARRE DE PROGRESSION CHAPITRE -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <a href="parcours.html#chapitre-1" style="display:inline-flex; gap:8px; align-items:center; color:var(--text-muted)">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Chapitre 01 &middot; Fondations</span>
+    </a>
+    <div class="progress-track" aria-label="Progression"><div class="progress-fill" style="width:71%"></div></div>
+    <span><strong style="color:var(--text)">Guide 5</strong> / 7 du chapitre</span>
+  </div>
+</div>
+
+<div class="container">
+  <nav class="breadcrumbs">
+    <a href="index.html">Accueil</a><span class="sep">/</span>
+    <a href="parcours.html">Parcours</a><span class="sep">/</span>
+    <a href="parcours.html#chapitre-1">Chapitre 01</a><span class="sep">/</span>
+    <span>La partie double</span>
+  </nav>
+</div>
+
+<section style="padding:16px 0 28px">
+  <div class="container container-narrow">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge-num">Guide 1.5</span>
+      <span class="badge">Fondations</span>
+      <span class="badge">Niveau 1</span>
+      <span class="badge">18 min de lecture</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 3.6vw, 46px); margin-bottom:14px">La partie double : la règle d'or de toute écriture.</h1>
+    <p class="lead">Toute la comptabilité moderne tient sur un seul principe, vieux de 500 ans : chaque opération s'enregistre deux fois, dans deux comptes différents, pour un même montant. Ce guide explique pourquoi cette règle existe, comment elle marche concrètement, et déroule six écritures réelles dans la boutique d'Awa au Grand Marché de Bamako.</p>
+    <p class="text-sm muted mt-6">23 mai 2026 &middot; Ousmane Mangane, comptable à Bamako</p>
+
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M280 30v84M240 120q40 -8 80 0"/>
+        <path d="M170 48 392 48" />
+        <path d="M170 48l-22 34q22 12 44 0zM392 48l-22 34q22 12 44 0z"/>
+        <text x="148" y="120" font-size="13" font-weight="700" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">DÉBIT</text>
+        <text x="352" y="120" font-size="13" font-weight="700" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">CRÉDIT</text>
+        <circle cx="280" cy="30" r="5" class="accent" style="fill:var(--accent)"/>
+      </svg>
+    </div>
+    <div class="flex gap-3 mt-8 flex-wrap" style="align-items:center">
+      
+      <span class="text-sm muted">En mode débutant, les passages techniques sont masqués.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="article-layout">
+
+      <article class="article-body container-narrow" style="padding-left:0; padding-right:0; max-width:none">
+
+        <section id="intuition">
+          <h2>L'intuition derrière la partie double</h2>
+          <p>Avant la mécanique, la logique. La partie double est la conséquence d'une observation très simple : <strong>toute opération économique a deux faces</strong>.</p>
+          <p>Quand Awa achète 50 pagnes pour 250 000 FCFA en payant cash, il s'est passé <em>deux choses simultanément</em> : elle a maintenant 50 pagnes de plus en stock, ET elle a 250 000 FCFA de moins en caisse. La même opération est donc à la fois une <strong>entrée</strong> (le stock augmente) et une <strong>sortie</strong> (la caisse diminue).</p>
+          <p>Quand Awa vend 10 pagnes à crédit à une cliente pour 80 000 FCFA, c'est pareil : son stock diminue de 10 pagnes, ET sa cliente lui doit maintenant 80 000 FCFA. Une vente, deux conséquences.</p>
+          <div class="callout">
+            <strong>En clair :</strong> chaque opération a une cause et une contrepartie. Si tu n'enregistres qu'une seule face, tu n'as qu'une moitié de l'information. La partie double oblige à enregistrer les deux à chaque fois.
+          </div>
+          <p>Cette intuition a été formalisée par le moine vénitien <strong>Luca Pacioli</strong> en 1494 dans son <em>Summa de arithmetica</em>. Cinq siècles plus tard, c'est toujours le mécanisme central de toute comptabilité dans le monde, et la base obligatoire du SYSCOHADA en zone OHADA (encadrée par l'AUDCIF aux articles 14 à 24 sur l'organisation comptable).</p>
+        </section>
+
+        <section id="equation">
+          <h2>L'équation comptable fondamentale</h2>
+          <p>La partie double est le mécanisme d'écriture. L'<strong>équation comptable</strong> est ce qu'elle préserve.</p>
+          <blockquote>
+            <strong>ACTIF = PASSIF + CAPITAUX PROPRES</strong><br>
+            <span class="text-sm muted">Ou, en intégrant le résultat de l'exercice :</span><br>
+            <strong>ACTIF = PASSIF + CAPITAUX PROPRES + (PRODUITS − CHARGES)</strong>
+          </blockquote>
+          <p>Cette égalité doit être vraie à <strong>tout moment</strong>. Pas seulement à la clôture, pas seulement après l'inventaire : à chaque instant, après chaque écriture.</p>
+          <p>Décortiquons :</p>
+          <ul>
+            <li><strong>L'actif</strong> : tout ce que l'entreprise possède ou doit recevoir (caisse, banque, stocks, créances clients, immobilisations).</li>
+            <li><strong>Le passif</strong> : tout ce que l'entreprise doit à des tiers (dettes fournisseurs, dettes fiscales, emprunts).</li>
+            <li><strong>Les capitaux propres</strong> : ce que les associés ou l'exploitant ont apporté, plus les bénéfices accumulés non distribués.</li>
+          </ul>
+          <p>La logique est imparable : tout ce que possède l'entreprise (actif) provient nécessairement <em>soit</em> de tiers à qui elle doit rendre des comptes (passif), <em>soit</em> de ses propriétaires (capitaux propres). Il n'y a pas de troisième source. Donc Actif = Passif + Capitaux propres, toujours.</p>
+          <p>La partie double découle de cette équation : si une opération augmente un poste, elle doit <strong>obligatoirement</strong> être contrebalancée par une diminution ailleurs ou une augmentation d'un autre poste de l'autre côté. Sinon, l'égalité serait rompue.</p>
+        </section>
+
+        <section id="emplois-ressources">
+          <h2>Avant la mécanique : l'analyse emplois-ressources</h2>
+          <p>Avant même de parler de débit et de crédit, il faut comprendre une grille de lecture plus profonde : <strong>toute opération économique met en relation une ressource et un emploi</strong>.</p>
+          <ul>
+            <li><strong>La ressource</strong> : c'est l'origine d'un flux. D'où vient l'argent (ou le bien, ou le service) ? Qu'est-ce qui finance l'opération ?</li>
+            <li><strong>L'emploi</strong> : c'est la destination. Où va l'argent ? À quoi est-il employé ?</li>
+          </ul>
+          <p>À l'origine de tout emploi, il y a une ressource. De même, toute ressource a un emploi. Aucune ressource ne reste sans usage, aucun emploi n'apparaît sans qu'une ressource ne le finance.</p>
+          <div class="callout">
+            <strong>En clair :</strong> pose-toi systématiquement deux questions à chaque opération. <em>D'où vient l'argent ?</em> (c'est la ressource) et <em>Où va l'argent ?</em> (c'est l'emploi). Si tu trouves les deux, tu as compris l'opération comptable. C'est le réflexe le plus important du métier.
+          </div>
+
+          <h3>Trois exemples chez Awa</h3>
+          <p>Reprenons trois opérations de la boutique d'Awa pour illustrer cette grille.</p>
+
+          <table>
+            <thead>
+              <tr><th>Opération</th><th>Ressource (d'où vient l'argent)</th><th>Emploi (où va l'argent)</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Awa apporte 500 000 FCFA à son entreprise depuis ses économies personnelles</td>
+                <td>Apport de l'exploitant (capital)</td>
+                <td>Augmentation du compte bancaire de l'entreprise</td>
+              </tr>
+              <tr>
+                <td>Awa achète 50 pagnes à 5 000 FCFA cash, soit 250 000 FCFA</td>
+                <td>Diminution du compte bancaire</td>
+                <td>Achat de marchandises (charge consommée)</td>
+              </tr>
+              <tr>
+                <td>Une cliente règle 40 000 FCFA en espèces sur une vente faite à crédit la semaine d'avant</td>
+                <td>Diminution de la créance client (l'argent dû arrive)</td>
+                <td>Augmentation de la caisse</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Tu remarques que dans chaque cas, l'opération a <strong>exactement deux faces</strong> : une ressource qui finance, un emploi qui consomme. Cette dualité est la racine économique de la partie double. Le débit et le crédit, qu'on va voir maintenant, ne sont que la <strong>convention d'écriture</strong> pour noter cette dualité dans les comptes.</p>
+
+          <h3>L'équivalence emplois = ressources</h3>
+          <p>Pour chaque opération comme pour un exercice complet, on vérifie toujours l'équilibre suivant :</p>
+          <blockquote>
+            <strong>Total des emplois = Total des ressources</strong>
+          </blockquote>
+          <p>Cette équivalence est la garantie que rien n'a été oublié ni inventé. Une ressource sans emploi voudrait dire qu'on a reçu de l'argent sans rien en faire (impossible). Un emploi sans ressource voudrait dire qu'on a dépensé de l'argent qu'on n'avait pas (impossible aussi, sauf en dette, qui est elle-même une ressource).</p>
+        </section>
+
+        <section id="debit-credit">
+          <h2>Le mécanisme débit / crédit</h2>
+          <p>Maintenant qu'on a posé la grille emplois-ressources, la convention comptable devient simple. <strong>Les emplois s'enregistrent à gauche du compte (au débit). Les ressources s'enregistrent à droite (au crédit).</strong> C'est tout.</p>
+          <p>Pour enregistrer concrètement la double face d'une opération, la comptabilité utilise deux colonnes : <strong>débit</strong> à gauche, <strong>crédit</strong> à droite. Chaque écriture comporte au minimum un débit ET un crédit, pour le même montant total.</p>
+          <div class="callout">
+            <strong>Ne te laisse pas piéger par le langage courant.</strong> Dans la vie de tous les jours, on associe « débit » à perte et « crédit » à gain. En comptabilité d'entreprise, ce n'est pas si simple : selon le type de compte, débiter peut augmenter OU diminuer le solde. C'est pour ça qu'il faut mémoriser le tableau ci-dessous.
+          </div>
+
+          <h3>La règle, classe par classe</h3>
+          <p>Le plan comptable SYSCOHADA range les comptes en 9 classes (de 1 à 9). Selon la classe, débit et crédit ne jouent pas le même rôle.</p>
+
+          <table>
+            <thead>
+              <tr><th>Classe</th><th>Type de compte</th><th>Le débit&hellip;</th><th>Le crédit&hellip;</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>1</strong></td><td>Capitaux propres et dettes financières (passif stable)</td><td>diminue</td><td>augmente</td></tr>
+              <tr><td><strong>2</strong></td><td>Immobilisations (actif)</td><td>augmente</td><td>diminue</td></tr>
+              <tr><td><strong>3</strong></td><td>Stocks (actif)</td><td>augmente</td><td>diminue</td></tr>
+              <tr><td><strong>4</strong></td><td>Tiers : clients, fournisseurs, État, personnel</td><td>augmente créances / diminue dettes</td><td>diminue créances / augmente dettes</td></tr>
+              <tr><td><strong>5</strong></td><td>Trésorerie : banque, caisse (actif)</td><td>augmente</td><td>diminue</td></tr>
+              <tr><td><strong>6</strong></td><td>Charges</td><td>augmente</td><td>diminue (rare)</td></tr>
+              <tr><td><strong>7</strong></td><td>Produits</td><td>diminue (rare)</td><td>augmente</td></tr>
+              <tr><td><strong>8</strong></td><td>Autres charges et produits HAO</td><td>selon nature</td><td>selon nature</td></tr>
+              <tr><td><strong>9</strong></td><td>Comptabilité analytique (hors champ ici)</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Le moyen mnémotechnique qui marche</h3>
+          <p>Plutôt que d'apprendre par cœur les 9 lignes, retiens la logique de base : <strong>tout compte d'actif augmente au débit, tout compte de passif augmente au crédit</strong>. Les charges sont assimilées à des « emplois de fonds » (donc au débit comme l'actif), et les produits à des « ressources » (donc au crédit comme le passif).</p>
+          <div class="callout">
+            <strong>Trois règles d'or à retenir :</strong>
+            <ol style="margin:8px 0 0; padding-left:18px">
+              <li>Toute écriture comporte au minimum un débit et un crédit.</li>
+              <li>Le total des débits = le total des crédits, à tout moment.</li>
+              <li>Le sens (débit ou crédit) d'un compte dépend de sa classe, pas du langage courant.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="cas-awa">
+          <h2>Cas pratique : Awa au Grand Marché de Bamako</h2>
+          <p>Le mieux pour intégrer la mécanique, c'est de la voir en action. On suit Awa pendant son <strong>premier mois d'activité</strong>, avec 6 opérations dans l'ordre chronologique. Pour chaque opération, on identifie les deux comptes impactés, le sens (débit ou crédit), et on présente l'écriture telle qu'elle figurerait dans le journal comptable.</p>
+
+          <div class="example-box">
+            <span class="label-tiny">Cas concret &middot; Awa, boutique de pagne au Grand Marché de Bamako</span>
+            <h3>Situation de départ</h3>
+            <p>Le 1<sup>er</sup> juin, Awa décide de formaliser sa boutique de pagne en entreprise individuelle. Elle ouvre un compte bancaire dédié à son commerce et y apporte 500 000 FCFA de ses économies personnelles.</p>
+          </div>
+
+          <h3>Écriture 1 — Apport en capital</h3>
+          <p><strong>Opération :</strong> Awa verse 500 000 FCFA depuis son compte personnel vers le compte bancaire de l'entreprise.</p>
+          <p><strong>Analyse :</strong></p>
+          <ul>
+            <li>La banque de l'entreprise augmente de 500 000 FCFA → compte <strong>521 Banques</strong> (actif, classe 5) au <strong>débit</strong>.</li>
+            <li>Les capitaux propres de l'entreprise augmentent de 500 000 FCFA → compte <strong>104 Compte de l'exploitant</strong> (capitaux propres, classe 1) au <strong>crédit</strong>.</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>521</td><td>Banques</td><td class="num">500 000</td><td class="num">—</td></tr>
+              <tr><td>104</td><td>Compte de l'exploitant</td><td class="num">—</td><td class="num">500 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">500 000</td><td class="num">500 000</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">Vérification : 500 000 au débit = 500 000 au crédit. L'équation Actif = Passif + Capitaux propres est respectée (500 000 d'actif nouveau = 500 000 de capitaux propres nouveaux).</p>
+
+          <h3>Écriture 2 — Achat de marchandises au comptant</h3>
+          <p><strong>Opération :</strong> Awa achète 50 pagnes à 5 000 FCFA pièce auprès de son fournisseur de Sikasso, soit 250 000 FCFA payés cash en banque le jour même.</p>
+          <p><strong>Analyse :</strong></p>
+          <ul>
+            <li>Une charge est née : l'achat de marchandises → compte <strong>6011 Achats de marchandises</strong> (charge, classe 6) au <strong>débit</strong>.</li>
+            <li>La banque diminue de 250 000 FCFA → compte <strong>521 Banques</strong> (actif, classe 5) au <strong>crédit</strong>.</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>6011</td><td>Achats de marchandises</td><td class="num">250 000</td><td class="num">—</td></tr>
+              <tr><td>521</td><td>Banques</td><td class="num">—</td><td class="num">250 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">250 000</td><td class="num">250 000</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">Note technique : sous SYSCOHADA en système d'inventaire intermittent, on n'enregistre pas l'entrée en stock à chaque achat. C'est seulement à la clôture qu'on constate la variation de stock (compte 6031). Sujet traité dans le guide stocks.</p>
+
+          <h3>Écriture 3 — Vente au comptant</h3>
+          <p><strong>Opération :</strong> Awa vend 10 pagnes à 8 000 FCFA pièce, soit 80 000 FCFA encaissés en espèces dans la caisse de la boutique.</p>
+          <p><strong>Analyse :</strong></p>
+          <ul>
+            <li>La caisse augmente de 80 000 FCFA → compte <strong>571 Caisse</strong> (actif, classe 5) au <strong>débit</strong>.</li>
+            <li>Un produit est né : la vente de marchandises → compte <strong>7011 Ventes de marchandises</strong> (produit, classe 7) au <strong>crédit</strong>.</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>571</td><td>Caisse</td><td class="num">80 000</td><td class="num">—</td></tr>
+              <tr><td>7011</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">80 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">80 000</td><td class="num">80 000</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Écriture 4 — Vente à crédit</h3>
+          <p><strong>Opération :</strong> Awa vend 10 autres pagnes à 8 000 FCFA pièce à une cliente régulière qui paiera la semaine suivante. Soit 80 000 FCFA de créance.</p>
+          <p><strong>Analyse :</strong></p>
+          <ul>
+            <li>Une créance naît : la cliente doit 80 000 FCFA → compte <strong>411 Clients</strong> (créance d'actif, classe 4) au <strong>débit</strong>.</li>
+            <li>Un produit est né : la vente → compte <strong>7011 Ventes de marchandises</strong> (produit, classe 7) au <strong>crédit</strong>.</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>411</td><td>Clients</td><td class="num">80 000</td><td class="num">—</td></tr>
+              <tr><td>7011</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">80 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">80 000</td><td class="num">80 000</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">Note : la vente est enregistrée même si l'argent n'est pas encore encaissé. C'est l'application du principe d'<strong>indépendance des exercices</strong> : un produit est constaté quand il est acquis (la vente est conclue), pas quand il est encaissé. Ce sera décaissé à l'écriture 6.</p>
+
+          <h3>Écriture 5 — Paiement du loyer</h3>
+          <p><strong>Opération :</strong> Awa paye le loyer de juin de son emplacement au Grand Marché, soit 75 000 FCFA en espèces sortis de la caisse.</p>
+          <p><strong>Analyse :</strong></p>
+          <ul>
+            <li>Une charge est née : le loyer → compte <strong>6132 Locations et charges locatives</strong> (charge, classe 6) au <strong>débit</strong>.</li>
+            <li>La caisse diminue de 75 000 FCFA → compte <strong>571 Caisse</strong> (actif, classe 5) au <strong>crédit</strong>.</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>6132</td><td>Locations et charges locatives</td><td class="num">75 000</td><td class="num">—</td></tr>
+              <tr><td>571</td><td>Caisse</td><td class="num">—</td><td class="num">75 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">75 000</td><td class="num">75 000</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Écriture 6 — Encaissement client</h3>
+          <p><strong>Opération :</strong> La cliente de l'écriture 4 vient régler 40 000 FCFA en espèces. Elle paiera les 40 000 FCFA restants le mois suivant.</p>
+          <p><strong>Analyse :</strong></p>
+          <ul>
+            <li>La caisse augmente de 40 000 FCFA → compte <strong>571 Caisse</strong> (actif, classe 5) au <strong>débit</strong>.</li>
+            <li>La créance client diminue de 40 000 FCFA → compte <strong>411 Clients</strong> (créance d'actif, classe 4) au <strong>crédit</strong>.</li>
+          </ul>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>571</td><td>Caisse</td><td class="num">40 000</td><td class="num">—</td></tr>
+              <tr><td>411</td><td>Clients</td><td class="num">—</td><td class="num">40 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">40 000</td><td class="num">40 000</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">Note : cet encaissement n'est pas un produit. La vente a déjà été enregistrée à l'écriture 4. Là, on transforme simplement une créance (411 Clients) en cash (571 Caisse). C'est un échange entre deux comptes d'actif.</p>
+        </section>
+
+        <section id="balance">
+          <h2>La balance : la vérification finale</h2>
+          <p>Après ces 6 écritures, comment vérifier que la partie double a été respectée partout ? Avec la <strong>balance</strong>, qui récapitule pour chaque compte les totaux débits et crédits, et calcule le solde.</p>
+
+          <table>
+            <thead>
+              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Total débits</th><th style="text-align:right">Total crédits</th><th style="text-align:right">Solde débiteur</th><th style="text-align:right">Solde créditeur</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>104</td><td>Compte de l'exploitant</td><td class="num">—</td><td class="num">500 000</td><td class="num">—</td><td class="num">500 000</td></tr>
+              <tr><td>411</td><td>Clients</td><td class="num">80 000</td><td class="num">40 000</td><td class="num">40 000</td><td class="num">—</td></tr>
+              <tr><td>521</td><td>Banques</td><td class="num">500 000</td><td class="num">250 000</td><td class="num">250 000</td><td class="num">—</td></tr>
+              <tr><td>571</td><td>Caisse</td><td class="num">120 000</td><td class="num">75 000</td><td class="num">45 000</td><td class="num">—</td></tr>
+              <tr><td>6011</td><td>Achats de marchandises</td><td class="num">250 000</td><td class="num">—</td><td class="num">250 000</td><td class="num">—</td></tr>
+              <tr><td>6132</td><td>Locations</td><td class="num">75 000</td><td class="num">—</td><td class="num">75 000</td><td class="num">—</td></tr>
+              <tr><td>7011</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">160 000</td><td class="num">—</td><td class="num">160 000</td></tr>
+              <tr style="background:var(--surface-2); font-weight:600"><td colspan="2">Total</td><td class="num">1 025 000</td><td class="num">1 025 000</td><td class="num">660 000</td><td class="num">660 000</td></tr>
+            </tbody>
+          </table>
+
+          <p>Trois choses à observer :</p>
+          <ol>
+            <li><strong>Total débits = Total crédits</strong> (1 025 000 de chaque côté). Si ce n'est pas le cas, il y a forcément une erreur d'écriture quelque part.</li>
+            <li><strong>Total soldes débiteurs = Total soldes créditeurs</strong> (660 000 de chaque côté). Cette égalité est la conséquence directe de l'équation comptable : Actif + Charges = Passif + Capitaux propres + Produits.</li>
+            <li><strong>Le solde de chaque compte a un sens économique</strong> : Banques 250 000 = ce qui reste en banque, Caisse 45 000 = ce qui reste en caisse, Clients 40 000 = ce que la cliente doit encore, etc.</li>
+          </ol>
+          <p>À partir de cette balance, on peut produire le <strong>bilan</strong> (en isolant les soldes des classes 1 à 5) et le <strong>compte de résultat</strong> (en isolant les soldes des classes 6 et 7). C'est l'objet des guides 1.4 et 1.5.</p>
+        </section>
+
+        <section id="pieges">
+          <h2>Les pièges à éviter quand on débute</h2>
+
+          <h3>Piège 1 : inverser débit et crédit</h3>
+          <p>C'est l'erreur classique. On veut enregistrer une vente, et on met le client au crédit au lieu du débit. Conséquence : l'écriture est techniquement équilibrée (débit = crédit), mais le sens économique est faux. La balance ne le détectera pas, seul un regard humain le fera.</p>
+          <p><strong>Le réflexe à acquérir :</strong> avant chaque écriture, se poser deux questions. Quel poste de l'actif ou du passif a augmenté ? Quel poste a diminué ? Puis appliquer la règle de la classe.</p>
+
+          <h3>Piège 2 : oublier une contrepartie</h3>
+          <p>Un débit sans crédit (ou inverse) est impossible en compta. Pourtant l'erreur se produit parfois quand on saisit en vrac dans un ERP. La balance le détectera immédiatement : total débit ≠ total crédit.</p>
+
+          <h3>Piège 3 : confondre encaissement et produit</h3>
+          <p>Quand un client paye une facture émise précédemment, il n'y a <strong>pas</strong> de produit nouveau. Le produit a déjà été enregistré à la facturation. L'encaissement transforme juste la créance (411 Clients) en cash (banque ou caisse). C'est le piège qui a piégé Awa au début, et qui piège encore beaucoup d'entrepreneurs : ils confondent ventes (compte 7011) et entrées d'argent (compte 521 ou 571).</p>
+
+          <h3>Piège 4 : utiliser des comptes au mauvais niveau de détail</h3>
+          <p>Le plan comptable OHADA propose des comptes à 2, 3, 4 ou 5 chiffres. <strong>411</strong> c'est « Clients », <strong>4111</strong> c'est « Clients en compte », <strong>41111</strong> c'est « Client X spécifiquement ». Plus on descend, plus c'est analytique. Au démarrage, rester à 4 chiffres maximum suffit largement. Inutile de créer un compte par client tant qu'on a moins de 20 clients réguliers.</p>
+        </section>
+
+        <section id="retenir">
+          <h2>À retenir</h2>
+          <div class="callout callout-accent">
+            <ul style="margin:0; padding-left:18px">
+              <li><strong>Une opération = deux écritures</strong>, un débit et un crédit, pour un même montant.</li>
+              <li>L'équation comptable <strong>Actif = Passif + Capitaux propres + (Produits − Charges)</strong> doit être vraie à tout moment.</li>
+              <li>Le sens débit/crédit dépend de la <strong>classe du compte</strong>, pas du langage courant : actif et charges augmentent au débit, passif et produits augmentent au crédit.</li>
+              <li>La <strong>balance</strong> permet de vérifier que la partie double a été respectée : total débits = total crédits, total soldes débiteurs = total soldes créditeurs.</li>
+              <li>L'<strong>encaissement n'est pas un produit</strong> : c'est juste un transfert entre comptes d'actif (411 Clients → 521 Banque ou 571 Caisse).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="suite">
+          <h2>La suite du chapitre</h2>
+          <p>Tu sais maintenant comment chaque opération s'enregistre. La question logique suivante : <strong>quel compte utiliser pour quelle opération ?</strong> C'est l'objet du prochain guide, qui détaille le plan comptable OHADA en 9 classes, classe par classe.</p>
+          <div class="flex gap-3 mt-6 flex-wrap">
+            <a href="guide-plan-comptable.html" class="btn btn-primary"><span class="btn-arrow">Guide 1.6 · Le plan comptable OHADA en 9 classes</span></a>
+            <a href="parcours.html#chapitre-1" class="btn btn-secondary">Retour au chapitre</a>
+          </div>
+        </section>
+
+      </article>
+
+      <aside>
+        <nav class="toc">
+          <h4>Sommaire</h4>
+          <ol>
+            <li><a href="#intuition">L'intuition</a></li>
+            <li><a href="#equation">L'équation comptable</a></li>
+            <li><a href="#emplois-ressources">Emplois &amp; ressources</a></li>
+            <li><a href="#debit-credit">Débit / crédit</a></li>
+            <li><a href="#cas-awa">Cas d'Awa : 6 écritures</a></li>
+            <li><a href="#balance">La balance</a></li>
+            <li><a href="#pieges">Pièges à éviter</a></li>
+            <li><a href="#retenir">À retenir</a></li>
+            <li><a href="#suite">La suite du chapitre</a></li>
+          </ol>
+          <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--border)">
+            <a href="bibliotheque.html" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center">Bibliothèque</a>
+          </div>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA discret en pied -->
+<section class="section-tight">
+  <div class="container">
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between; align-items:center">
+      <div>
+        <h3 style="font-size:18px; margin-bottom:4px">Tu débutes en compta et tu veux qu'on en parle ?</h3>
+        <p class="text-sm muted">Premier échange gratuit de 30 minutes, sans engagement.</p>
+      </div>
+      <a href="travaillons-ensemble.html" class="btn btn-secondary">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col"><h4>Apprendre</h4><ul><li><a href="parcours.html">Parcours, du niveau 0 au 6</a></li><li><a href="bibliotheque.html">Bibliothèque</a></li><li><a href="articles.html">Articles</a></li><li><a href="outils.html">Outils &amp; calculatrices</a></li></ul></div>
+      <div class="footer-col"><h4>Fiscalité Mali</h4><ul><li><a href="fiscalite-its.html">ITS Mali</a></li><li><a href="fiscalite-irf.html">IRF</a></li><li><a href="fiscalite-is.html">IS Mali</a></li><li><a href="guide-tva-mali.html">TVA Mali</a></li></ul></div>
+      <div class="footer-col"><h4>Le site</h4><ul><li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li><li><a href="#">Newsletter</a></li><li><a href="#">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span><span>Construit à Bamako</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

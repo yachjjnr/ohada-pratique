@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ITS Mali — Impôt sur les Traitements et Salaires</title>
+<meta name="description" content="ITS Mali : champ d'application, barème, calcul d'un bulletin, obligations déclaratives et pénalités. Cas pratique chiffré en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/fiscalite-its.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/fiscalite-its.html" />
+<meta property="og:title" content="ITS Mali — Impôt sur les Traitements et Salaires" />
+<meta property="og:description" content="ITS Mali : champ d'application, barème, calcul d'un bulletin, obligations déclaratives et pénalités. Cas pratique chiffré en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ITS Mali — Impôt sur les Traitements et Salaires" />
+<meta name="twitter:description" content="ITS Mali : champ d'application, barème, calcul d'un bulletin, obligations déclaratives et pénalités. Cas pratique chiffré en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html" class="active">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<div class="container">
+  <nav class="breadcrumbs">
+    <a href="index.html">Accueil</a><span class="sep">/</span>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a><span class="sep">/</span>
+    <span>ITS</span>
+  </nav>
+</div>
+
+<section style="padding:16px 0 28px">
+  <div class="container">
+    <div class="flex gap-2 mb-3 flex-wrap">
+      <span class="badge badge-accent">ITS</span>
+      <span class="badge">Personnes physiques</span>
+      <span class="badge">Mensuel</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 3.4vw, 44px); margin-bottom:14px">Impôt sur les Traitements et Salaires (ITS) au Mali.</h1>
+    <p class="lead">L'ITS est l'impôt direct prélevé sur les revenus du travail salarié. C'est l'employeur qui le retient à la source et qui le reverse à la Direction des Grandes Entreprises ou à la Direction des Moyennes Entreprises.</p>
+    <div class="flex gap-3 mt-6 flex-wrap" style="align-items:center">
+      
+      <a href="outils.html" class="btn btn-secondary btn-sm">Ouvrir le simulateur ITS</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="article-layout">
+
+      <article class="article-body">
+
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="180" y="30" width="110" height="92" rx="7"/>
+        <path d="M196 52h78M196 70h58M196 88h78" opacity="0.5"/>
+        <path d="M196 106h44" class="accent" style="fill:none" stroke-width="3.5"/>
+        <path d="M330 110h28v-18h28v-18h28v-18h28v-18h22"/>
+        <circle cx="464" cy="38" r="5" class="accent" style="fill:var(--accent)"/>
+      </svg>
+    </div>
+
+
+        <section id="definition">
+          <h2>Définition</h2>
+          <p>L'Impôt sur les Traitements et Salaires (ITS) frappe l'ensemble des rémunérations versées en contrepartie d'un travail salarié au Mali : salaire de base, primes, indemnités, avantages en nature. Il est retenu mensuellement par l'employeur sur le salaire brut, après application des abattements et déductions.</p>
+          <div class="callout">
+            <strong>En clair :</strong> ton employeur calcule l'ITS pour toi, le déduit de ton salaire et le reverse à la DGI. Tu ne vois passer que ton salaire net.
+          </div>
+        </section>
+
+        <section id="champ">
+          <h2>Champ d'application</h2>
+          <p>Sont assujettis à l'ITS :</p>
+          <ul>
+            <li>Toutes les personnes physiques exerçant une activité salariée au Mali, quelle que soit leur nationalité</li>
+            <li>Les fonctionnaires et agents de l'État</li>
+            <li>Les dirigeants assimilés salariés (gérants minoritaires, présidents de SA)</li>
+            <li>Les salariés détachés au Mali pour plus de 183 jours par an</li>
+          </ul>
+          <p>Sont exclus du champ : les indemnités de licenciement dans la limite légale, les remboursements de frais sur justificatifs, et certaines primes spécifiques (à confirmer dans le Code Général des Impôts du Mali en vigueur).</p>
+        </section>
+
+        <section id="calcul">
+          <h2>Calcul avec exemple chiffré</h2>
+          <p>Le calcul suit toujours la même mécanique en 4 étapes :</p>
+          <ol>
+            <li>Déterminer le <strong>salaire brut imposable</strong> (brut total moins éléments exonérés)</li>
+            <li>Appliquer les <strong>abattements forfaitaires</strong> liés au statut</li>
+            <li>Calculer la <strong>base nette imposable</strong></li>
+            <li>Appliquer le <strong>barème progressif</strong> par tranches</li>
+          </ol>
+
+          <h3>Barème progressif annuel</h3>
+          <p class="muted text-sm" style="margin-top:-4px">Barème annuel en vigueur depuis le 1er juillet 2015 (CGI art. 10). Le barème s'applique au revenu <strong>annuel</strong> imposable.</p>
+          <table>
+            <thead>
+              <tr><th>Tranche de revenu annuel (FCFA)</th><th style="text-align:right">Taux</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>De 0 à 330 000</td><td class="num">0 %</td></tr>
+              <tr><td>De 330 001 à 578 400</td><td class="num">5 %</td></tr>
+              <tr><td>De 578 401 à 1 176 400</td><td class="num">12 %</td></tr>
+              <tr><td>De 1 176 401 à 1 789 733</td><td class="num">18 %</td></tr>
+              <tr><td>De 1 789 734 à 2 384 195</td><td class="num">26 %</td></tr>
+              <tr><td>De 2 384 196 à 3 494 130</td><td class="num">31 %</td></tr>
+              <tr><td>Au-delà de 3 494 130</td><td class="num">37 %</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">Les salaires au niveau du SMIG (40 000 FCFA/mois depuis 2016) ne sont pas soumis à l'ITS. Après calcul, l'impôt est réduit de 2 points de pourcentage au profit du salarié (art. 12-A), et des réductions pour charges de famille s'appliquent (voir plus bas).</p>
+
+          <div class="example-box">
+            <span class="label-tiny">Cas pratique — Bulletin de paie à Bamako</span>
+            <h3>Awa, salaire brut imposable 125 000 FCFA par mois (1 500 000 par an)</h3>
+            <p>Awa travaille pour une PME malienne. Son salaire brut imposable est de 125 000 FCFA par mois, soit 1 500 000 FCFA sur l'année. Elle est célibataire sans enfant (pas de réduction pour charges de famille). On applique le barème annuel par tranches :</p>
+            <ul style="margin-top:12px">
+              <li>Tranche 1 (0 à 330 000) : 330 000 × 0 % = <strong>0</strong></li>
+              <li>Tranche 2 (330 001 à 578 400) : 248 400 × 5 % = <strong>12 420</strong></li>
+              <li>Tranche 3 (578 401 à 1 176 400) : 598 000 × 12 % = <strong>71 760</strong></li>
+              <li>Tranche 4 (1 176 401 à 1 500 000) : 323 600 × 18 % = <strong>58 248</strong></li>
+              <li style="margin-top:6px">Impôt brut annuel = <strong>142 428</strong></li>
+              <li style="margin-top:8px; border-top:1px solid color-mix(in srgb, var(--brand-primary) 30%, transparent); padding-top:8px"><strong>Après réduction de 2 points (art. 12-A) : ≈ 112 400 FCFA sur l'année</strong></li>
+            </ul>
+            <p class="text-sm muted mt-3">Soit environ 9 400 FCFA retenus chaque mois. La réduction de 2 points s'applique sur le <em>taux réel</em> (impôt brut / revenu imposable) ; le calcul mensuel exact peut varier légèrement selon la méthode de la DGI. Les réductions pour charges de famille viendraient encore diminuer ce montant.</p>
+          </div>
+
+          <h3>Abattements et déductions sur le brut</h3>
+          <p>Avant d'appliquer le barème, on déduit du salaire brut (CGI art. 7) notamment les retenues pour pension ou retraite (dans la limite de 4 % des salaires bruts) et les allocations couvrant des frais inhérents à la fonction, effectivement utilisées. Les avantages en nature sont, eux, ajoutés au brut, retenus pour 50 % de leur valeur réelle.</p>
+
+          <h3>Réductions pour charges de famille</h3>
+          <p>Après calcul de l'impôt, des réductions s'appliquent sur l'impôt (art. 11) :</p>
+          <table>
+            <thead>
+              <tr><th>Situation</th><th style="text-align:right">Réduction</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Célibataire / divorcé(e) / veuf(ve), sans enfant</td><td class="num">0 %</td></tr>
+              <tr><td>Marié(e), sans enfant</td><td class="num">10 %</td></tr>
+              <tr><td>Par enfant à charge (jusqu'au 10e inclus)</td><td class="num">2,5 %</td></tr>
+              <tr><td>Enfant majeur infirme</td><td class="num">10 %</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">La situation de famille retenue est celle au 1er janvier de l'année d'imposition (art. 12).</p>
+
+          <p>L'employeur enregistre la retenue au crédit du compte <code>447 — État, impôts retenus à la source</code> (subdivision ITS), par le débit du compte <code>422 — Personnel, rémunérations dues</code>. Le reversement à la DGI solde ce compte par le crédit de la trésorerie.</p>
+          <p class="text-sm muted">Le numéro exact de la subdivision SYSCOHADA pour l'ITS retenu (447x) est à confirmer sur le plan de comptes retenu par l'entreprise. <span class="muted">[à vérifier]</span></p>
+        </section>
+
+        <section id="obligations">
+          <h2>Obligations déclaratives</h2>
+          <table>
+            <thead>
+              <tr><th>Obligation</th><th>Fréquence</th><th>Échéance</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Déclaration ITS (formulaire spécifique)</td><td>Mensuelle</td><td>Le 15 du mois suivant</td></tr>
+              <tr><td>Reversement à la DGI</td><td>Mensuelle</td><td>Le 15 du mois suivant</td></tr>
+              <tr><td>État récapitulatif annuel des salaires</td><td>Annuelle</td><td>31 mars de l'année suivante</td></tr>
+              <tr><td>Délivrance d'une attestation de salaire</td><td>Annuelle</td><td>Sur demande du salarié</td></tr>
+            </tbody>
+          </table>
+          <p class="text-sm muted">Les seuils et dates ci-dessus reflètent la pratique observée à Bamako en 2025. Confirme les échéances exactes auprès de la DGI ou de ton centre des impôts, elles peuvent évoluer avec les lois de finances.</p>
+        </section>
+
+        <section id="penalites">
+          <h2>Pénalités en cas de manquement</h2>
+          <ul>
+            <li><strong>Retard de déclaration :</strong> majoration de 25 % du montant dû, et intérêts de retard à un taux mensuel.</li>
+            <li><strong>Défaut de retenue à la source :</strong> l'employeur reste solidairement redevable du montant, plus pénalité.</li>
+            <li><strong>Insuffisance déclarée :</strong> rappel d'impôt assorti d'une majoration de 50 % à 100 % selon le caractère de la mauvaise foi.</li>
+            <li><strong>Récidive :</strong> les majorations peuvent doubler en cas de seconde infraction dans les 3 ans.</li>
+          </ul>
+        </section>
+
+        <section id="cas-particuliers">
+          <h2>Cas particuliers fréquents</h2>
+          <h3>Avantages en nature</h3>
+          <p>Logement de fonction, véhicule de fonction, prise en charge des frais de scolarité : ces avantages sont évalués selon un forfait ou un coût réel, puis ajoutés au salaire brut imposable.</p>
+          <h3>Indemnités de départ</h3>
+          <p>L'indemnité légale de licenciement est exonérée dans la limite prévue par le Code du Travail. Au-delà, la fraction excédentaire est imposable. L'indemnité de départ à la retraite suit un régime spécifique.</p>
+          <h3>Expatriés</h3>
+          <p>Un salarié envoyé au Mali par une société étrangère reste imposable dans son pays d'origine pendant les 183 premiers jours, sous réserve d'une convention fiscale. Au-delà, il bascule à l'ITS Mali.</p>
+        </section>
+
+        <section id="faq">
+          <h2>Questions fréquentes</h2>
+          <details style="border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px 18px; margin-top:8px">
+            <summary style="cursor:pointer; font-weight:600">L'ITS s'applique-t-il aux stagiaires ?</summary>
+            <p class="mt-3">Une indemnité de stage en dessous du plafond légal n'est pas soumise à l'ITS. Au-delà, la fraction excédentaire est imposée comme un salaire.</p>
+          </details>
+          <details style="border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px 18px; margin-top:8px">
+            <summary style="cursor:pointer; font-weight:600">Comment traiter le 13e mois ?</summary>
+            <p class="mt-3">Le 13e mois est un complément de salaire. Il s'ajoute au salaire du mois de versement et le barème est appliqué sur le cumul du mois.</p>
+          </details>
+          <details style="border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px 18px; margin-top:8px">
+            <summary style="cursor:pointer; font-weight:600">Le télétravail depuis l'étranger change-t-il quelque chose ?</summary>
+            <p class="mt-3">Si le salarié est rémunéré par une société malienne mais réside hors du Mali, l'ITS reste en principe dû. Le cas est réglé par la convention fiscale applicable.</p>
+          </details>
+          <details style="border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px 18px; margin-top:8px">
+            <summary style="cursor:pointer; font-weight:600">L'ITS et l'IS sont-ils déductibles entre eux ?</summary>
+            <p class="mt-3">Non. L'ITS est un impôt sur le revenu du salarié et n'affecte pas la base IS de l'employeur. Seul le salaire brut (charge 661) est déductible.</p>
+          </details>
+        </section>
+
+      </article>
+
+      <aside>
+        <nav class="toc">
+          <h4>Sommaire</h4>
+          <ol>
+            <li><a href="#definition">Définition</a></li>
+            <li><a href="#champ">Champ d'application</a></li>
+            <li><a href="#calcul">Calcul avec exemple</a></li>
+            <li><a href="#obligations">Obligations déclaratives</a></li>
+            <li><a href="#penalites">Pénalités</a></li>
+            <li><a href="#cas-particuliers">Cas particuliers</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+          <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--border)">
+            <a href="outils.html" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center">Simulateur ITS</a>
+          </div>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col"><h4>Apprendre</h4><ul><li><a href="bibliotheque.html">Bibliothèque</a></li><li><a href="guide-amortissements.html">Amortissements</a></li><li><a href="guide-capital-social.html">Capital social</a></li><li><a href="guide-sig.html">SIG &amp; TFT</a></li></ul></div>
+      <div class="footer-col"><h4>Fiscalité Mali</h4><ul><li><a href="fiscalite-its.html">ITS Mali</a></li><li><a href="fiscalite-irf.html">IRF</a></li><li><a href="fiscalite-is.html">IS Mali</a></li><li><a href="guide-tva-mali.html">TVA Mali</a></li></ul></div>
+      <div class="footer-col"><h4>Le site</h4><ul><li><a href="articles.html">Articles</a></li><li><a href="outils.html">Outils &amp; calculatrices</a></li><li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li><li><a href="#">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span><span>Site construit à Bamako · v1.0</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cessions d'immobilisations et de titres en SYSCOHADA | OHADA Pratique</title>
+<meta name="description" content="Comptabiliser la cession d'une immobilisation en SYSCOHADA : amortissement complémentaire, sortie du bien par le compte 81 (valeur comptable des cessions, HAO) ou 654 (cessions courantes), prix de cession au compte 82 ou 754, créances sur cessions 485, reprise des dépréciations 29, résultat de cession. Distinction HAO / activité ordinaire. Cession de titres et de VMP. Exemples chiffrés en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-cessions-actifs.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-cessions-actifs.html" />
+<meta property="og:title" content="Cessions d'immobilisations et de titres en SYSCOHADA" />
+<meta property="og:description" content="Comptabiliser la cession d'une immobilisation en SYSCOHADA : amortissement complémentaire, sortie du bien par le compte 81 (valeur comptable des cessions, HAO) ou 654 (cessions courantes), prix de cession au compte 82 ou 754, créances sur cessions 485, reprise des dépréciations 29, résultat de cession. Distinction HAO / activité ordinaire. Cession de titres et de VMP. Exemples chiffrés en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cessions d'immobilisations et de titres en SYSCOHADA" />
+<meta name="twitter:description" content="Comptabiliser la cession d'une immobilisation en SYSCOHADA : amortissement complémentaire, sortie du bien par le compte 81 (valeur comptable des cessions, HAO) ou 654 (cessions courantes), prix de cession au compte 82 ou 754, créances sur cessions 485, reprise des dépréciations 29, résultat de cession. Distinction HAO / activité ordinaire. Cession de titres et de VMP. Exemples chiffrés en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Travaux d'inventaire · Cessions</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>Cessions d'immobilisations et de titres</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Les cessions d'éléments d'actif</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide transversal</span>
+      <span class="badge badge-outline">Travaux d'inventaire</span>
+      <span class="badge badge-outline">Niveau 2</span>
+      <span class="badge badge-outline">16 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Les cessions d'éléments d'actif</h1>
+    <p class="lead">Vendre un véhicule, mettre au rebut une machine, céder des titres : sortir un bien du patrimoine n'est jamais une simple écriture de banque. Il faut d'abord « arrêter » l'amortissement à la date de vente, faire disparaître le bien et ses amortissements cumulés, constater le prix reçu, et reprendre les dépréciations devenues sans objet. SYSCOHADA a sa propre mécanique, différente de celle des manuels français, avec une distinction clé entre cession <em>hors activités ordinaires</em> et cession <em>courante</em>.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="170" y="52" width="100" height="62" rx="7"/>
+        <path d="M186 76h68M186 94h48" opacity="0.5"/>
+        <path d="M292 82h74M350 74l16 8-16 8" class="accent" style="fill:none"/>
+        <rect x="386" y="56" width="84" height="50" rx="7" transform="rotate(-4 428 81)"/>
+        <text x="428" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#E25822" stroke="none" font-family="JetBrains Mono, monospace" transform="rotate(-4 428 81)">CÉDÉ</text>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#hao">HAO ou courante : deux régimes, deux jeux de comptes</a></li>
+      <li><a href="#etapes">Les quatre étapes d'une cession d'immobilisation</a></li>
+      <li><a href="#exemple">Exemple complet : cession d'un véhicule</a></li>
+      <li><a href="#rebut">Mise au rebut et destruction</a></li>
+      <li><a href="#courante">Cas des cessions courantes (654 / 754)</a></li>
+      <li><a href="#titres">Cession de titres et de valeurs mobilières de placement</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>La société Keïta Transit, à Bamako, renouvelle son parc et vend un camion acheté il y a trois ans. L'argent arrive sur le compte, mais avant d'enregistrer ce prix, il faut régler le sort comptable du camion : combien d'amortissement reste-t-il à passer jusqu'au jour de la vente ? Quelle est sa valeur nette ce jour-là ? Le bien et ses amortissements doivent disparaître du bilan. Voyons la mécanique SYSCOHADA, étape par étape.</p>
+
+  <h2 id="hao">1. HAO ou courante : deux régimes, deux jeux de comptes</h2>
+  <p>C'est la première question à se poser, car elle détermine quels comptes utiliser. SYSCOHADA classe la plupart des cessions en <strong>hors activités ordinaires (HAO)</strong> : vendre une immobilisation n'est pas le métier de l'entité, c'est un événement non récurrent.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Régime</th><th>Valeur comptable du bien sorti</th><th>Prix de cession</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cession <strong>HAO</strong> (cas général)</td><td>81 — Valeurs comptables des cessions d'immobilisations</td><td>82 — Produits des cessions d'immobilisations</td></tr>
+      <tr><td>Cession <strong>courante</strong> (exploitation)</td><td>654 — Valeurs comptables des cessions courantes</td><td>754 — Produits des cessions courantes</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>Quand est-ce « courant » ?</strong> Uniquement quand céder des immobilisations fait partie du modèle d'activité : un transporteur ou un loueur qui renouvelle <em>fréquemment et régulièrement</em> son matériel. Pour une entreprise de distribution ou de services qui vend un véhicule de temps en temps, c'est du HAO. En cas de doute, c'est HAO.</p>
+  </div>
+  <div class="callout callout-warning">
+    <p><strong>Attention, piège PCG :</strong> les supports français passent la valeur nette comptable en « 675 » et le prix en « 775 ». <strong>Ces comptes n'existent pas en SYSCOHADA.</strong> Ici, on utilise 81 / 82 (HAO) ou 654 / 754 (courant). Et surtout, SYSCOHADA ne sort pas la valeur <em>nette</em> : il sort la valeur <em>brute</em> au compte 81 tout en soldant les amortissements en même temps (voir étape 2).</p>
+  </div>
+
+  <h2 id="etapes">2. Les quatre étapes d'une cession d'immobilisation</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li><strong>Étape 1 — Amortissement complémentaire.</strong> On passe la dotation courant l'exercice, de l'ouverture jusqu'à la date de cession, pour que le cumul d'amortissement soit à jour au jour de la vente.</li>
+      <li><strong>Étape 2 — Sortie du bien.</strong> On débite le compte 81 de la valeur <em>nette</em>, et on solde le compte 28 (amortissements) en débit, par le crédit du compte d'immobilisation (classe 2) pour sa valeur <em>d'entrée</em> (brute).</li>
+      <li><strong>Étape 3 — Prix de cession.</strong> On crédite le compte 82 du prix net de vente, par le débit du compte 485 (créances sur cessions d'immobilisations) ou d'un compte de trésorerie. TVA collectée (4431) si la cession est taxable.</li>
+      <li><strong>Étape 4 — Reprise des dépréciations.</strong> Si le bien était déprécié (compte 29), cette dépréciation devient sans objet : on la reprend en produit.</li>
+    </ul>
+  </div>
+  <p>Le résultat de la cession n'a pas de compte dédié : c'est simplement la différence entre le produit (82) et la valeur comptable sortie (81). Si 82 &gt; 81, l'entité réalise une plus-value ; sinon une moins-value. Les deux comptes se soldent au résultat (compte 13) à la clôture.</p>
+
+  <h2 id="exemple">3. Exemple complet : cession d'un véhicule</h2>
+  <p>Keïta Transit a acquis un camion le 1er janvier N−3 pour <strong>20 000 000 FCFA</strong> HT, amorti en linéaire sur 5 ans (soit 4 000 000 par an). Il le cède le <strong>30 juin N</strong> pour <strong>9 000 000 FCFA</strong> HT. La cession est soumise à la TVA (18 %). Règlement à recevoir.</p>
+  <p>Au 1er janvier N, le cumul d'amortissement est de 3 ans × 4 000 000 = 12 000 000. Il faut ajouter l'amortissement de janvier à juin N.</p>
+
+  <p><strong>Étape 1</strong> — Amortissement complémentaire du 01/01 au 30/06/N : 4 000 000 × 6/12 = 2 000 000</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>6813</td><td>Dotations aux amortissements des immo. corporelles</td><td class="num">2 000 000</td><td class="num">—</td></tr>
+      <tr><td>2845</td><td>Amortissements du matériel de transport</td><td class="num">—</td><td class="num">2 000 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le cumul d'amortissement atteint maintenant 12 000 000 + 2 000 000 = 14 000 000. La valeur nette comptable du camion au jour de la cession est donc 20 000 000 − 14 000 000 = 6 000 000 FCFA.</p>
+
+  <p><strong>Étape 2</strong> — Sortie du bien : on solde l'immobilisation (brute) et ses amortissements, la VNC va en 812</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>812</td><td>Valeurs comptables des cessions d'immo. corporelles <span class="muted">(VNC)</span></td><td class="num">6 000 000</td><td class="num">—</td></tr>
+      <tr><td>2845</td><td>Amortissements du matériel de transport <span class="muted">(cumul soldé)</span></td><td class="num">14 000 000</td><td class="num">—</td></tr>
+      <tr><td>2451</td><td>Matériel de transport <span class="muted">(valeur d'entrée brute)</span></td><td class="num">—</td><td class="num">20 000 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">C'est le cœur de la mécanique SYSCOHADA : une <strong>double écriture</strong> au débit (la VNC en 812 + le cumul d'amortissement en 2845) qui solde le compte d'immobilisation pour sa valeur brute. Le camion et ses amortissements disparaissent totalement du bilan.</p>
+
+  <p><strong>Étape 3</strong> — Prix de cession (9 000 000 HT + TVA 18 % = 1 620 000), créance à recevoir</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>485</td><td>Créances sur cessions d'immobilisations <span class="muted">(TTC)</span></td><td class="num">10 620 000</td><td class="num">—</td></tr>
+      <tr><td>822</td><td>Produits des cessions d'immo. corporelles <span class="muted">(prix HT)</span></td><td class="num">—</td><td class="num">9 000 000</td></tr>
+      <tr><td>4431</td><td>TVA facturée sur cession <span class="muted">(18 %)</span></td><td class="num">—</td><td class="num">1 620 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le prix s'enregistre en 485 (un compte de créance dédié aux cessions d'immobilisations, distinct du compte clients 411), et non en compte clients ordinaire. À l'encaissement, on débitera la banque (521) par le crédit du 485.</p>
+
+  <div class="callout">
+    <p><strong>Résultat de la cession :</strong> produit 822 (9 000 000) − valeur comptable 812 (6 000 000) = <strong>+ 3 000 000 FCFA de plus-value</strong>. Elle apparaît au niveau HAO du compte de résultat. Aucun compte spécifique « plus-value » : c'est la différence entre les deux comptes, qui se soldent au résultat net (13) en fin d'exercice.</p>
+  </div>
+
+  <h2 id="rebut">4. Mise au rebut et destruction</h2>
+  <p>En SYSCOHADA, « cession » couvre aussi la mise au rebut et la destruction. Une machine hors service que l'on jette suit la même logique, sans étape 3 (pas de prix de vente).</p>
+  <p>Si le bien est <strong>totalement amorti</strong>, la VNC est nulle : on solde simplement l'immobilisation par ses amortissements (débit 28, crédit classe 2), rien ne passe en 81. S'il n'est <strong>pas totalement amorti</strong>, on passe d'abord un amortissement complémentaire pour ramener la VNC à la valeur réellement perdue, puis la sortie via le 81 fait apparaître cette perte.</p>
+  <div class="callout callout-accent">
+    <p><strong>Indemnité d'assurance :</strong> si le bien est détruit et indemnisé, l'indemnité représentative du bien détruit est assimilée à un prix de cession et se porte au crédit du compte <strong>82</strong>, exactement comme un prix de vente. (Les autres indemnités d'assurance, elles, vont en 7582.)</p>
+  </div>
+
+  <h2 id="courante">5. Cas des cessions courantes (654 / 754)</h2>
+  <p>Pour une entité dont l'activité implique de céder régulièrement des immobilisations (transporteur, loueur de matériel), la cession n'est plus un événement exceptionnel : elle est « remontée » au niveau exploitation. La mécanique est identique aux quatre étapes ci-dessus, mais on remplace simplement les comptes HAO par leurs équivalents d'exploitation :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>HAO (cas général)</th><th>Courante (exploitation)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>81 — Valeurs comptables des cessions</td><td>654 — Valeurs comptables des cessions courantes</td></tr>
+      <tr><td>82 — Produits des cessions</td><td>754 — Produits des cessions courantes</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Les étapes 1 (amortissement complémentaire), la sortie du bien et la reprise des dépréciations restent identiques ; seuls les comptes de valeur comptable et de prix changent de niveau.</p>
+
+  <h2 id="titres">6. Cession de titres et de valeurs mobilières de placement</h2>
+  <p>La cession de <strong>titres immobilisés</strong> (participations 26, titres immobilisés 27) suit la même logique HAO : valeur comptable en 816 (immobilisations financières), prix en 826, créance en 485. Si une dépréciation (296 / 297) existait, on la reprend.</p>
+  <p>La cession de <strong>titres de placement</strong> (VMP, classe 50), elle, relève de la gestion de trésorerie et donc du résultat <em>financier</em>, pas du HAO. SYSCOHADA prévoit des comptes dédiés : le résultat net de cession se constate directement en charge ou en produit financier.</p>
+  <div class="callout">
+    <p><strong>En clair :</strong> on compare le prix de cession des VMP à leur valeur d'entrée. Si gain, produit financier (compte 77 — revenus financiers et produits assimilés, subdivision cessions de titres de placement) ; si perte, charge financière (compte 67 — frais financiers, subdivision pertes sur cessions de titres de placement). La créance à recevoir se loge en 4714 (créances sur cessions de titres de placement). Toute dépréciation antérieure des VMP (590) devenue sans objet est reprise.</p>
+  </div>
+  <p class="text-sm muted">Pour le détail du classement des titres (intention de détention, participation vs placement) et de leur valorisation à l'inventaire, voir le guide <a href="guide-titres-immo-financieres.html">Titres et immobilisations financières</a>.</p>
+
+  <h2 id="a-retenir">7. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Quatre étapes : amortissement complémentaire → sortie du bien → prix de cession → reprise des dépréciations.</li>
+      <li>Régime HAO (cas général) : valeur comptable en 81, prix en 82. Régime courant (transporteur, loueur) : 654 et 754.</li>
+      <li>Comptes SYSCOHADA, pas PCG : jamais « 675 » ni « 775 ». Et on sort la valeur brute en soldant les amortissements, pas la valeur nette directement.</li>
+      <li>Le prix de cession d'immobilisation passe par le compte 485 (créances sur cessions d'immo.), pas par le compte clients 411.</li>
+      <li>Le résultat de cession = produit (82 ou 754) − valeur comptable (81 ou 654). Pas de compte « plus-value » dédié.</li>
+      <li>Mise au rebut et destruction = cession sans prix ; l'indemnité d'assurance d'un bien détruit s'assimile à un prix de cession (82).</li>
+      <li>Cession de VMP : résultat financier (77 si gain, 67 si perte), pas HAO.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Pour aller plus loin</p>
+    <a href="guide-amortissements.html" class="guide-next-link">
+      <span>Les amortissements en SYSCOHADA</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Une immobilisation à céder et tu hésites sur les écritures ?</h3>
+    <p>Amortissement complémentaire, sortie en 81 ou 654, plus-value ou moins-value, TVA sur cession : décris-moi le bien et le prix de vente, je t'aide à passer la cession complète.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-amortissements.html">Amortissements</a></li>
+          <li><a href="guide-depreciations.html">Dépréciations</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

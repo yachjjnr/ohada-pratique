@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gestion des créances et dettes en SYSCOHADA — Guide transversal | OHADA Pratique</title>
+<meta name="description" content="Maîtriser la classe 4 SYSCOHADA : comptes clients (41) et fournisseurs (40), ventes et achats à crédit, effets de commerce, créances douteuses, BFR et délais de rotation clients/fournisseurs. Écritures et cas ouest-africains." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-creances-dettes.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-creances-dettes.html" />
+<meta property="og:title" content="Gestion des créances et dettes en SYSCOHADA — Guide transversal" />
+<meta property="og:description" content="Maîtriser la classe 4 SYSCOHADA : comptes clients (41) et fournisseurs (40), ventes et achats à crédit, effets de commerce, créances douteuses, BFR et délais de rotation clients/fournisseurs. Écritures et cas ouest-africains." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gestion des créances et dettes en SYSCOHADA — Guide transversal" />
+<meta name="twitter:description" content="Maîtriser la classe 4 SYSCOHADA : comptes clients (41) et fournisseurs (40), ventes et achats à crédit, effets de commerce, créances douteuses, BFR et délais de rotation clients/fournisseurs. Écritures et cas ouest-africains." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Guide transversal · Comptes de tiers</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>Créances et dettes</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Créances et dettes</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Transversal</span>
+      <span class="badge badge-outline">Comptes de tiers</span>
+      <span class="badge badge-outline">Niveau 2</span>
+      <span class="badge badge-outline">15 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Gestion des créances et dettes</h1>
+    <p class="lead">Ce que les clients doivent, ce que l'entreprise doit aux fournisseurs : la classe 4 du SYSCOHADA. Bien la tenir, c'est maîtriser son fonds de roulement, surveiller ses délais et éviter que la trésorerie ne s'asphyxie. Le nerf de la guerre pour une PME.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="160" y="38" width="92" height="76" rx="7"/>
+        <path d="M174 60h64M174 78h48M174 96h64" opacity="0.5"/>
+        <rect x="308" y="38" width="92" height="76" rx="7"/>
+        <path d="M322 60h64M322 78h48M322 96h64" opacity="0.5"/>
+        <circle cx="280" cy="76" r="16" class="accent" style="fill:none"/>
+        <path d="M280 67v9l6 4" class="accent" style="fill:none" stroke-width="2"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#classe4">La classe 4, les comptes de tiers</a></li>
+      <li><a href="#clients">Comptabiliser les créances clients</a></li>
+      <li><a href="#fournisseurs">Comptabiliser les dettes fournisseurs</a></li>
+      <li><a href="#effets">Les effets de commerce</a></li>
+      <li><a href="#douteux">Les créances douteuses</a></li>
+      <li><a href="#bfr">BFR et délais de rotation</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>Awa vend à crédit à des clientes fidèles, et achète parfois à crédit à ses fournisseurs de Sikasso. Ces décalages entre la transaction et le paiement créent des créances et des dettes. Le SYSCOHADA les loge dans la classe 4, et leur bonne gestion conditionne la santé de sa trésorerie.</p>
+
+  <h2 id="classe4">1. La classe 4, les comptes de tiers</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Nature</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>40 — Fournisseurs</td><td>Dettes envers les fournisseurs (passif)</td></tr>
+      <tr><td>41 — Clients</td><td>Créances sur les clients (actif)</td></tr>
+      <tr><td>42 — Personnel</td><td>Dettes envers les salariés</td></tr>
+      <tr><td>43 — Organismes sociaux</td><td>Cotisations sociales</td></tr>
+      <tr><td>44 — État et collectivités</td><td>TVA, impôts</td></tr>
+      <tr><td>46 — Associés et groupe</td><td>Relations avec les associés</td></tr>
+      <tr><td>47 — Débiteurs et créditeurs divers</td><td>Autres tiers</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="clients">2. Comptabiliser les créances clients</h2>
+  <p>Vente à crédit de 1 000 000 FCFA HT, TVA 18 % :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>411</td><td>Clients</td><td class="num">1 180 000</td><td class="num">—</td></tr>
+      <tr><td>701</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">1 000 000</td></tr>
+      <tr><td>4431</td><td>État, TVA facturée</td><td class="num">—</td><td class="num">180 000</td></tr>
+    </tbody>
+  </table>
+  <p>À l'encaissement, on solde la créance contre la trésorerie (411 au crédit, 521 au débit). Rappel : l'encaissement n'est pas un produit, juste un transfert entre comptes d'actif.</p>
+
+  <h2 id="fournisseurs">3. Comptabiliser les dettes fournisseurs</h2>
+  <p>Achat à crédit de 600 000 FCFA HT, TVA 18 % :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>601</td><td>Achats de marchandises</td><td class="num">600 000</td><td class="num">—</td></tr>
+      <tr><td>4452</td><td>État, TVA récupérable</td><td class="num">108 000</td><td class="num">—</td></tr>
+      <tr><td>401</td><td>Fournisseurs</td><td class="num">—</td><td class="num">708 000</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="effets">4. Les effets de commerce</h2>
+  <p>Une créance ou une dette peut être matérialisée par un effet (lettre de change, billet à ordre). Côté client, l'acceptation d'un effet transfère le 411 vers le 412 :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>412</td><td>Clients, effets à recevoir</td><td class="num">1 180 000</td><td class="num">—</td></tr>
+      <tr><td>411</td><td>Clients</td><td class="num">—</td><td class="num">1 180 000</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>Note technique : la remise à l'escompte.</strong> Pour obtenir du cash avant l'échéance, l'entreprise peut remettre l'effet à sa banque, qui l'avance contre des agios. On débite alors la banque (521) du montant net, les agios en charges financières (675), et on solde l'effet (412). C'est un financement court terme courant, mais coûteux.</p>
+  </div>
+
+  <h2 id="douteux">5. Les créances douteuses</h2>
+  <p>Quand le recouvrement devient incertain, la créance bascule de 411 vers 416 (clients douteux), puis on constate une dépréciation sur le montant HT à risque.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Étape</th><th>Écriture</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1. Reclassement</td><td>Débit 416 / Crédit 411</td></tr>
+      <tr><td>2. Dépréciation (HT × taux de risque)</td><td>Débit 6594 / Crédit 491</td></tr>
+      <tr><td>3a. Recouvrement</td><td>Reprise : Débit 491 / Crédit 7594</td></tr>
+      <tr><td>3b. Perte définitive</td><td>Débit 651 + 4455 / Crédit 416, puis reprise de la dépréciation</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le mécanisme complet de dotation et reprise est détaillé dans le <a href="guide-depreciations.html">guide Dépréciations</a>.</p>
+
+  <h2 id="bfr">6. BFR et délais de rotation</h2>
+  <p>La gestion des tiers se mesure par deux délais et un solde.</p>
+  <div class="formula-box">
+    <p class="formula">Délai clients = (Créances clients × 360) / CA TTC<br>Délai fournisseurs = (Dettes fournisseurs × 360) / Achats TTC</p>
+  </div>
+  <p>Exemple : CA 120 000 000, créances clients 24 000 000 → délai clients 72 jours. Achats 72 000 000, dettes fournisseurs 18 000 000 → délai fournisseurs 90 jours.</p>
+  <div class="callout callout-accent">
+    <p><strong>La règle d'or de trésorerie :</strong> idéalement, on encaisse ses clients <em>avant</em> de payer ses fournisseurs (délai clients &lt; délai fournisseurs). Quand c'est l'inverse, le cycle d'exploitation consomme du cash, et le BFR gonfle. Réduire le délai clients et négocier le délai fournisseurs sont les deux leviers les plus directs sur la trésorerie.</p>
+  </div>
+  <p class="text-sm muted">Le besoin en fonds de roulement et son financement sont approfondis dans le <a href="guide-tfre.html">guide TFRE</a>.</p>
+
+  <h2 id="a-retenir">7. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>La classe 4 regroupe tous les comptes de tiers : clients (41), fournisseurs (40), État, personnel, social.</li>
+      <li>Vente à crédit : 411 au débit, ventes et TVA facturée au crédit ; l'encaissement n'est pas un produit.</li>
+      <li>Les effets de commerce transfèrent la créance (412) ou la dette (402), et permettent l'escompte.</li>
+      <li>Une créance douteuse passe en 416, puis est dépréciée sur le montant HT à risque.</li>
+      <li>Délais clients et fournisseurs pilotent le BFR : encaisser avant de payer protège la trésorerie.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Guide lié</p>
+    <a href="guide-depreciations.html" class="guide-next-link">
+      <span>Les dépréciations</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Ta trésorerie est tendue à cause des impayés ?</h3>
+    <p>Suivi des créances, relances, dépréciation des douteux, négociation des délais : décris-moi ta situation, on cherche ensemble comment desserrer l'étau.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-depreciations.html">Dépréciations</a></li>
+          <li><a href="guide-tfre.html">TFRE</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

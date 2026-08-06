@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Escompte de traites : 675 ou 6745 ? Un mot, quatre comptes | OHADA Pratique</title>
+<meta name="description" content="Escompte d'effets de commerce en SYSCOHADA : compte 675 ou 6745 ? Le circuit complet de la traite escomptée (412, 415, 565), les quatre comptes qui portent le mot escompte, et le cas des agios pris en charge par le tiré (6744)." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/article-escomptes-traites-syscohada.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/article-escomptes-traites-syscohada.html" />
+<meta property="og:title" content="Escompte de traites : 675 ou 6745 ? Un mot, quatre comptes" />
+<meta property="og:description" content="Escompte d'effets de commerce en SYSCOHADA : compte 675 ou 6745 ? Le circuit complet de la traite escomptée (412, 415, 565), les quatre comptes qui portent le mot escompte, et le cas des agios pris en charge par le tiré (6744)." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Escompte de traites : 675 ou 6745 ? Un mot, quatre comptes" />
+<meta name="twitter:description" content="Escompte d'effets de commerce en SYSCOHADA : compte 675 ou 6745 ? Le circuit complet de la traite escomptée (412, 415, 565), les quatre comptes qui portent le mot escompte, et le cas des agios pris en charge par le tiré (6744)." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Escompte de traites : 675 ou 6745 ? Un mot, quatre comptes",
+  "author": { "@type": "Person", "name": "Ousmane Mangane" },
+  "datePublished": "2026-06-12",
+  "inLanguage": "fr-FR"
+}
+</script>
+<style>
+  /* Frise du circuit de la traite escomptée */
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+  @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 18px;
+    position: relative;
+  }
+  .step .step-num {
+    font-family: var(--font-mono, "JetBrains Mono", monospace);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: .12em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .step h4 { font-size: 15.5px; margin-bottom: 6px; }
+  .step p { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+  .step .step-ecriture {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    font-family: var(--font-mono, "JetBrains Mono", monospace);
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<div class="container">
+  <nav class="breadcrumbs">
+    <a href="index.html">Accueil</a><span class="sep">/</span>
+    <a href="articles.html">Articles</a><span class="sep">/</span>
+    <span>Escompte de traites : 675 ou 6745 ?</span>
+  </nav>
+</div>
+
+<section style="padding:16px 0 28px">
+  <div class="container container-narrow">
+    <div class="flex gap-2 mb-3 flex-wrap">
+      <span class="badge badge-accent">Cas pratique</span>
+      <span class="badge">9 min de lecture</span>
+      <span class="badge">Débats d'imputation &middot; épisode 3</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 3.6vw, 46px); margin-bottom:14px">Escompte de traites : 675 ou 6745&nbsp;? Un mot, quatre comptes.</h1>
+    <p class="lead">Le plan comptable OHADA emploie le mot « escompte » dans quatre comptes différents, et deux d'entre eux semblent dire la même chose : 675 « Escomptes des effets de commerce » et 6745 « Intérêts bancaires et sur opérations de trésorerie et d'escompte ». De quoi alimenter des débats sans fin au moment d'enregistrer les agios d'une traite. Troisième épisode de la série sur les débats d'imputation : cette fois, c'est le texte du plan qui départage, mot pour mot.</p>
+    <p class="text-sm muted mt-6">12 juin 2026 &middot; Ousmane Mangane, comptable à Bamako</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="article-layout">
+
+      <article class="article-body container-narrow" style="padding-left:0; padding-right:0; max-width:none">
+
+        <section id="cas">
+          <h2>Le cas : la traite que SODIBAM remet à l'escompte</h2>
+
+          <figure class="article-figure">
+            <svg viewBox="0 0 560 230" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Une traite remise à la banque : le cash tout de suite, moins les agios">
+              <!-- la traite -->
+              <rect x="58" y="56" width="180" height="110" rx="8"/>
+              <text x="148" y="84" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="currentColor" stroke="none">TRAITE</text>
+              <path d="M76 100h144M76 118h110" opacity="0.5"/>
+              <!-- échéance : petite horloge -->
+              <circle cx="206" cy="140" r="14"/>
+              <path d="M206 132v8l6 4"/>
+              <!-- flèche vers la banque -->
+              <path d="M252 110h56M296 102l14 8-14 8" class="accent"/>
+              <!-- banque -->
+              <path d="M336 112l60-34 60 34z"/>
+              <path d="M348 112v54M372 112v54M396 112v54M420 112v54M444 112v54" opacity="0.6"/>
+              <path d="M340 166h112"/>
+              <path d="M330 178h132" opacity="0.5"/>
+              <!-- le cash qui revient, moins une part -->
+              <path d="M308 196H252M266 188l-14 8 14 8" class="accent"/>
+              <circle cx="226" cy="196" r="9"/>
+              <circle cx="202" cy="196" r="9"/>
+              <circle cx="178" cy="196" r="9" class="accent"/>
+              <text x="130" y="201" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#E25822" stroke="none">- agios</text>
+            </svg>
+            <figcaption>L'escompte en une image : la banque avance le nominal avant l'échéance, et garde les agios au passage.</figcaption>
+          </figure>
+
+          <p>Toujours chez notre groupe fictif <a href="article-imputation-nature-destination.html">SODIBAM</a>. Distribution détient une traite acceptée par un client : 1 000 000 FCFA, échéance à 90 jours. La trésorerie est tendue, le comptable remet l'effet à l'escompte. La banque avance le nominal et prélève 38 000 FCFA d'agios sur le décompte : intérêts d'escompte, commissions, TAF comprise.</p>
+          <p>Au moment d'enregistrer ces 38 000 FCFA, le débat démarre :</p>
+          <blockquote>Compte <strong>675 Escomptes des effets de commerce</strong>, ou compte <strong>6745 Intérêts bancaires et sur opérations de trésorerie et d'escompte</strong> ? Les deux intitulés contiennent le mot « escompte », et les deux sont des charges financières.</blockquote>
+          <p>Contrairement aux épisodes précédents, où il fallait qualifier la nature du service, ici les deux camps sont d'accord sur la nature : c'est un coût de financement. Le débat ne porte que sur la bonne subdivision. Et il se tranche en lisant le fonctionnement des comptes, qui a prévu le cas avec une précision étonnante.</p>
+        </section>
+
+        <section id="circuit">
+          <h2>Le circuit complet de la traite escomptée</h2>
+          <p>Avant le verdict, posons le mécanisme, car c'est lui qui justifie la réponse. L'escompte n'est pas une vente de la créance : le banquier avance les fonds, mais l'entité reste <strong>garante</strong> si le client ne paie pas à l'échéance. La créance ne disparaît donc pas du bilan, elle change de statut, et le plan mobilise trois comptes spécifiques pour suivre l'opération.</p>
+
+          <div class="steps">
+            <div class="step">
+              <span class="step-num">TEMPS 1 &middot; LA REMISE</span>
+              <h4>L'effet part à la banque</h4>
+              <p>La traite quitte le portefeuille et devient un effet escompté non échu. La créance reste au bilan.</p>
+              <div class="step-ecriture">D 415 Clients, EENE&nbsp;1 000 000<br>C 412 Clients, EAR&nbsp;&nbsp;&nbsp;1 000 000</div>
+            </div>
+            <div class="step">
+              <span class="step-num">TEMPS 2 &middot; LE DÉCOMPTE</span>
+              <h4>La banque avance les fonds</h4>
+              <p>Le net arrive en banque, les agios partent en charge financière, le nominal s'inscrit en crédit d'escompte.</p>
+              <div class="step-ecriture">D 52 Banques&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;962 000<br>D 675 Escomptes EC&nbsp;&nbsp;&nbsp;38 000<br>C 565 Escompte créd. ord.&nbsp;1 000 000</div>
+            </div>
+            <div class="step">
+              <span class="step-num">TEMPS 3 &middot; L'ÉCHÉANCE</span>
+              <h4>Le client paie, tout se solde</h4>
+              <p>L'opération dénouée, le crédit d'escompte et l'effet escompté se neutralisent.</p>
+              <div class="step-ecriture">D 565 Escompte créd. ord.&nbsp;1 000 000<br>C 415 Clients, EENE&nbsp;1 000 000</div>
+            </div>
+          </div>
+
+          <p class="text-sm muted">EAR : effets à recevoir. EENE : effets escomptés non échus. Si le client est défaillant à l'échéance, l'entité rembourse la banque et reprend la créance, c'est tout le sens du maintien au bilan.</p>
+        </section>
+
+        <section id="verdict">
+          <h2>675 ou 6745 : le texte tranche, deux fois</h2>
+          <p>Le commentaire du compte 675 décrit exactement notre situation :</p>
+          <blockquote>« Le compte 675 enregistre, <strong>après la remise au banquier de l'effet à l'escompte</strong>, lors de la réception du bordereau d'escompte, le montant indiqué sur le décompte bancaire, au titre des frais prélevés pour l'opération d'escompte. »</blockquote>
+          <p>Et le fonctionnement du compte 56 le répète en décrivant l'écriture du temps 2 : le compte 675 est débité « pour le montant des <strong>frais bancaires et d'intérêts d'escompte</strong> ». Détail qui surprend : le plan loge dans le 675 la <strong>totalité du décompte</strong>, intérêts et commissions confondus, pas seulement la part « intérêts ». Pas besoin de ventiler les agios entre 675 et 631.</p>
+          <p>Alors à quoi sert le « et d'escompte » du <strong>6745</strong> ? Aux <strong>autres financements de trésorerie</strong> : agios de découvert, intérêts d'avances de trésorerie, et les crédits d'escompte qui ne passent pas par le circuit des effets de commerce ordinaires, notamment l'<strong>escompte de crédits de campagne</strong> (compte 564). Ce n'est pas une vue de l'esprit : le commentaire du compte 56 exclut expressément les produits de campagne du circuit 412 / 415 / 565 / 675.</p>
+          <div class="callout callout-accent">
+            <p><strong>La règle de lecture à retenir :</strong> quand le plan offre un compte spécifique, il prime sur le compte générique. Le 675 a été créé précisément pour l'escompte des effets de commerce, avec son schéma d'écritures dédié. Le 6745 ramasse le reste des intérêts de trésorerie. Une traite client escomptée, c'est donc <strong>675</strong>, sans débat.</p>
+          </div>
+        </section>
+
+        <section id="quatre-escomptes">
+          <h2>Un mot, quatre comptes : la grille complète</h2>
+          <p>Si le débat revient si souvent, c'est que le mot « escompte » désigne en réalité <strong>deux choses différentes</strong> en finance : une <strong>réduction</strong> pour paiement anticipé (l'escompte de règlement) et une <strong>opération de crédit</strong> (l'escompte bancaire). Le plan comptable suit cette double réalité :</p>
+
+          <table class="data-table">
+            <thead>
+              <tr><th>Situation</th><th>Ce que c'est</th><th>Compte</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tu accordes une réduction au client qui paie avant l'échéance</td>
+                <td>Réduction financière consentie</td>
+                <td><strong>673</strong> Escomptes accordés (et 773 chez lui)</td>
+              </tr>
+              <tr>
+                <td>Tu remets une traite client à l'escompte, la banque prélève les agios</td>
+                <td>Coût de mobilisation d'une créance commerciale</td>
+                <td><strong>675</strong> Escomptes des effets de commerce</td>
+              </tr>
+              <tr>
+                <td>Agios de découvert, avances de trésorerie, escompte de crédits de campagne</td>
+                <td>Intérêts des autres crédits de trésorerie</td>
+                <td><strong>6745</strong> Intérêts bancaires et sur opérations de trésorerie et d'escompte</td>
+              </tr>
+              <tr>
+                <td>Tu prends en charge, sur accord, les agios d'escompte de la traite que ton fournisseur a tirée sur toi</td>
+                <td>Intérêt du crédit fournisseur obtenu</td>
+                <td><strong>6744</strong> Intérêts sur dettes commerciales</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="prise-en-charge">
+          <h2>Le cas qui piège tout le monde : les agios pris en charge par le tiré</h2>
+          <p>La quatrième ligne du tableau mérite qu'on s'y arrête, car elle inverse les rôles. Imaginons que le fournisseur de SODIBAM tire une traite sur elle à 90 jours, l'escompte auprès de sa propre banque, et que SODIBAM accepte, par convention, de <strong>rembourser les agios</strong> au fournisseur.</p>
+          <p>Réflexe fréquent : « ce sont des frais d'escompte, donc 675 ». Faux, et le raisonnement de toute la série s'applique : on impute ce qu'on a réellement acheté. SODIBAM n'a <strong>rien remis à l'escompte</strong>, elle n'a reçu aucun bordereau de sa banque. Ce qu'elle paie, c'est le <strong>coût du délai de paiement</strong> que son fournisseur lui consent : un intérêt sur sa dette commerciale. Le compte est tout trouvé : <strong>6744 Intérêts sur dettes commerciales</strong>, dans le 674 dont le commentaire vise les « charges financières versées aux associés et à divers tiers ».</p>
+          <p>La même somme d'agios change donc de nature en changeant de main : <strong>675 chez le fournisseur</strong> qui escompte, <strong>6744 chez le client</strong> qui la prend en charge. Et chez le fournisseur remboursé, la neutralisation passe élégamment par un <strong>787 Transferts de charges financières</strong>, sans gonfler le chiffre d'affaires.</p>
+          <div class="callout">
+            <p><strong>Trois précautions pour ce montage :</strong> une <strong>convention écrite</strong> qui prévoit la prise en charge (sans elle, le vérificateur peut y voir une libéralité non déductible) ; une <strong>note de débit</strong> du fournisseur reprenant le décompte bancaire à l'identique ; et pas de TVA sur cette refacturation d'intérêts en principe, l'opération financière ayant déjà supporté la TAF chez la banque, à confirmer auprès de la DGI selon votre configuration.</p>
+          </div>
+        </section>
+
+        <section id="conclusion">
+          <h2>En résumé</h2>
+          <ul>
+            <li>Une traite client remise à l'escompte suit le circuit <strong>412 → 415 → 565</strong>, et les agios du décompte vont en <strong>675</strong>, frais bancaires et intérêts confondus : le fonctionnement des comptes le dit expressément.</li>
+            <li>Le <strong>6745</strong> n'est pas un doublon : il reçoit les intérêts des <strong>autres</strong> financements de trésorerie (découverts, avances, escompte de crédits de campagne du compte 564).</li>
+            <li>Le mot « escompte » recouvre deux réalités : la <strong>réduction</strong> de règlement (673 accordé, 773 obtenu) et l'<strong>opération de crédit</strong> (675, 6745). Quatre comptes, zéro synonyme.</li>
+            <li>Les agios d'escompte <strong>pris en charge par le tiré</strong> sur accord ne sont pas un escompte chez lui : c'est le coût de son crédit fournisseur, en <strong>6744</strong>, avec convention écrite et note de débit à l'appui.</li>
+            <li>La créance escomptée <strong>reste au bilan</strong> jusqu'au dénouement : l'entité demeure garante du paiement à l'échéance.</li>
+          </ul>
+          <p>Le réflexe de la série, une fois encore : ne demande pas comment l'opération s'appelle, demande qui a remis quoi à qui, et ce que l'entité a réellement acheté. Le mot « escompte » est ambigu ; les écritures, jamais.</p>
+        </section>
+
+      </article>
+
+      <aside>
+        <nav class="toc">
+          <h4>Sommaire</h4>
+          <ol>
+            <li><a href="#cas">Le cas SODIBAM</a></li>
+            <li><a href="#circuit">Le circuit de la traite</a></li>
+            <li><a href="#verdict">675 ou 6745 : le verdict</a></li>
+            <li><a href="#quatre-escomptes">La grille des 4 comptes</a></li>
+            <li><a href="#prise-en-charge">Agios pris en charge par le tiré</a></li>
+            <li><a href="#conclusion">En résumé</a></li>
+          </ol>
+          <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--border)">
+            <a href="articles.html" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center">Tous les articles</a>
+          </div>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- Articles similaires -->
+<section class="section" style="padding-top:0; background:var(--surface-2); border-top:1px solid var(--border); padding-bottom:64px; padding-top:48px; margin-top:32px">
+  <div class="container">
+    <h2 class="h2" style="margin-bottom:24px">Articles similaires</h2>
+    <div class="guide-cards">
+      <a href="article-imputation-nature-destination.html" class="guide-card">
+        <div class="flex gap-2 flex-wrap"><span class="badge badge-accent">Cas pratique</span><span class="badge">11 min</span></div>
+        <h3 class="guide-card__title">Location ou publicité ? Le réflexe SYSCOHADA qui tranche les débats d'imputation.</h3>
+        <p class="guide-card__excerpt">L'épisode 1 de la série : des camionnettes habillées en publicité, un débat 6223 contre 627, et le classement des charges par nature.</p>
+      </a>
+      <a href="article-entretien-maintenance-climatiseurs.html" class="guide-card">
+        <div class="flex gap-2 flex-wrap"><span class="badge badge-accent">Cas pratique</span><span class="badge">8 min</span></div>
+        <h3 class="guide-card__title">Climatiseurs de l'immeuble : entretien, réparations ou maintenance ?</h3>
+        <p class="guide-card__excerpt">L'épisode 2 : préventif contre curatif, mobilier contre immobilier, et la frontière charge/immobilisation.</p>
+      </a>
+      <a href="article-tresorerie-syscohada.html" class="guide-card">
+        <div class="flex gap-2 flex-wrap"><span class="badge badge-accent">Trésorerie</span><span class="badge">12 min</span></div>
+        <h3 class="guide-card__title">Gérer sa trésorerie en zone SYSCOHADA : 3 règles essentielles.</h3>
+        <p class="guide-card__excerpt">L'escompte est un outil de trésorerie : suivre les flux, maîtriser le BFR, constituer une réserve de sécurité.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA discret en pied -->
+<section class="section-tight">
+  <div class="container">
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between; align-items:center">
+      <div>
+        <h3 style="font-size:18px; margin-bottom:4px">Des effets de commerce qui embrouillent vos comptes ?</h3>
+        <p class="text-sm muted">Premier échange gratuit de 30 minutes, sans engagement.</p>
+      </div>
+      <a href="travaillons-ensemble.html" class="btn btn-secondary">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col"><h4>Apprendre</h4><ul><li><a href="bibliotheque.html">Bibliothèque</a></li><li><a href="guide-amortissements.html">Amortissements</a></li><li><a href="guide-capital-social.html">Capital social</a></li><li><a href="guide-sig.html">SIG &amp; TFT</a></li></ul></div>
+      <div class="footer-col"><h4>Fiscalité Mali</h4><ul><li><a href="fiscalite-its.html">ITS Mali</a></li><li><a href="fiscalite-irf.html">IRF</a></li><li><a href="fiscalite-is.html">IS Mali</a></li><li><a href="guide-tva-mali.html">TVA Mali</a></li></ul></div>
+      <div class="footer-col"><h4>Le site</h4><ul><li><a href="articles.html">Articles</a></li><li><a href="outils.html">Outils &amp; calculatrices</a></li><li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li><li><a href="#">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span><span>Site construit à Bamako · v1.0</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

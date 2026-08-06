@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trésorerie en SYSCOHADA : rapprochement bancaire et effets de commerce | OHADA Pratique</title>
+<meta name="description" content="Gérer la trésorerie en SYSCOHADA : comptes 52 Banques et 57 Caisse, état de rapprochement bancaire (méthode et exemple), effets de commerce (412 effets à recevoir, 402 effets à payer), remise à l'encaissement et à l'escompte (415 effets escomptés non échus, 565, 675). Écritures et exemples chiffrés en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-tresorerie-operations.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-tresorerie-operations.html" />
+<meta property="og:title" content="Trésorerie en SYSCOHADA : rapprochement bancaire et effets de commerce" />
+<meta property="og:description" content="Gérer la trésorerie en SYSCOHADA : comptes 52 Banques et 57 Caisse, état de rapprochement bancaire (méthode et exemple), effets de commerce (412 effets à recevoir, 402 effets à payer), remise à l'encaissement et à l'escompte (415 effets escomptés non échus, 565, 675). Écritures et exemples chiffrés en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Trésorerie en SYSCOHADA : rapprochement bancaire et effets de commerce" />
+<meta name="twitter:description" content="Gérer la trésorerie en SYSCOHADA : comptes 52 Banques et 57 Caisse, état de rapprochement bancaire (méthode et exemple), effets de commerce (412 effets à recevoir, 402 effets à payer), remise à l'encaissement et à l'escompte (415 effets escomptés non échus, 565, 675). Écritures et exemples chiffrés en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Opérations courantes · Trésorerie</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>Rapprochement et effets</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Trésorerie : rapprochement et effets</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide transversal</span>
+      <span class="badge badge-outline">Opérations courantes</span>
+      <span class="badge badge-outline">Niveau 2</span>
+      <span class="badge badge-outline">18 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Trésorerie : rapprochement bancaire et effets de commerce</h1>
+    <p class="lead">Le compte banque de l'entreprise et le relevé envoyé par la banque ne sont presque jamais d'accord au centime près. Savoir les rapprocher, et savoir manier les effets de commerce (traites) jusqu'à leur escompte, c'est maîtriser le nerf de la gestion quotidienne : l'argent qui entre et qui sort.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="190" y="50" width="110" height="64" rx="7"/>
+        <circle cx="245" cy="82" r="16"/>
+        <path d="M239 82q6 -10 12 0t-12 0" stroke-width="2" opacity="0.7"/>
+        <path d="M330 58h90M330 76h64" opacity="0.6"/>
+        <rect x="318" y="44" width="116" height="48" rx="6" opacity="0.7"/>
+        <path d="M338 116h70M394 108l14 8-14 8" class="accent" style="fill:none"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#comptes">Les comptes de trésorerie en SYSCOHADA</a></li>
+      <li><a href="#rapprochement">L'état de rapprochement bancaire</a></li>
+      <li><a href="#methode">La méthode en 5 étapes</a></li>
+      <li><a href="#exemple-rappro">Exemple chiffré de rapprochement</a></li>
+      <li><a href="#effets">Les effets de commerce</a></li>
+      <li><a href="#encaissement">Remise à l'encaissement</a></li>
+      <li><a href="#escompte">Remise à l'escompte</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>La société Coulibaly &amp; Frères, à Bamako, suit son compte bancaire dans sa comptabilité. À la fin du mois, elle reçoit le relevé de sa banque et constate un écart de solde. Rien d'anormal : certains chèques émis ne sont pas encore débités, la banque a prélevé des frais qu'elle ignorait. L'état de rapprochement va réconcilier les deux. Et quand un client la paie par traite, ce sont les comptes d'effets qui entrent en jeu.</p>
+
+  <h2 id="comptes">1. Les comptes de trésorerie en SYSCOHADA</h2>
+  <p>La trésorerie correspond à la classe 5. Voici les comptes qui reviennent au quotidien.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Libellé</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>52</td><td>Banques</td></tr>
+      <tr><td>57</td><td>Caisse</td></tr>
+      <tr><td>51</td><td>Valeurs à encaisser (chèques et effets remis, en attente)</td></tr>
+      <tr><td>585</td><td>Virements internes (entre deux comptes de trésorerie)</td></tr>
+      <tr><td>565</td><td>Escompte de crédits ordinaires (effets escomptés)</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le compte 585 (virements internes) sert à éviter de compter deux fois une somme qui passe d'un compte à un autre, par exemple un retrait de la banque vers la caisse. On crédite la banque par le 585, puis on débite la caisse par le 585, qui se solde.</p>
+
+  <h2 id="rapprochement">2. L'état de rapprochement bancaire</h2>
+  <p>Le compte 52 Banques tenu par l'entreprise et le relevé tenu par la banque enregistrent les mêmes opérations, mais <strong>en sens inverse</strong> : ce qui est un débit chez toi est un crédit chez la banque (tu es son client, tu figures à son passif). Ce sont des comptabilités réciproques.</p>
+  <div class="callout">
+    <p><strong>Pourquoi les soldes diffèrent ?</strong> Décalages de temps, surtout : un chèque que tu as émis et comptabilisé n'est débité par la banque qu'à son encaissement par le bénéficiaire ; la banque prélève des frais ou enregistre un virement reçu, et tu ne l'apprends qu'en recevant le relevé ; et parfois, une erreur de saisie d'un côté ou de l'autre.</p>
+  </div>
+  <p>L'état de rapprochement est le tableau qui justifie l'écart et permet, à la fin, de corriger la comptabilité de l'entreprise pour les opérations qu'elle ignorait.</p>
+
+  <h2 id="methode">3. La méthode en 5 étapes</h2>
+  <ol>
+    <li><strong>Côte à côte.</strong> On place l'édition du compte 52 (tenu par l'entreprise) à côté du relevé bancaire.</li>
+    <li><strong>Pointer les soldes de départ.</strong> S'ils diffèrent, on identifie les opérations de la période précédente qui expliquent l'écart initial.</li>
+    <li><strong>Pointer en croisé.</strong> On coche les sommes identiques : un débit chez l'entreprise correspond à un crédit chez la banque, et inversement.</li>
+    <li><strong>Construire le tableau.</strong> On récapitule les sommes non pointées (celles qui figurent sur un seul des deux documents) de part et d'autre, et on rapproche les soldes de fin.</li>
+    <li><strong>Régulariser.</strong> On passe en comptabilité les écritures pour les opérations que seule la banque connaissait (frais, virements reçus, prélèvements).</li>
+  </ol>
+  <div class="callout callout-accent">
+    <p><strong>Le réflexe à avoir :</strong> seules les opérations qui apparaissent sur le relevé mais <em>pas encore</em> dans ta comptabilité doivent donner lieu à une écriture de régularisation. Les chèques que tu as émis mais que la banque n'a pas encore débités, eux, ne se régularisent pas : ils se débiteront tout seuls quand le bénéficiaire les encaissera.</p>
+  </div>
+
+  <h2 id="exemple-rappro">4. Exemple chiffré de rapprochement</h2>
+  <p>Au 31 mars, le compte 52 de Coulibaly &amp; Frères affiche un solde débiteur de 1 200 000 FCFA. Le relevé bancaire affiche un solde créditeur (en faveur de l'entreprise) de 1 050 000 FCFA. En pointant, on identifie :</p>
+  <ul>
+    <li>Un chèque de 250 000 FCFA émis par l'entreprise, non encore débité par la banque.</li>
+    <li>Des frais de tenue de compte de 60 000 FCFA prélevés par la banque, non encore enregistrés.</li>
+    <li>Un virement client reçu de 160 000 FCFA, connu de la banque seulement.</li>
+  </ul>
+  <table class="data-table">
+    <thead>
+      <tr><th>&nbsp;</th><th class="num">Compte 52 (entreprise)</th><th class="num">Relevé (banque)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Solde de départ</td><td class="num">1 200 000 (D)</td><td class="num">1 050 000 (C)</td></tr>
+      <tr><td>Chèque émis non débité</td><td class="num">—</td><td class="num">− 250 000</td></tr>
+      <tr><td>Frais de tenue de compte</td><td class="num">− 60 000</td><td class="num">—</td></tr>
+      <tr><td>Virement client reçu</td><td class="num">+ 160 000</td><td class="num">—</td></tr>
+      <tr><td><strong>Solde rapproché</strong></td><td class="num"><strong>1 300 000</strong></td><td class="num"><strong>1 300 000</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Les deux soldes concordent désormais à 1 300 000 FCFA. Restent à passer les <strong>deux écritures de régularisation</strong> côté entreprise (le chèque non débité, lui, ne se régularise pas) :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>631</td><td>Frais bancaires</td><td class="num">60 000</td><td class="num">—</td></tr>
+      <tr><td>52</td><td>Banques</td><td class="num">—</td><td class="num">60 000</td></tr>
+      <tr><td colspan="4" class="text-sm muted" style="padding-top:6px">Frais de tenue de compte (TVA récupérable à isoler si facturée)</td></tr>
+    </tbody>
+  </table>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>52</td><td>Banques</td><td class="num">160 000</td><td class="num">—</td></tr>
+      <tr><td>411</td><td>Clients</td><td class="num">—</td><td class="num">160 000</td></tr>
+      <tr><td colspan="4" class="text-sm muted" style="padding-top:6px">Encaissement d'un règlement client par virement</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="effets">5. Les effets de commerce</h2>
+  <p>Un effet de commerce (traite, lettre de change) est à la fois un moyen de paiement et un instrument de crédit : il matérialise une créance à une échéance donnée. Dès qu'une vente est réglée par traite, la créance « ordinaire » se transforme en créance « sur effet ».</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Libellé</th><th>Chez qui</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>412</td><td>Clients, effets à recevoir en portefeuille</td><td>Le vendeur (créancier)</td></tr>
+      <tr><td>402</td><td>Fournisseurs, effets à payer</td><td>L'acheteur (débiteur)</td></tr>
+      <tr><td>415</td><td>Clients, effets escomptés non échus</td><td>Vendeur, après remise à l'escompte</td></tr>
+    </tbody>
+  </table>
+  <p>Quand le client Diallo accepte une traite de 500 000 FCFA en règlement de sa dette, le vendeur transfère la créance du compte 411 (Clients) au compte 412 (Effets à recevoir) :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>412</td><td>Clients, effets à recevoir</td><td class="num">500 000</td><td class="num">—</td></tr>
+      <tr><td>411</td><td>Clients</td><td class="num">—</td><td class="num">500 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">En miroir, l'acheteur transfère sa dette du compte 401 (Fournisseurs) au compte 402 (Fournisseurs, effets à payer). À l'échéance, l'effet est payé : le vendeur débite sa banque par le crédit du 412, l'acheteur débite le 402 par le crédit de sa banque.</p>
+
+  <h2 id="encaissement">6. Remise à l'encaissement</h2>
+  <p>À l'approche de l'échéance, le vendeur remet l'effet à sa banque pour qu'elle l'encaisse. La banque prélève une commission. Le compte 412 est soldé, la banque crédite le compte (net de commission), et la commission va en charge (631 frais bancaires) avec sa TVA récupérable si elle est facturée.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>52</td><td>Banques (montant net reçu)</td><td class="num">495 000</td><td class="num">—</td></tr>
+      <tr><td>631</td><td>Frais bancaires (commission HT)</td><td class="num">4 237</td><td class="num">—</td></tr>
+      <tr><td>4454</td><td>TVA récupérable sur services (18 %)</td><td class="num">763</td><td class="num">—</td></tr>
+      <tr><td>412</td><td>Clients, effets à recevoir (montant nominal)</td><td class="num">—</td><td class="num">500 000</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="escompte">7. Remise à l'escompte</h2>
+  <p>Si le vendeur a besoin de trésorerie <strong>avant</strong> l'échéance, il « escompte » l'effet : la banque lui avance le montant, diminué d'un agio (intérêts + frais). SYSCOHADA décompose l'opération en plusieurs temps, avec un compte spécifique pour suivre l'effet tant qu'il n'est pas échu.</p>
+
+  <p><strong>1) À la remise à l'escompte</strong> — l'effet quitte le portefeuille pour le compte 415</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>415</td><td>Clients, effets escomptés non échus</td><td class="num">500 000</td><td class="num">—</td></tr>
+      <tr><td>412</td><td>Clients, effets à recevoir</td><td class="num">—</td><td class="num">500 000</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>2) À réception du décompte bancaire</strong> — la banque verse le net, l'agio est une charge (675)</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>52</td><td>Banques (net versé)</td><td class="num">485 000</td><td class="num">—</td></tr>
+      <tr><td>675</td><td>Escomptes des effets de commerce (agio)</td><td class="num">15 000</td><td class="num">—</td></tr>
+      <tr><td>565</td><td>Escompte de crédits ordinaires (nominal)</td><td class="num">—</td><td class="num">500 000</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>3) À l'échéance, après dénouement</strong> — on solde le 565 par le 415</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>565</td><td>Escompte de crédits ordinaires</td><td class="num">500 000</td><td class="num">—</td></tr>
+      <tr><td>415</td><td>Clients, effets escomptés non échus</td><td class="num">—</td><td class="num">500 000</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>Pourquoi ce détour par le 415 et le 565 ?</strong> Parce que tant que l'effet n'est pas payé par le client à l'échéance, l'entreprise reste engagée : si le client est défaillant, la banque se retourne contre elle. La créance ne disparaît donc pas vraiment du bilan, elle est suivie en « effets escomptés non échus » jusqu'au dénouement. C'est une rigueur propre à SYSCOHADA qui reflète bien la réalité du risque.</p>
+  </div>
+  <p class="text-sm muted">Ne pas confondre les deux escomptes : l'<strong>escompte de règlement</strong> (compte 673/773), réduction accordée pour paiement rapide, et l'<strong>escompte d'effets</strong> (compte 675), agio bancaire pour mobiliser une traite avant l'échéance. Voir le guide <a href="guide-achats-ventes.html">Achats, ventes et réductions</a> pour le premier.</p>
+
+  <h2 id="a-retenir">8. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Compte banque (52) et relevé bancaire sont réciproques : un débit chez toi = un crédit chez la banque.</li>
+      <li>L'état de rapprochement justifie l'écart de soldes ; seules les opérations connues de la seule banque sont à régulariser.</li>
+      <li>Un chèque émis non encore débité ne se régularise pas : il se dénouera seul.</li>
+      <li>Effet de commerce : la créance passe de 411 à 412 (vendeur) ; la dette de 401 à 402 (acheteur).</li>
+      <li>Remise à l'encaissement : 412 soldé, banque créditée du net, commission en 631.</li>
+      <li>Remise à l'escompte (3 temps) : 412 → 415 ; puis banque + agio 675 contre 565 ; puis 565 soldé par 415 à l'échéance.</li>
+      <li>Escompte de règlement (673/773) ≠ escompte d'effets (675) : deux notions distinctes.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Pour aller plus loin</p>
+    <a href="article-tresorerie-syscohada.html" class="guide-next-link">
+      <span>Article : la trésorerie au quotidien en SYSCOHADA</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Un rapprochement qui ne tombe pas juste ou un effet à comptabiliser ?</h3>
+    <p>Écart de solde introuvable, escompte d'effet, traite impayée : décris-moi ta situation, je t'aide à retrouver l'écart et à passer les écritures de régularisation.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-achats-ventes.html">Achats &amp; ventes</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

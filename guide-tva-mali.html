@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La TVA au Mali : mécanisme, comptes SYSCOHADA et déclaration | OHADA Pratique</title>
+<meta name="description" content="Comprendre et comptabiliser la TVA au Mali en SYSCOHADA : TVA facturée (compte 443) et TVA récupérable (compte 445), TVA due ou crédit (compte 444), base d'imposition selon le CGI Mali, exigibilité, déclaration et reversement. Écritures et exemples chiffrés en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-tva-mali.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-tva-mali.html" />
+<meta property="og:title" content="La TVA au Mali : mécanisme, comptes SYSCOHADA et déclaration" />
+<meta property="og:description" content="Comprendre et comptabiliser la TVA au Mali en SYSCOHADA : TVA facturée (compte 443) et TVA récupérable (compte 445), TVA due ou crédit (compte 444), base d'imposition selon le CGI Mali, exigibilité, déclaration et reversement. Écritures et exemples chiffrés en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="La TVA au Mali : mécanisme, comptes SYSCOHADA et déclaration" />
+<meta name="twitter:description" content="Comprendre et comptabiliser la TVA au Mali en SYSCOHADA : TVA facturée (compte 443) et TVA récupérable (compte 445), TVA due ou crédit (compte 444), base d'imposition selon le CGI Mali, exigibilité, déclaration et reversement. Écritures et exemples chiffrés en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Opérations courantes · Fiscalité Mali</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>La TVA au Mali</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>La TVA au Mali</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide transversal</span>
+      <span class="badge badge-outline">Opérations courantes</span>
+      <span class="badge badge-outline">Fiscalité Mali</span>
+      <span class="badge badge-outline">16 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">La TVA au Mali : mécanisme, comptes SYSCOHADA et déclaration</h1>
+    <p class="lead">La TVA traverse presque toutes les écritures d'achat et de vente, mais elle ne doit jamais peser sur le résultat de l'entreprise : c'est un impôt collecté pour le compte de l'État. Comprendre le jeu des comptes 443, 445 et 444, c'est saisir l'essentiel de la comptabilité des opérations courantes.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <path d="M236 44h66l24 24v38h-90z"/>
+        <circle cx="262" cy="68" r="3" fill="currentColor"/>
+        <path d="M258 92l28-32" stroke-width="2"/>
+        <circle cx="288" cy="88" r="3" fill="currentColor"/>
+        <text x="346" y="78" font-size="14" font-weight="700" fill="#E25822" stroke="none" font-family="JetBrains Mono, monospace">18 %</text>
+        <path d="M170 64h44M200 56l14 8-14 8" class="accent" style="fill:none"/>
+        <path d="M214 96h-44M184 88l-14 8 14 8"/>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#principe">Le principe : un impôt neutre pour l'entreprise</a></li>
+      <li><a href="#comptes">Les comptes de TVA en SYSCOHADA</a></li>
+      <li><a href="#base">La base d'imposition (CGI Mali)</a></li>
+      <li><a href="#exigibilite">Fait générateur et exigibilité</a></li>
+      <li><a href="#achat">Comptabiliser la TVA sur un achat</a></li>
+      <li><a href="#vente">Comptabiliser la TVA sur une vente</a></li>
+      <li><a href="#declaration">La déclaration : TVA due ou crédit de TVA</a></li>
+      <li><a href="#exclusions">Les exclusions du droit à déduction</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>La société Traoré Négoce, à Bamako, achète des marchandises auprès de ses fournisseurs et les revend à ses clients. Sur chaque achat, elle paie de la TVA à son fournisseur ; sur chaque vente, elle facture de la TVA à son client. À la fin du mois, elle ne reverse à l'État que la différence. Toute la mécanique de la TVA tient dans cette phrase, et ce guide la déroule pas à pas.</p>
+
+  <h2 id="principe">1. Le principe : un impôt neutre pour l'entreprise</h2>
+  <div class="callout callout-accent">
+    <p><strong>La TVA n'est ni une charge, ni un produit pour l'entreprise assujettie.</strong> C'est un impôt sur la consommation, supporté in fine par le client final. L'entreprise joue un rôle de collecteur : elle encaisse la TVA sur ses ventes (TVA facturée) et récupère la TVA payée sur ses achats (TVA récupérable). Elle ne reverse à l'État que le solde.</p>
+  </div>
+  <p>Conséquence directe sur la saisie : les achats s'enregistrent <strong>hors taxes</strong> dans les comptes de charges (classe 6), les ventes <strong>hors taxes</strong> dans les comptes de produits (classe 7), et la TVA transite par des comptes de tiers (classe 4, l'État). Le résultat de l'entreprise est calculé en hors taxes, la TVA n'y apparaît jamais.</p>
+  <div class="formula-box">
+    <p class="formula">TVA = Base (montant HT) × Taux</p>
+  </div>
+  <p class="text-sm muted">Au Mali, le taux normal de la TVA est de 18 %, avec un taux réduit sur certains produits limitativement énumérés. <strong>Note de prudence :</strong> le taux n'est pas couvert par la version du CGI dont nous disposons en source primaire (la section TVA s'y arrête à l'article 210) ; les taux exacts et la liste des produits au taux réduit sont à confirmer sur le texte fiscal en vigueur. Les exemples ci-dessous utilisent 18 % à titre d'illustration.</p>
+
+  <h2 id="comptes">2. Les comptes de TVA en SYSCOHADA</h2>
+  <p>C'est le point où l'on ne peut pas raisonner « comme en France » : les numéros de comptes sont propres à SYSCOHADA. Voici la structure officielle (compte 44, État et collectivités publiques).</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Libellé</th><th>Sens habituel</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4431</td><td>TVA facturée sur ventes</td><td>Crédit (dette)</td></tr>
+      <tr><td>4432</td><td>TVA facturée sur prestations de services</td><td>Crédit (dette)</td></tr>
+      <tr><td>4433</td><td>TVA facturée sur travaux</td><td>Crédit (dette)</td></tr>
+      <tr><td>4451</td><td>TVA récupérable sur immobilisations</td><td>Débit (créance)</td></tr>
+      <tr><td>4452</td><td>TVA récupérable sur achats</td><td>Débit (créance)</td></tr>
+      <tr><td>4453</td><td>TVA récupérable sur transport</td><td>Débit (créance)</td></tr>
+      <tr><td>4454</td><td>TVA récupérable sur services extérieurs et autres charges</td><td>Débit (créance)</td></tr>
+      <tr><td>4441</td><td>État, TVA due</td><td>Crédit (à reverser)</td></tr>
+      <tr><td>4449</td><td>État, crédit de TVA à reporter</td><td>Débit (créance)</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>En clair :</strong> la <strong>TVA facturée (443)</strong> est une dette envers l'État (tu l'as collectée, tu la lui dois). La <strong>TVA récupérable (445)</strong> est une créance sur l'État (tu l'as avancée à tes fournisseurs, l'État te la rembourse en déduction). Le compte <strong>444</strong> sert à solder les deux à la déclaration.</p>
+  </div>
+
+  <h2 id="base">3. La base d'imposition (CGI Mali)</h2>
+  <p>La TVA se calcule sur le prix hors taxes, mais le Code général des impôts du Mali précise ce qu'on y inclut et ce qu'on en exclut (articles 198 à 200).</p>
+  <p><strong>Sont inclus dans la base</strong> (article 199) : les autres impôts, taxes et prélèvements (hors TVA elle-même), les frais accessoires (commissions, intérêts, emballage, transport, assurance), et les subventions qui sont la contrepartie d'une opération imposable.</p>
+  <p><strong>Sont exclus de la base</strong> (article 200) : les escomptes de caisse, remises, rabais et ristournes ; les sommes perçues pour emballages consignés (si la TVA n'est pas facturée et que les emballages sont rendus dans les délais) ; les indemnités de dommages-intérêts ; les débours remboursés.</p>
+  <div class="callout callout-accent">
+    <p><strong>Point pratique :</strong> comme les réductions (remises, rabais, ristournes, escomptes) sont exclues de la base, la TVA se calcule toujours sur le <strong>net</strong> de toutes les réductions, jamais sur le brut. Ce point est détaillé dans le guide <a href="guide-achats-ventes.html">Achats, ventes et réductions de prix</a>.</p>
+  </div>
+
+  <h2 id="exigibilite">4. Fait générateur et exigibilité</h2>
+  <p>Le <strong>fait générateur</strong> est l'événement qui crée la créance de l'État. L'<strong>exigibilité</strong> est la date à partir de laquelle l'État peut réclamer le paiement. Les deux ne coïncident pas toujours, et c'est le point qui distingue les ventes de biens des prestations de services (articles 205 et 206 du CGI Mali).</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Opération</th><th>Fait générateur</th><th>Exigibilité</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Vente de biens</td><td>Livraison du bien</td><td>Réalisation du fait générateur (livraison)</td></tr>
+      <tr><td>Prestations de services</td><td>Exécution du service</td><td>Encaissement du prix ou des acomptes</td></tr>
+      <tr><td>Travaux immobiliers</td><td>Exécution des travaux</td><td>Exécution, ou encaissement antérieur des acomptes</td></tr>
+      <tr><td>Importations</td><td>Franchissement du cordon douanier</td><td>Mise à la consommation</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Pour les prestations de services, la TVA n'est donc exigible qu'à l'encaissement, sauf autorisation d'acquitter « sur les débits » (à la facturation), accordée par l'administration fiscale. Cette distinction a un impact direct sur le moment où l'on enregistre la TVA collectée.</p>
+
+  <h2 id="achat">5. Comptabiliser la TVA sur un achat</h2>
+  <p>Traoré Négoce achète des marchandises pour 1 000 000 FCFA HT, TVA 18 % récupérable. La charge s'enregistre HT, la TVA récupérable est isolée, la dette fournisseur est TTC.</p>
+  <div class="formula-box">
+    <p class="formula">TVA = 1 000 000 × 18 % = 180 000 FCFA &nbsp;·&nbsp; TTC = 1 180 000 FCFA</p>
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>601</td><td>Achats de marchandises</td><td class="num">1 000 000</td><td class="num">—</td></tr>
+      <tr><td>4452</td><td>TVA récupérable sur achats</td><td class="num">180 000</td><td class="num">—</td></tr>
+      <tr><td>401</td><td>Fournisseurs</td><td class="num">—</td><td class="num">1 180 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Pour un achat d'immobilisation, on utiliserait le compte 4451 (TVA récupérable sur immobilisations) ; pour un service extérieur, le compte 4454 ; pour du transport, le compte 4453. Le bon sous-compte de TVA récupérable dépend de la nature de la dépense.</p>
+
+  <h2 id="vente">6. Comptabiliser la TVA sur une vente</h2>
+  <p>Traoré Négoce revend des marchandises pour 1 500 000 FCFA HT, TVA 18 %. Le produit s'enregistre HT, la TVA facturée est une dette, la créance client est TTC.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>411</td><td>Clients</td><td class="num">1 770 000</td><td class="num">—</td></tr>
+      <tr><td>701</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">1 500 000</td></tr>
+      <tr><td>4431</td><td>TVA facturée sur ventes</td><td class="num">—</td><td class="num">270 000</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Pour une prestation de services, la TVA facturée irait au compte 4432 ; pour des travaux, au compte 4433. Là encore, le sous-compte suit la nature de l'opération vendue.</p>
+
+  <h2 id="declaration">7. La déclaration : TVA due ou crédit de TVA</h2>
+  <p>À la fin de la période (le mois, sous le régime du réel normal), on solde les comptes de TVA pour dégager le montant à reverser. La règle est simple :</p>
+  <div class="formula-box">
+    <p class="formula">TVA due = TVA facturée (443) − TVA récupérable (445) − Crédit de TVA antérieur (4449)</p>
+  </div>
+  <p>En reprenant nos deux exemples (270 000 de TVA facturée, 180 000 de TVA récupérable), la TVA due du mois est de 270 000 − 180 000 = <strong>90 000 FCFA</strong>. L'écriture de déclaration solde le 443 et le 445 par le compte 4441 (TVA due) :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4431</td><td>TVA facturée sur ventes</td><td class="num">270 000</td><td class="num">—</td></tr>
+      <tr><td>4452</td><td>TVA récupérable sur achats</td><td class="num">—</td><td class="num">180 000</td></tr>
+      <tr><td>4441</td><td>État, TVA due</td><td class="num">—</td><td class="num">90 000</td></tr>
+    </tbody>
+  </table>
+  <p>Puis, lors du reversement à l'État :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4441</td><td>État, TVA due</td><td class="num">90 000</td><td class="num">—</td></tr>
+      <tr><td>521</td><td>Banques</td><td class="num">—</td><td class="num">90 000</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>Et si la TVA récupérable dépasse la TVA facturée ?</strong> Le solde n'est pas une dette mais une créance : c'est un <strong>crédit de TVA</strong>, enregistré au compte 4449 (Crédit de TVA à reporter). Il s'impute sur la TVA due des périodes suivantes. Cela arrive typiquement les mois de gros investissements ou pour les exportateurs (dont les ventes sont exonérées mais qui récupèrent la TVA sur leurs achats).</p>
+  </div>
+
+  <h2 id="exclusions">8. Les exclusions du droit à déduction</h2>
+  <p>Toute TVA payée sur un achat n'est pas forcément récupérable. Le CGI Mali (articles 209 et 210) exclut du droit à déduction certaines dépenses, dont il faut alors enregistrer le montant <strong>TTC</strong> en charge.</p>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Les dépenses de logement, hébergement, réception, restaurant, spectacles et déplacements à caractère personnel des dirigeants ou du personnel.</li>
+      <li>Les véhicules ou engins conçus pour transporter des personnes ou à usage mixte (véhicules de tourisme) : la TVA n'est pas déductible.</li>
+    </ul>
+  </div>
+  <p>Ne sont pas exclus, en revanche : les vêtements de travail ou de protection, les locaux et matériels affectés aux besoins collectifs du personnel, et le logement gratuit du personnel de surveillance sur les lieux de travail.</p>
+  <p class="text-sm muted">Exemple : à l'achat d'un véhicule de tourisme, la TVA n'étant pas déductible, elle s'incorpore au coût d'entrée de l'immobilisation (compte 245) au lieu d'être isolée au 4451.</p>
+
+  <h2 id="a-retenir">9. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>La TVA est neutre : ni charge, ni produit. Achats et ventes s'enregistrent HT, la TVA transite par la classe 4 (État).</li>
+      <li>TVA facturée = compte 443 (dette) ; TVA récupérable = compte 445 (créance) ; TVA due ou crédit = compte 444.</li>
+      <li>Attention aux sous-comptes : 4431 ventes / 4432 services / 4433 travaux ; 4451 immos / 4452 achats / 4453 transport / 4454 services extérieurs.</li>
+      <li>La TVA se calcule sur le net de réductions (les remises et escomptes sont exclus de la base, CGI art. 200).</li>
+      <li>Biens : TVA exigible à la livraison. Services : exigible à l'encaissement (sauf option pour les débits).</li>
+      <li>TVA due = TVA facturée − TVA récupérable − crédit antérieur. Solde négatif = crédit de TVA à reporter (4449).</li>
+      <li>Véhicules de tourisme et dépenses personnelles : TVA non déductible, à enregistrer TTC.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Pour aller plus loin</p>
+    <a href="guide-achats-ventes.html" class="guide-next-link">
+      <span>Achats, ventes et réductions de prix</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Une déclaration de TVA à préparer ou des écritures à valider ?</h3>
+    <p>Calcul de la TVA due, crédit de TVA à reporter, bon sous-compte récupérable : décris-moi ta situation, je t'aide à fiabiliser la déclaration et les écritures.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-amortissements.html">Amortissements</a></li>
+          <li><a href="guide-partie-double.html">Partie double</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

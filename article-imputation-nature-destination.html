@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Location ou publicité ? Imputer une charge par nature, pas par destination | OHADA Pratique</title>
+<meta name="description" content="Des camionnettes de livraison habillées en publicité, un forfait intra-groupe : compte 6223 Locations ou 627 Publicité ? Le principe SYSCOHADA du classement des charges par nature, avec écritures, arbre de décision et point fiscal Mali." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/article-imputation-nature-destination.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/article-imputation-nature-destination.html" />
+<meta property="og:title" content="Location ou publicité ? Imputer une charge par nature, pas par destination" />
+<meta property="og:description" content="Des camionnettes de livraison habillées en publicité, un forfait intra-groupe : compte 6223 Locations ou 627 Publicité ? Le principe SYSCOHADA du classement des charges par nature, avec écritures, arbre de décision et point fiscal Mali." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Location ou publicité ? Imputer une charge par nature, pas par destination" />
+<meta name="twitter:description" content="Des camionnettes de livraison habillées en publicité, un forfait intra-groupe : compte 6223 Locations ou 627 Publicité ? Le principe SYSCOHADA du classement des charges par nature, avec écritures, arbre de décision et point fiscal Mali." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Location ou publicité ? Imputer une charge par nature, pas par destination",
+  "author": { "@type": "Person", "name": "Ousmane Mangane" },
+  "datePublished": "2026-06-11",
+  "inLanguage": "fr-FR"
+}
+</script>
+<style>
+  /* Composants propres à cet article */
+  .nd-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  @media (max-width: 640px) { .nd-duo { grid-template-columns: 1fr; } }
+  .nd-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 20px;
+  }
+  .nd-card--nature { border-top: 3px solid var(--accent); }
+  .nd-card--destination { border-top: 3px solid var(--border-strong, var(--border)); }
+  .nd-card .nd-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--bg-tint);
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .nd-card--nature .nd-icon { color: var(--accent); }
+  .nd-card .nd-icon svg { width: 22px; height: 22px; }
+  .nd-card h4 { font-size: 16px; margin-bottom: 6px; }
+  .nd-card p { font-size: 14.5px; line-height: 1.6; color: var(--muted); margin: 0; }
+  .nd-card .nd-verdict {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: var(--font-mono, "JetBrains Mono", monospace);
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-tint);
+    color: var(--text);
+  }
+  .nd-card--nature .nd-verdict { border-color: var(--accent); color: var(--accent); }
+
+  .dtree { margin: 26px 0; }
+  .dtree-q {
+    max-width: 460px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--text);
+    color: var(--bg, #fff);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 15.5px;
+  }
+  html[data-mode="dark"] .dtree-q { background: var(--surface); color: var(--text); border: 1px solid var(--border-strong, var(--border)); }
+  .dtree-arrows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .dtree-arrows span { display: flex; justify-content: center; padding: 6px 0 2px; color: var(--muted); }
+  .dtree-branches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  @media (max-width: 640px) {
+    .dtree-arrows { grid-template-columns: 1fr; }
+    .dtree-arrows span:last-child { display: none; }
+    .dtree-branches { grid-template-columns: 1fr; }
+  }
+  .dtree-branch {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dtree-branch .dtree-cond { font-size: 14px; line-height: 1.55; color: var(--muted); }
+  .dtree-branch .dtree-cond strong { color: var(--text); }
+  .dtree-branch .dtree-res {
+    margin-top: auto;
+    border-top: 1px dashed var(--border);
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 14.5px;
+  }
+  .dtree-branch .dtree-res .acct {
+    font-family: var(--font-mono, "JetBrains Mono", monospace);
+    font-size: 13px;
+    background: var(--bg-tint);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 8px;
+    white-space: nowrap;
+  }
+  .dtree-branch--loc { border-top: 3px solid var(--accent); }
+  .dtree-branch--loc .dtree-res .acct { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<div class="container">
+  <nav class="breadcrumbs">
+    <a href="index.html">Accueil</a><span class="sep">/</span>
+    <a href="articles.html">Articles</a><span class="sep">/</span>
+    <span>Location ou publicité ? Imputer par nature</span>
+  </nav>
+</div>
+
+<section style="padding:16px 0 28px">
+  <div class="container container-narrow">
+    <div class="flex gap-2 mb-3 flex-wrap">
+      <span class="badge badge-accent">Cas pratique</span>
+      <span class="badge">11 min de lecture</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 3.6vw, 46px); margin-bottom:14px">Location ou publicité ? Le réflexe SYSCOHADA qui tranche les débats d'imputation.</h1>
+    <p class="lead">Des camionnettes de livraison habillées aux couleurs des produits, un forfait facturé entre deux sociétés d'un même groupe, et une question qui divise le service comptable : compte 6223 Locations, ou compte 627 Publicité ? Ce cas, inspiré d'une situation réelle et anonymisé, illustre un principe que tout comptable OHADA doit avoir en réflexe : on impute une charge selon sa nature, jamais selon sa destination.</p>
+    <p class="text-sm muted mt-6">11 juin 2026 &middot; Ousmane Mangane, comptable à Bamako</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="article-layout">
+
+      <article class="article-body container-narrow" style="padding-left:0; padding-right:0; max-width:none">
+
+        <section id="cas">
+          <h2>Le cas : les camionnettes du groupe SODIBAM</h2>
+
+          <figure class="article-figure">
+            <svg viewBox="0 0 560 230" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Camionnette de livraison portant un panneau publicitaire">
+              <!-- lignes de mouvement -->
+              <path d="M22 92h36M12 122h46M22 152h36" stroke-width="2" opacity="0.45"/>
+              <!-- caisse -->
+              <rect x="84" y="52" width="252" height="124" rx="8"/>
+              <!-- panneau publicitaire -->
+              <rect x="104" y="72" width="212" height="84" rx="5" stroke="#E25822"/>
+              <circle cx="138" cy="106" r="14" stroke="#E25822" stroke-width="2"/>
+              <path d="M132 106l5 5 8-10" stroke="#E25822" stroke-width="2"/>
+              <text x="164" y="102" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#E25822" stroke="none">VOS PRODUITS</text>
+              <text x="164" y="122" font-family="Public Sans, sans-serif" font-size="11" fill="currentColor" stroke="none" opacity="0.75">partout dans Bamako</text>
+              <path d="M118 142h180" stroke="#E25822" stroke-width="2" opacity="0.5" stroke-dasharray="3 6"/>
+              <!-- cabine -->
+              <path d="M336 176V84h64l34 44v48"/>
+              <path d="M348 96h44l24 32h-68z" stroke-width="2"/>
+              <!-- phare et pare-chocs -->
+              <path d="M434 152h-8" stroke-width="2"/>
+              <!-- sol -->
+              <path d="M64 176h392" stroke-width="2" opacity="0.6"/>
+              <!-- roues -->
+              <circle cx="150" cy="176" r="23" fill="var(--bg-tint, #fff)"/>
+              <circle cx="150" cy="176" r="8" stroke-width="2"/>
+              <circle cx="384" cy="176" r="23" fill="var(--bg-tint, #fff)"/>
+              <circle cx="384" cy="176" r="8" stroke-width="2"/>
+            </svg>
+            <figcaption>Un véhicule de livraison qui fait aussi de la publicité : deux usages, mais une seule nature de charge.</figcaption>
+          </figure>
+
+          <p>Le groupe SODIBAM (nom fictif) réunit deux sociétés : <strong>SODIBAM Transport</strong>, qui exploite une flotte de véhicules, et <strong>SODIBAM Distribution</strong>, qui commercialise des produits de grande consommation. Transport met à la disposition de Distribution des camionnettes de livraison préalablement habillées d'affiches et de visuels promotionnels aux couleurs des produits distribués.</p>
+          <p>Au départ, Distribution ne prenait en charge que les <strong>frais variables</strong> : le carburant et, le cas échéant, les réparations. Puis le directeur de Transport a fait valoir un argument de gestionnaire : cette mise à disposition a un <strong>coût d'opportunité</strong>, car ces véhicules auraient pu servir d'autres clients payants. Un accord a donc été conclu avec le directeur commercial : un <strong>forfait mensuel fixe</strong> s'ajoute désormais aux frais variables.</p>
+          <p>Lors de la révision des comptes, une mauvaise imputation est constatée sur ces frais. Et la discussion s'engage :</p>
+          <blockquote>Ces frais relèvent-ils du compte <strong>6223 Locations de matériels et outillages</strong>, compte tenu de la nature locative de la mise à disposition ? Ou d'un compte de <strong>frais de publicité (627)</strong>, au regard de l'usage exclusivement promotionnel qui est fait des véhicules ?</blockquote>
+        </section>
+
+        <section id="debat">
+          <h2>Deux lectures défendables, en apparence</h2>
+          <p>Le débat n'est pas absurde, c'est ce qui le rend intéressant. Chaque camp a un argument sérieux.</p>
+          <p><strong>Le camp du 6223</strong> regarde le contrat : Transport met des véhicules à disposition contre un loyer. C'est une location de matériel, point. Ce que Distribution en fait ne regarde pas le plan comptable.</p>
+          <p><strong>Le camp du 627</strong> regarde la finalité : ces camionnettes ne servent qu'à promouvoir les produits. La dépense est consentie pour faire de la publicité, elle doit donc apparaître dans les charges de publicité, là où le contrôle de gestion ira chercher le coût des actions commerciales.</p>
+          <p>Pour trancher, il faut remonter au principe de classement des charges du SYSCOHADA. Et là, le texte est sans ambiguïté.</p>
+        </section>
+
+        <section id="principe">
+          <h2>Le principe qui tranche : la nature, pas la destination</h2>
+          <p>Le SYSCOHADA organise la classe 6 <strong>par nature de charge</strong>. Le commentaire des comptes 62 et 63 du Plan comptable général OHADA le dit en toutes lettres :</p>
+          <blockquote>« Les services sont classés <strong>par nature</strong> ; leur importance et leur diversité sont telles qu'il a été nécessaire d'utiliser deux comptes à deux chiffres (62 et 63). »</blockquote>
+          <p>Autrement dit, la comptabilité générale enregistre ce que la charge <strong>est</strong> (une location, un transport, une prestation publicitaire), jamais ce à quoi elle <strong>sert</strong> (vendre, produire, livrer, promouvoir). L'analyse par destination existe bel et bien, mais elle relève de la <strong>comptabilité analytique</strong> et du contrôle de gestion, pas du plan de comptes général.</p>
+
+          <div class="nd-duo">
+            <div class="nd-card nd-card--nature">
+              <span class="nd-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9z"/><path d="M12 11l8-4.5M12 11L4 6.5M12 11v9"/></svg>
+              </span>
+              <h4>La nature : qu'est-ce que c'est ?</h4>
+              <p>Une location, un achat de carburant, une réparation, une insertion publicitaire. C'est ce critère, et lui seul, qui détermine le compte de classe 6.</p>
+              <span class="nd-verdict">Comptabilité générale</span>
+            </div>
+            <div class="nd-card nd-card--destination">
+              <span class="nd-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>
+              </span>
+              <h4>La destination : à quoi ça sert ?</h4>
+              <p>Campagne promotionnelle, budget marketing, coût des tournées de livraison. Cette lecture s'organise en sections analytiques, pas dans la classe 6.</p>
+              <span class="nd-verdict">Comptabilité analytique</span>
+            </div>
+          </div>
+
+          <p>L'argument « usage exclusivement promotionnel » est donc un argument de <strong>destination</strong>. Il est parfaitement recevable pour affecter la dépense au budget marketing en analytique. Il ne peut pas, à lui seul, justifier le compte 627 en comptabilité générale.</p>
+        </section>
+
+        <section id="qualifier">
+          <h2>Qualifier le forfait : que facture réellement Transport ?</h2>
+          <p>Reste à déterminer la nature du forfait fixe. La bonne question n'est pas « à quoi servent les camionnettes ? » mais <strong>« qui a la maîtrise des véhicules ? »</strong>.</p>
+
+          <div class="dtree" role="img" aria-label="Arbre de décision : qui a la maîtrise des véhicules ?">
+            <div class="dtree-q">Qui a la maîtrise des camionnettes&nbsp;?</div>
+            <div class="dtree-arrows" aria-hidden="true">
+              <span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg></span>
+              <span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg></span>
+            </div>
+            <div class="dtree-branches">
+              <div class="dtree-branch dtree-branch--loc">
+                <div class="dtree-cond"><strong>La société utilisatrice.</strong> Elle organise les tournées, emploie les chauffeurs, supporte le carburant et l'entretien. Le bailleur se contente de mettre le bien à disposition.</div>
+                <div class="dtree-res"><span class="acct">6223</span> Nature : location de matériel</div>
+              </div>
+              <div class="dtree-branch">
+                <div class="dtree-cond"><strong>Le prestataire.</strong> Ses chauffeurs, ses circuits, une obligation de faire circuler les visuels (tant d'heures, tels quartiers). Le client achète un résultat publicitaire, pas un véhicule.</div>
+                <div class="dtree-res"><span class="acct">6278</span> Nature : prestation publicitaire</div>
+              </div>
+            </div>
+          </div>
+
+          <p>Dans notre cas d'école SODIBAM, posons les faits ainsi : les chauffeurs sont salariés de Distribution, c'est elle qui organise les tournées, et elle supporte les frais variables. Le faisceau converge vers la <strong>location</strong> : on ne paie pas le carburant d'un prestataire qui vend une campagne d'affichage mobile, on paie celui d'un véhicule qu'on utilise soi-même.</p>
+          <p>Un avertissement de méthode, cependant : la prise en charge des frais variables est un <strong>indice</strong>, pas une preuve. Le fait qui tranche vraiment, c'est <strong>l'employeur des chauffeurs</strong>. Si les conducteurs restaient salariés du bailleur, toute la qualification basculerait, on y revient plus bas.</p>
+          <p>Le forfait fixe rémunère donc la <strong>jouissance du bien</strong> : c'est un loyer. Sa nature est locative, et l'imputation correcte est le <strong>compte 6223 Locations de matériels et outillages</strong>. Pour garder la traçabilité de ces véhicules, rien n'empêche de créer une subdivision interne, par exemple 62231 Locations de matériel de transport.</p>
+          <div class="callout callout-accent">
+            <p><strong>Le cas inverse existe.</strong> Si Transport vendait une prestation globale d'affichage mobile, avec ses chauffeurs, ses circuits et une obligation de résultat publicitaire, la facture serait par nature une charge de publicité : compte <strong>6278 Autres charges de publicité et relations publiques</strong>. Et si la conception et la pose des visuels sont facturées séparément, cette ligne-là est bien publicitaire (6272 Catalogues, imprimés publicitaires, ou 6278). Une même facture peut porter deux natures, donc deux comptes.</p>
+          </div>
+          <p>Une objection sérieuse mérite d'être traitée avant d'aller plus loin : la <strong>prééminence de la réalité sur l'apparence</strong>. Ne faudrait-il pas dépasser l'« apparence » de location pour retenir la « réalité » publicitaire de l'opération ? Non, et la nuance est importante. Ce postulat sert à requalifier <strong>ce que le prestataire fournit réellement</strong> : un crédit-bail qui est en substance un financement, un personnel « prêté » qui est en substance de l'intérim. Il ne sert jamais à reclasser une charge selon <strong>l'usage que le client fait du bien</strong>. Ici, la réalité de l'opération est bien une mise à disposition de véhicules ; la réalité de l'usage, elle, vit en comptabilité analytique.</p>
+        </section>
+
+        <section id="imputation">
+          <h2>L'imputation correcte, ligne par ligne</h2>
+          <p>Reprenons chaque élément payé par SODIBAM Distribution et donnons-lui le compte que sa nature commande.</p>
+
+          <table class="data-table">
+            <thead>
+              <tr><th>Élément facturé</th><th>Nature réelle</th><th>Compte SYSCOHADA</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Forfait fixe de mise à disposition</td><td>Loyer</td><td><strong>6223</strong> Locations de matériels et outillages</td></tr>
+              <tr><td>Carburant des tournées</td><td>Énergie non stockée</td><td><strong>6053</strong> Fournitures non stockables, autres énergies</td></tr>
+              <tr><td>Réparations des camionnettes</td><td>Entretien de biens mobiliers</td><td><strong>6242</strong> Entretien et réparations des biens mobiliers</td></tr>
+              <tr><td>Conception et pose des visuels (si facturées à part)</td><td>Publicité</td><td><strong>6272</strong> ou <strong>6278</strong> Charges de publicité</td></tr>
+            </tbody>
+          </table>
+
+          <p class="text-sm muted">Au passage, le commentaire du compte 61 Transports confirme la logique : lorsque l'entité effectue des transports <strong>pour son propre compte</strong>, les carburants et réparations de véhicules ne passent pas en 61 mais dans les comptes de charges appropriés (6053, 6242). C'est exactement la situation de Distribution, qui livre ses propres marchandises.</p>
+
+          <div class="example-box">
+            <span class="label-tiny">Exemple chiffré</span>
+            <h3>La facture mensuelle de Transport à Distribution</h3>
+            <p>Forfait de mise à disposition : 400 000 FCFA HT. Réparations du mois : 120 000 FCFA HT. Carburant refacturé : 250 000 FCFA, sans TVA (les ventes de produits pétroliers sont exonérées de TVA au Mali, article 195 du CGI). TVA 18 % sur le forfait et les réparations : 93 600 FCFA. L'écriture chez SODIBAM Distribution :</p>
+            <table class="data-table">
+              <thead>
+                <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>6223</td><td>Locations de matériels et outillages</td><td class="num">400 000</td><td class="num"></td></tr>
+                <tr><td>6053</td><td>Fournitures non stockables, autres énergies (carburant)</td><td class="num">250 000</td><td class="num"></td></tr>
+                <tr><td>6242</td><td>Entretien et réparations des biens mobiliers</td><td class="num">120 000</td><td class="num"></td></tr>
+                <tr><td>4454</td><td>TVA récupérable sur services extérieurs et autres charges</td><td class="num">93 600</td><td class="num"></td></tr>
+                <tr><td>401</td><td>Fournisseurs, dettes en compte (SODIBAM Transport)</td><td class="num"></td><td class="num"><strong>863 600</strong></td></tr>
+              </tbody>
+            </table>
+            <p class="text-sm muted" style="margin-top:10px">La TVA sur le forfait de location reste déductible : l'exclusion de l'article 210 du CGI Mali vise les véhicules conçus pour le transport de personnes ou à usage mixte, pas les utilitaires de livraison. À confirmer auprès de la DGI selon la configuration exacte des véhicules.</p>
+          </div>
+        </section>
+
+        <section id="variantes">
+          <h2>Les mêmes camionnettes, trois jeux de faits, trois imputations</h2>
+          <p>Cette grille ne vaut que par les faits qu'on y met. Il suffit de changer une donnée, l'employeur des chauffeurs, pour que toute l'imputation se déplace. Voici les trois configurations possibles du même montage :</p>
+
+          <table class="data-table">
+            <thead>
+              <tr><th>Les faits</th><th>Ce que Transport facture, par nature</th><th>Comptes chez Distribution</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Chauffeurs et tournées chez <strong>Distribution</strong> (notre cas d'école)</td>
+                <td>Une location de véhicules</td>
+                <td><strong>6223</strong> (forfait), 6053 (carburant), 6242 (réparations)</td>
+              </tr>
+              <tr>
+                <td>Chauffeurs chez <strong>Transport</strong>, qui livre les produits et fait circuler les visuels</td>
+                <td>Deux services distincts : la livraison et l'affichage mobile</td>
+                <td><strong>61</strong> Transports, par exemple 612 Transports sur ventes (livraison, frais variables refacturés compris), et <strong>6278</strong> (forfait publicitaire)</td>
+              </tr>
+              <tr>
+                <td>Chauffeurs chez <strong>Transport</strong>, tournées purement publicitaires, aucune livraison</td>
+                <td>Une prestation d'affichage mobile</td>
+                <td><strong>6278</strong> pour la totalité</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Deux bascules méritent l'explication. D'abord, <strong>le 6223 disparaît dès que les chauffeurs restent chez Transport</strong> : sans transfert de la jouissance du véhicule, il n'y a tout simplement pas de location, quel que soit le vocabulaire du contrat. Ensuite, <strong>les frais variables changent de compte en même temps</strong> : le commentaire du compte 61 réserve les comptes 6053 et 6242 au transport effectué pour son propre compte. Dès que c'est un tiers qui transporte, le carburant et les réparations refacturés ne sont que des composantes du prix d'un service de transport, et suivent le service en 61.</p>
+
+          <p>Dans le dossier réel qui a inspiré ce cas, la situation avait d'abord été présentée comme la troisième configuration : un « véhicule purement publicitaire ». Le comptable chargé des écritures, qui connaissait les opérations, a rétabli deux faits : ces camionnettes livrent bel et bien les produits dont elles portent les couleurs, et les chauffeurs sont restés salariés de Transport. On était donc dans la deuxième ligne du tableau. La morale vaut bien la règle : <strong>avant d'imputer, vérifier les faits opérationnels auprès de ceux qui les vivent</strong>. Le récit d'une direction n'est jamais neutre, il accompagne souvent une négociation, ici celle du forfait. La qualification comptable, elle, se fait sur les faits constatés.</p>
+        </section>
+
+        <section id="cout-opportunite">
+          <h2>Le coût d'opportunité n'est pas une charge comptable</h2>
+          <p>L'argument du directeur de Transport mérite un détour, parce qu'il mélange deux mondes. Le <strong>coût d'opportunité</strong> (« ces véhicules auraient pu rapporter ailleurs ») est un concept de gestion, parfaitement légitime pour <strong>négocier le prix</strong> de la mise à disposition. Mais il n'existe pas en comptabilité générale : ce qui s'enregistre, c'est le prix effectivement <strong>facturé</strong>, pas le manque à gagner estimé.</p>
+          <p>Et il y a un préalable que ce cas illustre bien : tout ceci ne vaut que si Transport et Distribution sont <strong>deux personnes morales distinctes</strong>. Si « l'activité Transport » n'était qu'une branche de la même société, il n'y aurait aucune charge externe à comptabiliser : pas de facture à soi-même, pas de classe 6. Le partage du coût des camionnettes entre activités se traiterait alors en <strong>comptabilité analytique</strong>, comme un prix de cession interne.</p>
+        </section>
+
+        <section id="fiscal">
+          <h2>Le point fiscal : facturer entre sociétés liées</h2>
+          <p>Entre deux sociétés d'un même groupe, le forfait ne peut pas être fixé au doigt mouillé. Trois précautions :</p>
+          <ol>
+            <li><strong>Une convention écrite.</strong> Un contrat de mise à disposition qui précise les véhicules, la durée, le forfait et la répartition des frais variables. C'est la première pièce que demandera un vérificateur.</li>
+            <li><strong>Un prix de pleine concurrence.</strong> Le forfait doit être comparable à ce que facturerait un loueur indépendant pour des véhicules équivalents. Un prix manifestement excessif ou symbolique expose les deux sociétés à un redressement, sur le terrain de l'acte anormal de gestion et des prix de transfert.</li>
+            <li><strong>Une facturation régulière avec TVA.</strong> La location de biens meubles est une prestation imposable : facture en bonne et due forme, TVA collectée chez Transport, récupérable chez Distribution dans les conditions de droit commun.</li>
+          </ol>
+        </section>
+
+        <section id="conclusion">
+          <h2>En résumé</h2>
+          <ul>
+            <li>La classe 6 du SYSCOHADA classe les charges <strong>par nature</strong>, jamais par destination. L'usage promotionnel d'un bien ne transforme pas un loyer en frais de publicité.</li>
+            <li>Le forfait de mise à disposition des camionnettes est un <strong>loyer</strong> : compte <strong>6223</strong>, avec une subdivision interne si l'on veut suivre le matériel de transport à part.</li>
+            <li>Le compte <strong>627</strong> ne serait correct que si le prestataire vendait une véritable prestation publicitaire (affichage mobile exploité par ses soins) ou pour la ligne « conception et pose des visuels » facturée à part.</li>
+            <li>Le carburant va en <strong>6053</strong>, les réparations en <strong>6242</strong> : la question de la maîtrise du véhicule règle tout le reste.</li>
+            <li>La grille ne vaut que par les <strong>faits</strong> : si les chauffeurs restent salariés du bailleur, la location disparaît au profit d'une prestation (61 Transports pour la livraison, 6278 pour l'affichage). Avant d'imputer, vérifie qui conduit et qui organise les tournées.</li>
+            <li>Le <strong>coût d'opportunité</strong> sert à négocier le prix, pas à passer une écriture. Et entre sociétés liées : convention écrite, prix de pleine concurrence, facturation régulière.</li>
+            <li>La lecture « publicité » n'est pas perdue pour autant : elle vit en <strong>comptabilité analytique</strong>, où la dépense rejoint le budget marketing.</li>
+          </ul>
+          <p>Quand un débat d'imputation s'enlise, posez la question qui tranche : « Cette charge, qu'est-ce que c'est, indépendamment de ce à quoi elle sert ? » Neuf fois sur dix, le compte tombe tout seul.</p>
+        </section>
+
+      </article>
+
+      <aside>
+        <nav class="toc">
+          <h4>Sommaire</h4>
+          <ol>
+            <li><a href="#cas">Le cas SODIBAM</a></li>
+            <li><a href="#debat">Deux lectures défendables</a></li>
+            <li><a href="#principe">Nature, pas destination</a></li>
+            <li><a href="#qualifier">Qualifier le forfait</a></li>
+            <li><a href="#imputation">L'imputation ligne par ligne</a></li>
+            <li><a href="#variantes">Trois jeux de faits</a></li>
+            <li><a href="#cout-opportunite">Le coût d'opportunité</a></li>
+            <li><a href="#fiscal">Le point fiscal</a></li>
+            <li><a href="#conclusion">En résumé</a></li>
+          </ol>
+          <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--border)">
+            <a href="articles.html" class="btn btn-secondary btn-sm" style="width:100%; justify-content:center">Tous les articles</a>
+          </div>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- Articles similaires -->
+<section class="section" style="padding-top:0; background:var(--surface-2); border-top:1px solid var(--border); padding-bottom:64px; padding-top:48px; margin-top:32px">
+  <div class="container">
+    <h2 class="h2" style="margin-bottom:24px">Articles similaires</h2>
+    <div class="guide-cards">
+      <a href="article-erreurs-syscohada.html" class="guide-card">
+        <div class="flex gap-2 flex-wrap"><span class="badge badge-accent">Cas pratique</span><span class="badge">10 min</span></div>
+        <h3 class="guide-card__title">5 erreurs comptables courantes en zone SYSCOHADA.</h3>
+        <p class="guide-card__excerpt">La mauvaise imputation charge/immobilisation fait partie des pièges les plus fréquents : les erreurs à éviter et leurs solutions.</p>
+      </a>
+      <a href="article-devises-change.html" class="guide-card">
+        <div class="flex gap-2 flex-wrap"><span class="badge badge-accent">Cas pratique</span><span class="badge">12 min</span></div>
+        <h3 class="guide-card__title">Acheter en devises : éviter les pièges du change pour une PME OHADA.</h3>
+        <p class="guide-card__excerpt">Écart de conversion, provision pour perte de change, écart réalisé : la mécanique complète avec un cas d'import depuis Dubaï.</p>
+      </a>
+      <a href="article-compte-resultat-syscohada.html" class="guide-card">
+        <div class="flex gap-2 flex-wrap"><span class="badge badge-accent">Vulgarisation</span><span class="badge">10 min</span></div>
+        <h3 class="guide-card__title">Lire un Compte de résultat SYSCOHADA en 10 minutes.</h3>
+        <p class="guide-card__excerpt">Où atterrissent les services extérieurs dans la cascade des SIG, et pourquoi une imputation propre rend le résultat lisible.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA discret en pied -->
+<section class="section-tight">
+  <div class="container">
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between; align-items:center">
+      <div>
+        <h3 style="font-size:18px; margin-bottom:4px">Un débat d'imputation qui traîne dans vos comptes ?</h3>
+        <p class="text-sm muted">Premier échange gratuit de 30 minutes, sans engagement.</p>
+      </div>
+      <a href="travaillons-ensemble.html" class="btn btn-secondary">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col"><h4>Apprendre</h4><ul><li><a href="bibliotheque.html">Bibliothèque</a></li><li><a href="guide-amortissements.html">Amortissements</a></li><li><a href="guide-capital-social.html">Capital social</a></li><li><a href="guide-sig.html">SIG &amp; TFT</a></li></ul></div>
+      <div class="footer-col"><h4>Fiscalité Mali</h4><ul><li><a href="fiscalite-its.html">ITS Mali</a></li><li><a href="fiscalite-irf.html">IRF</a></li><li><a href="fiscalite-is.html">IS Mali</a></li><li><a href="guide-tva-mali.html">TVA Mali</a></li></ul></div>
+      <div class="footer-col"><h4>Le site</h4><ul><li><a href="articles.html">Articles</a></li><li><a href="outils.html">Outils &amp; calculatrices</a></li><li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li><li><a href="#">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span><span>Site construit à Bamako · v1.0</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

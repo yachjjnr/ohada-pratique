@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Le plan comptable OHADA en 9 classes (Guide 1.6) | OHADA Pratique</title>
+<meta name="description" content="Comprendre le plan de comptes SYSCOHADA : les 9 classes, la codification décimale, la logique du zéro et du 9, comment retrouver le bon compte pour chaque opération. Avec les comptes utilisés par la boutique d'Awa à Bamako." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-plan-comptable.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-plan-comptable.html" />
+<meta property="og:title" content="Le plan comptable OHADA en 9 classes (Guide 1.6)" />
+<meta property="og:description" content="Comprendre le plan de comptes SYSCOHADA : les 9 classes, la codification décimale, la logique du zéro et du 9, comment retrouver le bon compte pour chaque opération. Avec les comptes utilisés par la boutique d'Awa à Bamako." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Le plan comptable OHADA en 9 classes (Guide 1.6)" />
+<meta name="twitter:description" content="Comprendre le plan de comptes SYSCOHADA : les 9 classes, la codification décimale, la logique du zéro et du 9, comment retrouver le bon compte pour chaque opération. Avec les comptes utilisés par la boutique d'Awa à Bamako." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Chapitre 01 · Fondations · Guide 6/7</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:85%"></div>
+</div>
+    <span>Le plan comptable</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>Le plan comptable OHADA</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide 1.6</span>
+      <span class="badge badge-outline">Fondations</span>
+      <span class="badge badge-outline">Niveau 1</span>
+      <span class="badge badge-outline">15 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">Le plan comptable OHADA en 9 classes</h1>
+    <p class="lead">Tu sais maintenant <em>comment</em> enregistrer une opération (la partie double). Reste à savoir <em>dans quel compte</em>. Le plan comptable SYSCOHADA est la carte qui range tous les comptes possibles en neuf grandes classes. Une fois sa logique comprise, on retrouve n'importe quel compte sans l'apprendre par cœur.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="190" y="22" width="56" height="32" rx="5"/><rect x="252" y="22" width="56" height="32" rx="5"/><rect x="314" y="22" width="56" height="32" rx="5"/>
+        <rect x="190" y="60" width="56" height="32" rx="5"/><rect x="252" y="60" width="56" height="32" rx="5" class="accent" style="fill:none"/><rect x="314" y="60" width="56" height="32" rx="5"/>
+        <rect x="190" y="98" width="56" height="32" rx="5"/><rect x="252" y="98" width="56" height="32" rx="5"/><rect x="314" y="98" width="56" height="32" rx="5"/>
+        <text x="218" y="43" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">1</text><text x="280" y="43" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">2</text><text x="342" y="43" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">3</text>
+        <text x="218" y="81" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">4</text><text x="280" y="81" text-anchor="middle" font-size="13" font-weight="700" fill="#E25822" stroke="none" font-family="JetBrains Mono, monospace">5</text><text x="342" y="81" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">6</text>
+        <text x="218" y="119" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">7</text><text x="280" y="119" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">8</text><text x="342" y="119" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">9</text>
+      </svg>
+    </div>
+  </header>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#carte">Une carte des comptes</a></li>
+      <li><a href="#codification">La codification décimale</a></li>
+      <li><a href="#neuf-classes">Les neuf classes</a></li>
+      <li><a href="#bilan-resultat">Comptes de bilan, comptes de gestion</a></li>
+      <li><a href="#logique">La logique du zéro et du 9</a></li>
+      <li><a href="#awa">Cas pratique : les comptes d'Awa</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>Imagine une quincaillerie sans rayons : chaque vis, chaque outil jeté en vrac. Impossible de retrouver quoi que ce soit. Le plan comptable, c'est le rayonnage de la comptabilité. Chaque opération a sa place, et cette place est la même pour toutes les entreprises de la zone OHADA. C'est ce qui rend les comptes universellement lisibles.</p>
+
+  <h2 id="carte">1. Une carte des comptes</h2>
+  <p>Le plan comptable général SYSCOHADA est une liste normalisée de comptes, organisée en neuf classes numérotées de 1 à 9. Chaque compte porte un numéro et un intitulé. Le numéro n'est pas arbitraire : sa structure même renseigne sur la nature du compte.</p>
+
+  <h2 id="codification">2. La codification décimale</h2>
+  <p>Les comptes suivent une codification <strong>décimale</strong> : on part d'un chiffre (la classe), puis on précise en ajoutant des chiffres. Plus le numéro est long, plus le compte est précis.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Numéro</th><th>Niveau</th><th>Signification</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>6</td><td>Classe</td><td>Charges des activités ordinaires</td></tr>
+      <tr><td>60</td><td>Compte principal</td><td>Achats</td></tr>
+      <tr><td>601</td><td>Compte divisionnaire</td><td>Achats de marchandises</td></tr>
+      <tr><td>6011</td><td>Sous-compte</td><td>Achats de marchandises dans la région</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-accent">
+    <p><strong>Le réflexe :</strong> le premier chiffre suffit à savoir de quoi on parle. Un compte qui commence par 5, c'est de la trésorerie. Par 4, un tiers. Par 6, une charge. Cette lecture instantanée du premier chiffre est la compétence la plus utile au quotidien.</p>
+  </div>
+
+  <h2 id="neuf-classes">3. Les neuf classes</h2>
+  <p>Voici la carte complète. Les classes 1 à 5 décrivent le patrimoine (le bilan), les classes 6 à 8 décrivent l'activité (le résultat), la classe 9 est réservée à la comptabilité analytique.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Classe</th><th>Intitulé</th><th>Où on la retrouve</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Comptes de ressources durables (capitaux propres, dettes financières)</td><td>Passif du bilan</td></tr>
+      <tr><td>2</td><td>Comptes d'actif immobilisé</td><td>Actif du bilan</td></tr>
+      <tr><td>3</td><td>Comptes de stocks</td><td>Actif du bilan</td></tr>
+      <tr><td>4</td><td>Comptes de tiers (clients, fournisseurs, État, personnel)</td><td>Actif et passif du bilan</td></tr>
+      <tr><td>5</td><td>Comptes de trésorerie (banque, caisse)</td><td>Actif et passif du bilan</td></tr>
+      <tr><td>6</td><td>Comptes de charges des activités ordinaires</td><td>Compte de résultat</td></tr>
+      <tr><td>7</td><td>Comptes de produits des activités ordinaires</td><td>Compte de résultat</td></tr>
+      <tr><td>8</td><td>Comptes des autres charges et produits (HAO)</td><td>Compte de résultat</td></tr>
+      <tr><td>9</td><td>Comptes de la comptabilité analytique de gestion</td><td>Comptabilité interne</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="bilan-resultat">4. Comptes de bilan, comptes de gestion</h2>
+  <p>La grande coupure est là, et elle est essentielle. Les <strong>classes 1 à 5</strong> sont des comptes de <strong>bilan</strong> : leur solde se reporte d'un exercice à l'autre. Les <strong>classes 6 à 8</strong> sont des comptes de <strong>gestion</strong> : ils sont remis à zéro à chaque clôture, après avoir servi à calculer le résultat.</p>
+
+  <div class="two-col">
+    <div class="concept-card">
+      <h4>Comptes permanents (1 à 5)</h4>
+      <p>Le stock, la caisse, les dettes, le capital existent encore le 1<sup>er</sup> janvier suivant. Leur solde de clôture devient le solde d'ouverture.</p>
+    </div>
+    <div class="concept-card">
+      <h4>Comptes de gestion (6 à 8)</h4>
+      <p>Les achats et ventes de l'année servent à mesurer le résultat, puis sont soldés. On repart de zéro chaque exercice pour mesurer la nouvelle performance.</p>
+    </div>
+  </div>
+
+  <h2 id="logique">5. La logique du zéro et du 9</h2>
+  <p>La codification SYSCOHADA cache quelques règles de lecture qui font gagner un temps précieux.</p>
+
+  <h3>Le parallélisme 6 / 7</h3>
+  <p>Les charges (classe 6) et les produits (classe 7) sont souvent construits en miroir. Le compte 601 « Achats de marchandises » répond au 701 « Ventes de marchandises ». Connaître un compte de charge donne souvent le numéro du produit correspondant.</p>
+
+  <h3>Le 9 qui inverse le sens</h3>
+  <p>Quand le chiffre <strong>9</strong> apparaît en deuxième position, le compte fonctionne en sens inverse de sa classe : ce sont les dépréciations et provisions. Le 29 déprécie les immobilisations, le 39 les stocks, le 49 les créances, le 59 la trésorerie. Le 19 regroupe les provisions financières.</p>
+
+  <div class="callout">
+    <p><strong>Note technique.</strong> Le 9 peut aussi inverser le sens en troisième position pour signaler un solde anormal : le 419 « Clients créditeurs » enregistre les avances reçues des clients (une dette, alors que la classe 41 est normalement une créance), et le 409 « Fournisseurs débiteurs » enregistre les avances versées aux fournisseurs (une créance, alors que la classe 40 est normalement une dette). Le 8 en deuxième position signale, lui, les comptes « Autres » d'une rubrique (par exemple 218 « Autres immobilisations corporelles »).</p>
+  </div>
+
+  <h3>Le zéro terminal</h3>
+  <p>Un zéro en fin de numéro désigne en général un compte global ou un compte d'attente, qu'on précise ensuite. On travaille rarement directement sur un compte se terminant par plusieurs zéros : on descend d'un niveau pour gagner en précision.</p>
+
+  <h2 id="awa">6. Cas pratique : les comptes d'Awa</h2>
+  <p>Reprends les six écritures d'Awa du guide de la partie double. Tous les comptes qu'elle a mobilisés se rangent dans la carte des neuf classes. Regarde comme le premier chiffre raconte déjà l'histoire.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th>Classe</th><th>Nature</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>104</td><td>Compte de l'exploitant</td><td>1</td><td>Capitaux propres (bilan)</td></tr>
+      <tr><td>411</td><td>Clients</td><td>4</td><td>Tiers, créance (bilan)</td></tr>
+      <tr><td>521</td><td>Banques</td><td>5</td><td>Trésorerie (bilan)</td></tr>
+      <tr><td>571</td><td>Caisse</td><td>5</td><td>Trésorerie (bilan)</td></tr>
+      <tr><td>601</td><td>Achats de marchandises</td><td>6</td><td>Charge (résultat)</td></tr>
+      <tr><td>613</td><td>Locations et charges locatives</td><td>6</td><td>Charge (résultat)</td></tr>
+      <tr><td>701</td><td>Ventes de marchandises</td><td>7</td><td>Produit (résultat)</td></tr>
+    </tbody>
+  </table>
+
+  <p>En un coup d'œil, on sait que 104, 411, 521 et 571 iront au bilan, et que 601, 613 et 701 iront au compte de résultat. C'est précisément ce tri par classe qui permet, à partir d'une simple balance, de produire les deux états financiers fondamentaux.</p>
+
+  <h2 id="a-retenir">7. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Le plan comptable SYSCOHADA range tous les comptes en neuf classes, identiques pour toute la zone OHADA.</li>
+      <li>La codification est décimale : plus le numéro est long, plus le compte est précis.</li>
+      <li>Le premier chiffre suffit à connaître la nature du compte : 1 à 5 pour le bilan, 6 à 8 pour le résultat.</li>
+      <li>Les comptes de bilan (1 à 5) sont permanents ; les comptes de gestion (6 à 8) sont soldés chaque exercice.</li>
+      <li>Le 9 inverse le sens (dépréciations, provisions, soldes anormaux), le 6 et le 7 se répondent en miroir.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Guide suivant dans le chapitre</p>
+    <a href="guide-cycle-comptable.html" class="guide-next-link">
+      <span>1.7 — Le cycle comptable de A à Z</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Un doute sur le bon compte à utiliser ?</h3>
+    <p>Choisir le bon numéro de compte n'est pas toujours évident au début. Décris-moi ton opération, je t'indique le compte SYSCOHADA adapté et pourquoi.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-partie-double.html">Partie double</a></li>
+          <li><a href="guide-amortissements.html">Amortissements</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

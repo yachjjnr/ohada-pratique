@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="ohada" data-mode="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La paie au Mali : salaire brut, cotisations INPS/AMO et comptabilisation SYSCOHADA | OHADA Pratique</title>
+<meta name="description" content="Comptabiliser la paie au Mali en SYSCOHADA : du salaire brut au net à payer, cotisations INPS (prestations familiales, accidents du travail, retraite) et AMO, retenue ITS, comptes 661 charges de personnel, 422 rémunérations dues, 431 sécurité sociale. Assiette et répartition selon le Code de prévoyance sociale. Écritures et exemple chiffré en FCFA." />
+<link rel="canonical" href="https://yachjjnr.github.io/ohada-pratique/guide-paie-mali.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="OHADA Pratique" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://yachjjnr.github.io/ohada-pratique/guide-paie-mali.html" />
+<meta property="og:title" content="La paie au Mali : salaire brut, cotisations INPS/AMO et comptabilisation SYSCOHADA" />
+<meta property="og:description" content="Comptabiliser la paie au Mali en SYSCOHADA : du salaire brut au net à payer, cotisations INPS (prestations familiales, accidents du travail, retraite) et AMO, retenue ITS, comptes 661 charges de personnel, 422 rémunérations dues, 431 sécurité sociale. Assiette et répartition selon le Code de prévoyance sociale. Écritures et exemple chiffré en FCFA." />
+<meta property="og:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OHADA Pratique — le SYSCOHADA pratiqué au quotidien" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="La paie au Mali : salaire brut, cotisations INPS/AMO et comptabilisation SYSCOHADA" />
+<meta name="twitter:description" content="Comptabiliser la paie au Mali en SYSCOHADA : du salaire brut au net à payer, cotisations INPS (prestations familiales, accidents du travail, retraite) et AMO, retenue ITS, comptes 661 charges de personnel, 422 rémunérations dues, 431 sécurité sociale. Assiette et répartition selon le Code de prévoyance sociale. Écritures et exemple chiffré en FCFA." />
+<meta name="twitter:image" content="https://yachjjnr.github.io/ohada-pratique/assets/og-ohada-pratique.png" />
+<link rel="stylesheet" href="polices.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+      </span>
+      <span data-brand-name>OHADA Pratique</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="parcours.html">Parcours</a>
+      <a href="bibliotheque.html">Bibliothèque</a>
+      <a href="fiscalite-mali.html">Fiscalité Mali</a>
+      <a href="articles.html">Articles</a>
+      <a href="outils.html">Outils</a>
+      <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" data-mode-toggle aria-label="Changer de mode">
+        <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-btn aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav container" data-mobile-nav>
+    <a href="parcours.html">Parcours</a>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <a href="fiscalite-mali.html">Fiscalité Mali</a>
+    <a href="articles.html">Articles</a>
+    <a href="outils.html">Outils</a>
+    <a href="travaillons-ensemble.html">Travaillons ensemble</a>
+  </nav>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="container progress-bar__inner">
+    <span>Opérations courantes · Personnel</span>
+    <div class="progress-track" aria-label="Progression">
+<div class="progress-fill" style="width:100%"></div>
+</div>
+    <span>La paie au Mali</span>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="sep">/</span>
+    <a href="bibliotheque.html">Bibliothèque</a>
+    <span class="sep">/</span>
+    <span>La paie au Mali</span>
+  </nav>
+</div>
+
+<!-- ARTICLE -->
+<article class="container guide-article" style="max-width:820px; padding-top:32px; padding-bottom:80px">
+
+  <header class="mb-10">
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <span class="badge badge-accent">Guide transversal</span>
+      <span class="badge badge-outline">Opérations courantes</span>
+      <span class="badge badge-outline">Niveau 2</span>
+      <span class="badge badge-outline">19 min</span>
+    </div>
+    <h1 class="h1" style="font-size:clamp(30px, 4vw, 46px); line-height:1.15; margin-bottom:16px">La paie au Mali : du salaire brut au net, et sa comptabilisation</h1>
+    <p class="lead">Le bulletin de paie est l'un des documents les plus délicats à produire : il croise droit du travail, prévoyance sociale (INPS, AMO) et fiscalité (ITS). Comprendre l'enchaînement brut → retenues → net, et savoir le traduire en écritures SYSCOHADA, c'est sécuriser chaque clôture mensuelle.</p>
+  
+    <div class="doodle-frame guide-hero-doodle" style="min-height:150px; padding:18px 20px; margin-top:24px">
+      <svg viewBox="0 0 560 150" class="doodle" style="max-width:440px" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+        <rect x="210" y="26" width="120" height="100" rx="7"/>
+        <path d="M226 50h88M226 68h66M226 86h88" opacity="0.5"/>
+        <path d="M226 106h50" class="accent" style="fill:none" stroke-width="3.5"/>
+        <circle cx="376" cy="106" r="13"/>
+        <circle cx="404" cy="106" r="13"/>
+        <circle cx="390" cy="80" r="13" class="accent" style="fill:none"/>
+      </svg>
+    </div>
+  </header>
+
+  <div class="callout" style="border-left:3px solid var(--accent); background:var(--bg-tint)">
+    <p><strong>⚠ Avertissement sur les taux.</strong> Ce guide est entièrement sourcé sur le <strong>Code de prévoyance sociale du Mali (loi n°99-041 du 12 août 1999)</strong> pour l'assiette, la répartition et la mécanique. Mais le Code précise (article 192) que les <strong>taux chiffrés de cotisation sont fixés par décret</strong>, et l'AMO a été créée par une loi postérieure (2009). Les pourcentages indiqués ci-dessous sont des <strong>valeurs indicatives à confirmer</strong> sur les textes en vigueur (décret INPS, loi AMO) avant tout usage réel. Ils sont signalés par la mention <strong>[à confirmer]</strong>.</p>
+  </div>
+<!-- TOC -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc__title">Dans ce guide</p>
+    <ol>
+      <li><a href="#schema">Le schéma d'ensemble : qui paie quoi</a></li>
+      <li><a href="#brut">Le salaire brut et son assiette</a></li>
+      <li><a href="#retenues">Les retenues salariales</a></li>
+      <li><a href="#patronales">Les charges patronales</a></li>
+      <li><a href="#comptes">Les comptes de paie en SYSCOHADA</a></li>
+      <li><a href="#exemple">Exemple chiffré complet</a></li>
+      <li><a href="#ecritures">Les écritures de paie</a></li>
+      <li><a href="#a-retenir">À retenir</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRO -->
+  <p>La société Keïta Services, à Bamako, emploie des salariés. Chaque fin de mois, elle établit les bulletins, retient sur les salaires la part ouvrière des cotisations et l'ITS, verse le net aux salariés, puis reverse les cotisations à l'INPS et l'AMO, et l'ITS au Trésor. Ce guide suit ce circuit du début à la fin.</p>
+
+  <h2 id="schema">1. Le schéma d'ensemble : qui paie quoi</h2>
+  <p>La rémunération d'un salarié se décompose en trois flux qui partent du salaire brut.</p>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Le <strong>salaire net</strong>, versé au salarié.</li>
+      <li>Les <strong>cotisations salariales</strong> (part ouvrière) et l'<strong>ITS</strong>, retenus sur le brut et reversés par l'employeur aux organismes et au Trésor.</li>
+      <li>Les <strong>cotisations patronales</strong> (part employeur), qui s'ajoutent au coût pour l'entreprise, en plus du brut.</li>
+    </ul>
+  </div>
+  <div class="formula-box">
+    <p class="formula">Salaire net = Salaire brut − Cotisations salariales − ITS</p>
+    <p class="formula">Coût total employeur = Salaire brut + Cotisations patronales</p>
+  </div>
+  <p>Point important du Code de prévoyance (article 181) : <strong>c'est l'employeur qui déclare et verse les deux parts</strong>, ouvrière comme patronale, à l'INPS. Le salarié ne fait aucune démarche : tout est prélevé à la source.</p>
+
+  <h2 id="brut">2. Le salaire brut et son assiette</h2>
+  <p>Le salaire brut est la rémunération totale liée au travail, avant toute retenue. Il sert d'assiette aux cotisations sociales.</p>
+  <div class="formula-box">
+    <p class="formula">Salaire brut = Salaire de base + Heures supplémentaires + Primes et gratifications + Avantages en nature + Indemnités</p>
+  </div>
+  <p>Le Code de prévoyance (article 187) est précis sur l'assiette : les cotisations sont assises sur <strong>l'ensemble des rémunérations, salaires ou gains, y compris les avantages en nature et indemnités diverses</strong>, à l'exception de celles ayant un caractère de <strong>remboursement de frais</strong>.</p>
+  <div class="callout">
+    <p><strong>En clair :</strong> une prime d'ancienneté, un avantage logement, le carburant fourni entrent dans l'assiette. En revanche, le remboursement d'une mission (transport, hôtel justifiés) n'y entre pas : ce n'est pas un gain, c'est un remboursement. Plancher légal : l'assiette ne peut être inférieure au SMIG (article 189).</p>
+  </div>
+
+  <h2 id="retenues">3. Les retenues salariales</h2>
+  <p>Sur le salaire brut, l'employeur prélève la part ouvrière des cotisations sociales et l'impôt sur les traitements et salaires.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Retenue</th><th>Organisme</th><th>Taux part salariale</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Retraite (vieillesse, invalidité, décès)</td><td>INPS</td><td>[à confirmer] ≈ 3,6 %</td></tr>
+      <tr><td>AMO (assurance maladie obligatoire)</td><td>INPS / CANAM</td><td>[à confirmer] ≈ 3,06 %</td></tr>
+      <tr><td>ITS (impôt sur traitements et salaires)</td><td>Trésor (DGI)</td><td>Barème par tranche</td></tr>
+    </tbody>
+  </table>
+  <p>Pour le régime de retraite, le Code de prévoyance fixe une règle de répartition utile : <strong>la part ouvrière représente 40 % du taux du régime</strong> (article 197), la part patronale les 60 % restants. C'est le seul ratio chiffré que donne le Code lui-même.</p>
+  <p class="text-sm muted">L'ITS fait l'objet d'un guide dédié (barème par tranche, abattements pour charges de famille) : voir <a href="fiscalite-its.html">ITS Mali</a>. Les prestations familiales et les accidents du travail sont, eux, entièrement à la charge de l'employeur (pas de part salariale).</p>
+
+  <h2 id="patronales">4. Les charges patronales</h2>
+  <p>En plus du salaire brut, l'employeur supporte ses propres cotisations, qui financent les régimes de prévoyance. Elles ne sont pas retenues sur le salaire : elles s'ajoutent au coût.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Cotisation patronale</th><th>Régime (Code prévoyance)</th><th>Taux part patronale</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Prestations familiales</td><td>Art. 5 et s.</td><td>[à confirmer] ≈ 8 %</td></tr>
+      <tr><td>Accidents du travail</td><td>Art. 61 et s. (variable selon branche, art. 196)</td><td>[à confirmer] 1 à 4 %</td></tr>
+      <tr><td>Retraite (part patronale)</td><td>Art. 197 (60 % du taux retraite)</td><td>[à confirmer] ≈ 5,4 %</td></tr>
+      <tr><td>AMO (part patronale)</td><td>Loi AMO 2009</td><td>[à confirmer] ≈ 3,5 %</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le taux d'accidents du travail varie selon la branche d'activité et le degré de sécurité de l'entreprise (article 196 du Code) : il n'y a donc pas un taux unique. Tous ces pourcentages sont à valider sur le décret en vigueur.</p>
+
+  <h2 id="comptes">5. Les comptes de paie en SYSCOHADA</h2>
+  <p>Voici les comptes qui structurent toute écriture de paie. Ils sont propres à SYSCOHADA, à ne pas confondre avec d'autres référentiels.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Libellé</th><th>Rôle</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>661</td><td>Rémunérations directes versées au personnel national</td><td>Salaire brut (charge)</td></tr>
+      <tr><td>664</td><td>Charges sociales</td><td>Cotisations patronales (charge)</td></tr>
+      <tr><td>422</td><td>Personnel, rémunérations dues</td><td>Net à payer au salarié (dette)</td></tr>
+      <tr><td>431</td><td>Sécurité sociale</td><td>Cotisations dues à l'INPS (dette)</td></tr>
+      <tr><td>4472</td><td>Impôts sur salaires</td><td>ITS retenu, dû au Trésor (dette)</td></tr>
+      <tr><td>521</td><td>Banques</td><td>Règlements (net, cotisations, ITS)</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm muted">Le compte 431 se subdivise utilement : 4311 Prestations familiales, 4312 Accidents du travail, 4313 Caisse de retraite obligatoire. Le brut se ventile lui aussi : 6611 salaires, 6612 primes, 6613 congés payés, 6617 avantages en nature.</p>
+
+  <h2 id="exemple">6. Exemple chiffré complet</h2>
+  <p>Keïta Services paie un salarié dont le salaire brut du mois est de 400 000 FCFA. Avec des taux indicatifs <strong>[à confirmer]</strong>, on obtient :</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Élément</th><th class="num">Montant (FCFA)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Salaire brut</td><td class="num">400 000</td></tr>
+      <tr><td>− Retraite part salariale (≈ 3,6 %)</td><td class="num">− 14 400</td></tr>
+      <tr><td>− AMO part salariale (≈ 3,06 %)</td><td class="num">− 12 240</td></tr>
+      <tr><td>− ITS (barème, illustratif)</td><td class="num">− 25 000</td></tr>
+      <tr><td><strong>= Salaire net à payer</strong></td><td class="num"><strong>348 360</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Côté employeur, les charges patronales s'ajoutent (toujours à titre indicatif) : prestations familiales, accidents du travail, retraite patronale et AMO patronale, soit par exemple un total de l'ordre de <strong>≈ 80 000 FCFA</strong>. Le coût total du salarié pour l'entreprise est donc d'environ 480 000 FCFA, bien au-dessus du brut.</p>
+
+  <h2 id="ecritures">7. Les écritures de paie</h2>
+  <p>La paie se comptabilise en plusieurs temps. Reprenons l'exemple.</p>
+
+  <p><strong>1) Constatation du salaire brut et des retenues</strong></p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>661</td><td>Rémunérations directes (brut)</td><td class="num">400 000</td><td class="num">—</td></tr>
+      <tr><td>422</td><td>Personnel, rémunérations dues (net)</td><td class="num">—</td><td class="num">348 360</td></tr>
+      <tr><td>431</td><td>Sécurité sociale (part salariale retraite + AMO)</td><td class="num">—</td><td class="num">26 640</td></tr>
+      <tr><td>4472</td><td>Impôts sur salaires (ITS retenu)</td><td class="num">—</td><td class="num">25 000</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>2) Constatation des charges patronales</strong></p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>664</td><td>Charges sociales (part patronale)</td><td class="num">80 000</td><td class="num">—</td></tr>
+      <tr><td>431</td><td>Sécurité sociale (cotisations patronales)</td><td class="num">—</td><td class="num">80 000</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>3) Paiement du salaire net</strong></p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>422</td><td>Personnel, rémunérations dues</td><td class="num">348 360</td><td class="num">—</td></tr>
+      <tr><td>521</td><td>Banques</td><td class="num">—</td><td class="num">348 360</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>4) Reversement des cotisations à l'INPS et de l'ITS au Trésor</strong></p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>431</td><td>Sécurité sociale (salariale 26 640 + patronale 80 000)</td><td class="num">106 640</td><td class="num">—</td></tr>
+      <tr><td>4472</td><td>Impôts sur salaires (ITS)</td><td class="num">25 000</td><td class="num">—</td></tr>
+      <tr><td>521</td><td>Banques</td><td class="num">—</td><td class="num">131 640</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>En clair :</strong> le compte 422 enregistre la dette envers le salarié et se solde au paiement du net. Le compte 431 cumule les deux parts de cotisations (salariale retenue + patronale) et se solde au reversement à l'INPS. Le 4472 porte l'ITS retenu jusqu'à son versement au Trésor. À la fin, ces trois comptes de tiers reviennent à zéro : l'entreprise n'a fait que collecter et reverser.</p>
+  </div>
+
+  <h2 id="a-retenir">8. À retenir</h2>
+  <div class="callout callout-accent">
+    <ul class="check-list">
+      <li>Salaire net = brut − cotisations salariales − ITS. Coût employeur = brut + cotisations patronales.</li>
+      <li>L'employeur déclare et verse les deux parts (ouvrière et patronale) à l'INPS (Code prévoyance art. 181).</li>
+      <li>Assiette des cotisations : toutes les rémunérations + avantages en nature, hors remboursements de frais ; plancher = SMIG (art. 187-189).</li>
+      <li>Retraite : part ouvrière = 40 % du taux, patronale = 60 % (art. 197). Prestations familiales et accidents du travail : 100 % patronales.</li>
+      <li>Comptes clés : 661 brut, 664 charges patronales, 422 net à payer, 431 sécurité sociale (INPS), 4472 ITS.</li>
+      <li>Paie en 4 temps : brut + retenues, charges patronales, paiement du net, reversement INPS et Trésor.</li>
+      <li><strong>Taux chiffrés à confirmer</strong> : le Code renvoie à un décret (art. 192) ; l'AMO relève d'une loi de 2009. Valider sur les textes en vigueur.</li>
+    </ul>
+  </div>
+
+  <!-- NAV SUIVANT -->
+  <div class="guide-nav-next">
+    <p class="muted text-sm">Pour aller plus loin</p>
+    <a href="fiscalite-its.html" class="guide-next-link">
+      <span>ITS Mali — le calcul de l'impôt sur les salaires</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <aside class="cta-box mt-12">
+    <h3>Un bulletin de paie ou des écritures à fiabiliser ?</h3>
+    <p>Calcul du brut au net, ventilation des cotisations INPS/AMO, écritures de reversement : décris-moi ta situation, je t'aide à sécuriser la paie et sa comptabilisation en SYSCOHADA.</p>
+    <a href="travaillons-ensemble.html" class="btn btn-primary">Poser ma question</a>
+  </aside>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:12px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7a5 5 0 0 0-10 0c0 5 10 3 10 9a5 5 0 0 1-10 0"/></svg>
+          </span>
+          <span data-brand-name>OHADA Pratique</span>
+        </div>
+        <p class="text-sm muted" data-brand-tagline>Le SYSCOHADA pratiqué au quotidien, avec un ancrage Mali.</p>
+        <p class="text-sm muted mt-3">Bamako, Mali &middot; SYSCOHADA révisé 2017 &middot; OHADA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Apprendre</h4>
+        <ul>
+          <li><a href="bibliotheque.html">Bibliothèque</a></li>
+          <li><a href="guide-achats-ventes.html">Achats &amp; ventes</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+          <li><a href="parcours.html">Parcours complet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fiscalité Mali</h4>
+        <ul>
+          <li><a href="fiscalite-its.html">ITS Mali</a></li>
+          <li><a href="fiscalite-irf.html">IRF</a></li>
+          <li><a href="fiscalite-is.html">IS Mali</a></li>
+          <li><a href="guide-tva-mali.html">TVA Mali</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="outils.html">Outils &amp; calculatrices</a></li>
+          <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ousmane Mangane. Tous droits réservés.</span>
+      <span>Site construit à Bamako · v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
