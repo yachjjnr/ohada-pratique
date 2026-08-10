@@ -151,7 +151,8 @@
     </tbody>
   </table>
   <div class="callout callout-warning">
-    <p><strong>Attention, piège PCG :</strong> on rencontre souvent dans les supports français les comptes « 4081 », « 4181 » ou « 4458 TCA à régulariser ». <strong>Ce ne sont pas les comptes SYSCOHADA.</strong> En SYSCOHADA révisé : les charges à payer passent par le <strong>408</strong> (Fournisseurs, factures non parvenues), les produits à recevoir par le <strong>418</strong> (Clients, factures à établir), et la TVA en attente par le <strong>4455</strong> (TVA récupérable sur factures non parvenues) ou le <strong>4435</strong> (TVA sur factures à établir).</p>
+    <p><strong>Attention, piège PCG :</strong> le compte « 4458 TCA à régulariser », courant dans les supports français, <strong>n'existe pas en SYSCOHADA</strong>. La TVA en attente s'y loge au <strong>4455</strong> (TVA récupérable sur factures non parvenues) côté achats, au <strong>4435</strong> (TVA sur factures à établir) côté ventes.</p>
+    <p>En revanche, ne rejetez pas « 4081 » et « 4181 » : ils existent bel et bien dans le plan révisé, avec le sens que vous attendez. Le <strong>408</strong> (Fournisseurs, factures non parvenues) se subdivise en 4081 Fournisseurs, 4082 Fournisseurs Groupe, 4083 Fournisseurs sous-traitants, 4086 Fournisseurs intérêts courus. Le <strong>418</strong> s'intitule Clients, produits à recevoir, et c'est son sous-compte <strong>4181</strong> qui porte précisément les factures à établir, à côté du 4186 pour les intérêts courus.</p>
   </div>
 
   <h2 id="cca">3. Charges constatées d'avance (476)</h2>
@@ -205,7 +206,7 @@
       <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
     </thead>
     <tbody>
-      <tr><td>418</td><td>Clients, factures à établir</td><td class="num">1 770 000</td><td class="num">—</td></tr>
+      <tr><td>4181</td><td>Clients, factures à établir</td><td class="num">1 770 000</td><td class="num">—</td></tr>
       <tr><td>701</td><td>Ventes de marchandises</td><td class="num">—</td><td class="num">1 500 000</td></tr>
       <tr><td>4435</td><td>TVA sur factures à établir <span class="muted">(18 %)</span></td><td class="num">—</td><td class="num">270 000</td></tr>
     </tbody>
@@ -266,10 +267,10 @@
     <ul class="check-list">
       <li>Objectif unique : ne laisser dans le résultat de N que les charges et produits qui concernent N (principe de séparation des exercices).</li>
       <li>Charge payée d'avance → compte 476 (à l'actif). Produit encaissé d'avance → compte 477 (au passif).</li>
-      <li>Charge de N non facturée → compte 408 + TVA en attente au 4455. Produit de N non facturé → compte 418 + TVA en attente au 4435.</li>
+      <li>Charge de N non facturée → compte 408 + TVA en attente au 4455. Produit de N non facturé → compte 4181 + TVA en attente au 4435.</li>
       <li>Ristournes acquises ou dues sans avoir établi → comptes 4098 (à obtenir) et 4198 (à accorder), constatées hors taxes.</li>
       <li>Intérêts courus : on rattache à N la fraction écoulée jusqu'au 31/12 (1662 côté emprunt, comptes d'intérêts courus à recevoir côté prêt).</li>
-      <li>Comptes SYSCOHADA, pas PCG : 408 / 418 / 4455 / 4435 — jamais « 4081 », « 4181 » ou « 4458 TCA à régulariser ».</li>
+      <li>Le seul vrai faux ami du PCG ici est « 4458 TCA à régulariser », qui n'existe pas en SYSCOHADA. Les 4081 et 4181, eux, existent.</li>
       <li>Ces écritures se contre-passent au 1er janvier pour rebasculer le flux sur le bon exercice.</li>
     </ul>
   </div>
@@ -330,7 +331,7 @@
           <li><a href="articles.html">Articles</a></li>
           <li><a href="outils.html">Outils &amp; calculatrices</a></li>
           <li><a href="travaillons-ensemble.html">Travaillons ensemble</a></li>
-          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
     </div>

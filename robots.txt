@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yachjjnr.github.io/ohada-pratique/sitemap.xml
