@@ -172,7 +172,7 @@
           <h3>Trois exemples chez Awa</h3>
           <p>Reprenons trois opérations de la boutique d'Awa pour illustrer cette grille.</p>
 
-          <table>
+          <table class="data-table">
             <thead>
               <tr><th>Opération</th><th>Ressource (d'où vient l'argent)</th><th>Emploi (où va l'argent)</th></tr>
             </thead>
@@ -216,7 +216,7 @@
           <h3>La règle, classe par classe</h3>
           <p>Le plan comptable SYSCOHADA range les comptes en 9 classes (de 1 à 9). Selon la classe, débit et crédit ne jouent pas le même rôle.</p>
 
-          <table>
+          <table class="data-table">
             <thead>
               <tr><th>Classe</th><th>Type de compte</th><th>Le débit&hellip;</th><th>Le crédit&hellip;</th></tr>
             </thead>
@@ -263,9 +263,9 @@
             <li>Les capitaux propres de l'entreprise augmentent de 500 000 FCFA → compte <strong>104 Compte de l'exploitant</strong> (capitaux propres, classe 1) au <strong>crédit</strong>.</li>
           </ul>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
             </thead>
             <tbody>
               <tr><td>521</td><td>Banques</td><td class="num">500 000</td><td class="num">—</td></tr>
@@ -283,9 +283,9 @@
             <li>La banque diminue de 250 000 FCFA → compte <strong>521 Banques</strong> (actif, classe 5) au <strong>crédit</strong>.</li>
           </ul>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
             </thead>
             <tbody>
               <tr><td>6011</td><td>Achats de marchandises</td><td class="num">250 000</td><td class="num">—</td></tr>
@@ -303,9 +303,9 @@
             <li>Un produit est né : la vente de marchandises → compte <strong>7011 Ventes de marchandises</strong> (produit, classe 7) au <strong>crédit</strong>.</li>
           </ul>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
             </thead>
             <tbody>
               <tr><td>571</td><td>Caisse</td><td class="num">80 000</td><td class="num">—</td></tr>
@@ -322,9 +322,9 @@
             <li>Un produit est né : la vente → compte <strong>7011 Ventes de marchandises</strong> (produit, classe 7) au <strong>crédit</strong>.</li>
           </ul>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
             </thead>
             <tbody>
               <tr><td>411</td><td>Clients</td><td class="num">80 000</td><td class="num">—</td></tr>
@@ -342,9 +342,9 @@
             <li>La caisse diminue de 75 000 FCFA → compte <strong>571 Caisse</strong> (actif, classe 5) au <strong>crédit</strong>.</li>
           </ul>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
             </thead>
             <tbody>
               <tr><td>6222</td><td>Locations de bâtiments</td><td class="num">75 000</td><td class="num">—</td></tr>
@@ -361,9 +361,9 @@
             <li>La créance client diminue de 40 000 FCFA → compte <strong>411 Clients</strong> (créance d'actif, classe 4) au <strong>crédit</strong>.</li>
           </ul>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Débit</th><th class="num">Crédit</th></tr>
             </thead>
             <tbody>
               <tr><td>571</td><td>Caisse</td><td class="num">40 000</td><td class="num">—</td></tr>
@@ -378,9 +378,9 @@
           <h2>La balance : la vérification finale</h2>
           <p>Après ces 6 écritures, comment vérifier que la partie double a été respectée partout ? Avec la <strong>balance</strong>, qui récapitule pour chaque compte les totaux débits et crédits, et calcule le solde.</p>
 
-          <table>
+          <table class="data-table">
             <thead>
-              <tr><th>Compte</th><th>Intitulé</th><th style="text-align:right">Total débits</th><th style="text-align:right">Total crédits</th><th style="text-align:right">Solde débiteur</th><th style="text-align:right">Solde créditeur</th></tr>
+              <tr><th>Compte</th><th>Intitulé</th><th class="num">Total débits</th><th class="num">Total crédits</th><th class="num">Solde débiteur</th><th class="num">Solde créditeur</th></tr>
             </thead>
             <tbody>
               <tr><td>104</td><td>Compte de l'exploitant</td><td class="num">—</td><td class="num">500 000</td><td class="num">—</td><td class="num">500 000</td></tr>
