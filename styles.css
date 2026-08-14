@@ -1139,3 +1139,46 @@ body[data-level="approfondi"] .level-debutant { display: none; }
   background: var(--surface);
   border-left-color: var(--accent);
 }
+/* ============================================================
+   Bloc de vérification en fin d'article
+   ------------------------------------------------------------
+   Porte le référentiel appliqué, le périmètre géographique et la date de
+   dernière confrontation à la source. Volontairement sobre : c'est une
+   garantie que le lecteur consulte s'il en a besoin, pas un argument.
+   ============================================================ */
+.verification {
+  margin: 48px 0 0;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--bg-tint);
+}
+.verification__titre {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.verification__liste { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+/* Étiquette et valeur sur une ligne, la valeur passant dessous en étroit. */
+.verification__liste > div { display: grid; grid-template-columns: 132px 1fr; gap: 4px 16px; }
+.verification__liste dt {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+.verification__liste dd { margin: 0; font-size: 14px; line-height: 1.5; }
+.verification__note {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+@media (max-width: 560px) {
+  .verification__liste > div { grid-template-columns: 1fr; }
+  .verification__liste dt { font-size: 12px; }
+}
