@@ -1182,3 +1182,56 @@ body[data-level="approfondi"] .level-debutant { display: none; }
   .verification__liste > div { grid-template-columns: 1fr; }
   .verification__liste dt { font-size: 12px; }
 }
+
+/* ============================================================
+   Recherche
+   ------------------------------------------------------------
+   S'ouvre au clic sur la loupe, en Ctrl+K, ou sur « / ». Pensée pour être
+   utilisable au clavier de bout en bout : la première réponse est
+   présélectionnée, Entrée y va.
+   ============================================================ */
+.recherche { position: fixed; inset: 0; z-index: 100; display: flex; align-items: flex-start; justify-content: center; }
+.recherche[hidden] { display: none; }
+.recherche__voile { position: absolute; inset: 0; background: rgba(20, 18, 16, .55); backdrop-filter: blur(2px); }
+.recherche__boite {
+  position: relative;
+  width: min(640px, calc(100vw - 32px));
+  margin-top: min(12vh, 90px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(20, 18, 16, .28);
+  overflow: hidden;
+}
+.recherche__champ { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--border-soft); color: var(--text-muted); }
+.recherche__champ input {
+  flex: 1; border: 0; background: none; outline: none;
+  font-family: inherit; font-size: 17px; color: var(--text);
+  min-width: 0;
+}
+.recherche__champ input::-webkit-search-cancel-button { display: none; }
+.recherche__fermer {
+  border: 1px solid var(--border); background: var(--bg-tint); color: var(--text-muted);
+  font-family: var(--font-mono); font-size: 11px; padding: 4px 8px; border-radius: 6px; cursor: pointer;
+}
+.recherche__resultats { max-height: min(58vh, 460px); overflow-y: auto; }
+.recherche__item {
+  display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 4px 14px;
+  padding: 12px 18px; border-bottom: 1px solid var(--border-soft);
+  text-decoration: none; color: var(--text);
+}
+.recherche__item:last-child { border-bottom: 0; }
+.recherche__item.est-actif, .recherche__item:hover { background: var(--bg-tint); }
+.recherche__famille {
+  grid-column: 1 / -1;
+  font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--accent);
+}
+.recherche__titre { font-size: 15px; line-height: 1.35; }
+.recherche__comptes { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-muted); white-space: nowrap; }
+.recherche__aide, .recherche__vide { padding: 20px 18px; margin: 0; font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+@media (max-width: 560px) {
+  .recherche__boite { margin-top: 0; width: 100vw; height: 100vh; border-radius: 0; border: 0; }
+  .recherche__resultats { max-height: calc(100vh - 130px); }
+  .recherche__comptes { display: none; }
+}

@@ -366,3 +366,208 @@ function initGlossary() {
   });
 }
 document.addEventListener('DOMContentLoaded', initGlossary);
+
+/* ============================================================
+   Recherche dans le site
+   ------------------------------------------------------------
+   L'en-tête portait un bouton loupe branché sur rien : cliquer dessus ne
+   produisait aucune réaction. Un bouton qui ne fait rien est pire qu'un bouton
+   absent, il fait douter du reste.
+
+   L'index est un fichier statique chargé à la première ouverture seulement :
+   un lecteur qui ne cherche jamais ne le télécharge pas.
+   ============================================================ */
+(function () {
+  const CHEMIN = 'assets/recherche.json';
+  let index = null;
+  let chargement = null;
+  let selection = 0;
+
+  /** Minuscules sans accents : « dépréciation » doit répondre à « depreciation ». */
+  const pliage = (s) =>
+    (s || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '');
+
+  function charger() {
+    if (index) return Promise.resolve(index);
+    if (chargement) return chargement;
+    chargement = fetch(CHEMIN)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(r.status))))
+      .then((data) => {
+        index = data.pages.map((p) => ({
+          ...p,
+          _t: pliage(p.t),
+          _d: pliage(p.d),
+          _s: pliage((p.s || []).join(' ')),
+          _n: pliage(p.n || ''),
+        }));
+        return index;
+      });
+    return chargement;
+  }
+
+  /**
+   * Ordonne les résultats par nature de correspondance.
+   *
+   * Un numéro de compte saisi seul l'emporte sur tout le reste : quelqu'un qui
+   * tape « 411 » cherche le compte 411, pas une page où ce nombre traîne.
+   */
+  /**
+   * Compile un mot en motif de recherche.
+   *
+   * Chercher une simple sous-chaîne fait correspondre un mot court à l'intérieur
+   * d'un autre : « sol » trouvait « conSOLidés », « its » trouvait « produITS »,
+   * et les bonnes pages passaient derrière. On exige donc un début de mot.
+   *
+   * Les mots courts doivent correspondre entièrement, les plus longs seulement
+   * par leur début, pour qu'un singulier saisi trouve un pluriel écrit.
+   */
+  function motif(mot) {
+    const echappe = mot.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(mot.length < 5 ? '\\b' + echappe + '\\b' : '\\b' + echappe);
+  }
+
+  function chercher(requete) {
+    const q = pliage(requete).trim();
+    if (q.length < 2) return [];
+    const mots = q.split(/\s+/).filter(Boolean);
+    const estNumero = /^\d{2,6}$/.test(q);
+    const motifs = mots.map(motif);
+
+    return index
+      .map((p) => {
+        let score = 0;
+
+        if (estNumero) {
+          if ((p.c || []).includes(q)) score += 1000;
+          else if ((p.c || []).some((c) => c.startsWith(q))) score += 400;
+        }
+
+        for (const re of motifs) {
+          if (re.test(p._t)) score += 120;
+          if (re.test(p._s)) score += 45;
+          if (re.test(p._d)) score += 20;
+          // Notions du corps : pertinentes, mais moins qu'un titre.
+          if (re.test(p._n)) score += 15;
+        }
+        if (p._t.startsWith(mots[0])) score += 60;
+
+        // Tous les mots présents quelque part : la requête est vraiment couverte.
+        const partout = motifs.every((re) => re.test(p._t) || re.test(p._s) || re.test(p._d) || re.test(p._n));
+        if (partout && mots.length > 1) score += 80;
+
+        return { p, score };
+      })
+      .filter((r) => r.score > 0)
+      .sort((a, b) => b.score - a.score || a.p.t.localeCompare(b.p.t))
+      .slice(0, 12);
+  }
+
+  function construire() {
+    const dialogue = document.createElement('div');
+    dialogue.className = 'recherche';
+    dialogue.hidden = true;
+    dialogue.innerHTML = `
+      <div class="recherche__voile" data-fermer></div>
+      <div class="recherche__boite" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+        <div class="recherche__champ">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" placeholder="Un compte, une notion, une opération…" aria-label="Rechercher" autocomplete="off" spellcheck="false" />
+          <button type="button" class="recherche__fermer" data-fermer aria-label="Fermer">Échap</button>
+        </div>
+        <div class="recherche__resultats" role="listbox"></div>
+        <p class="recherche__aide">Tapez un numéro de compte (411), une notion (amortissement) ou une opération (vente à crédit).</p>
+      </div>`;
+    document.body.appendChild(dialogue);
+    return dialogue;
+  }
+
+  const dialogue = construire();
+  const champ = dialogue.querySelector('input');
+  const liste = dialogue.querySelector('.recherche__resultats');
+  const aide = dialogue.querySelector('.recherche__aide');
+
+  const echapper = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  function afficher(resultats, requete) {
+    if (!requete || requete.trim().length < 2) {
+      liste.innerHTML = '';
+      aide.hidden = false;
+      return;
+    }
+    aide.hidden = true;
+    if (!resultats.length) {
+      liste.innerHTML = `<p class="recherche__vide">Rien trouvé pour « ${echapper(requete)} ».<br>Essayez un numéro de compte, ou un mot seul.</p>`;
+      return;
+    }
+    selection = 0;
+    liste.innerHTML = resultats
+      .map(({ p }, i) => {
+        const comptes = (p.c || []).length ? `<span class="recherche__comptes">${p.c.slice(0, 6).join(' · ')}</span>` : '';
+        return `<a href="${p.u}" class="recherche__item${i === 0 ? ' est-actif' : ''}" role="option">
+          <span class="recherche__famille">${echapper(p.b || p.f)}</span>
+          <span class="recherche__titre">${echapper(p.t)}</span>
+          ${comptes}
+        </a>`;
+      })
+      .join('');
+  }
+
+  function bouger(pas) {
+    const items = liste.querySelectorAll('.recherche__item');
+    if (!items.length) return;
+    items[selection]?.classList.remove('est-actif');
+    selection = (selection + pas + items.length) % items.length;
+    items[selection].classList.add('est-actif');
+    items[selection].scrollIntoView({ block: 'nearest' });
+  }
+
+  function ouvrir() {
+    dialogue.hidden = false;
+    document.body.style.overflow = 'hidden';
+    champ.value = '';
+    afficher([], '');
+    champ.focus();
+    charger().catch(() => {
+      liste.innerHTML = '<p class="recherche__vide">La recherche est indisponible hors connexion sur cette page.</p>';
+    });
+  }
+
+  function fermer() {
+    dialogue.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  champ.addEventListener('input', () => {
+    if (!index) return;
+    afficher(chercher(champ.value), champ.value);
+  });
+
+  champ.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); bouger(1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); bouger(-1); }
+    else if (e.key === 'Enter') {
+      const actif = liste.querySelector('.recherche__item.est-actif');
+      if (actif) { e.preventDefault(); window.location.href = actif.getAttribute('href'); }
+    }
+  });
+
+  dialogue.addEventListener('click', (e) => {
+    if (e.target.closest('[data-fermer]')) fermer();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !dialogue.hidden) { fermer(); return; }
+    // Ctrl+K, la convention de tous les outils où l'on cherche.
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); ouvrir(); return; }
+    // « / » seul, à condition de ne pas être en train de saisir du texte.
+    const dansUnChamp = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
+    if (e.key === '/' && !dansUnChamp && dialogue.hidden) { e.preventDefault(); ouvrir(); }
+  });
+
+  document.querySelectorAll('[data-recherche], [aria-label="Rechercher"]').forEach((b) => {
+    b.addEventListener('click', (e) => { e.preventDefault(); ouvrir(); });
+  });
+})();
