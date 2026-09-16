@@ -634,3 +634,246 @@ document.addEventListener('DOMContentLoaded', initGlossary);
 
   document.addEventListener('DOMContentLoaded', initRevision);
 })();
+
+/* ============================================================
+   SIMULATEUR ITS MALI
+   Code général des impôts, articles 6 à 12-B.
+
+   Le calcul est affiché étape par étape, et pas seulement son
+   résultat. Un simulateur fiscal dont on ne voit pas le détail ne
+   se vérifie pas : le lecteur doit pouvoir refaire la ligne qui
+   le surprend, et repérer lui-même si une hypothèse ne correspond
+   pas à son cas.
+
+   Le point délicat est l'article 12-B, dont la rédaction est
+   ambiguë : « impôt dû = droits liquidés x taux réel diminué de
+   2 points », avec « taux réel = impôt liquidé / revenu
+   imposable ». Pris au pied de la lettre, un impôt multiplié par
+   un taux ne veut rien dire. La lecture qui a un sens est que le
+   taux effectif baisse de deux points, donc :
+
+     impôt dû = revenu x (taux réel − 2 %) = impôt − 2 % x revenu
+
+   Vérifié sur l'exemple publié dans la page ITS : 1 500 000 de
+   revenu, 142 428 d'impôt au barème, taux réel 9,4952 %. On a
+   1 500 000 x 7,4952 % = 112 428, et 142 428 − 30 000 = 112 428.
+   Les deux chemins donnent le même montant.
+   ============================================================ */
+(function () {
+  var SMIG_MENSUEL = 40000; // Décret 2015-363, à compter du 1er janvier 2016
+
+  // Barème annuel, article 10, en vigueur depuis le 1er juillet 2015.
+  var TRANCHES = [
+    { jusqua: 330000, taux: 0 },
+    { jusqua: 578400, taux: 0.05 },
+    { jusqua: 1176400, taux: 0.12 },
+    { jusqua: 1789733, taux: 0.18 },
+    { jusqua: 2384195, taux: 0.26 },
+    { jusqua: 3494130, taux: 0.31 },
+    { jusqua: Infinity, taux: 0.37 },
+  ];
+
+  function fcfa(n) {
+    return Math.round(n).toLocaleString('fr-FR') + ' F';
+  }
+  function pct(n) {
+    return (n * 100).toFixed(2).replace('.', ',') + ' %';
+  }
+
+  /** Applique le barème progressif et renvoie le détail par tranche. */
+  function bareme(revenu) {
+    var bas = 0;
+    var total = 0;
+    var lignes = [];
+    for (var i = 0; i < TRANCHES.length; i++) {
+      var t = TRANCHES[i];
+      if (revenu <= bas) break;
+      var assiette = Math.min(revenu, t.jusqua) - bas;
+      var droit = assiette * t.taux;
+      total += droit;
+      lignes.push({
+        de: bas,
+        a: t.jusqua === Infinity ? null : t.jusqua,
+        assiette: assiette,
+        taux: t.taux,
+        droit: droit,
+      });
+      bas = t.jusqua;
+    }
+    return { total: total, lignes: lignes };
+  }
+
+  /**
+   * Le coeur du calcul, isolé de l'affichage pour être testable.
+   * Toutes les entrées sont mensuelles, comme un bulletin de paie.
+   */
+  function calculerIts(e) {
+    var brut = Math.max(0, e.brut || 0);
+    var an = Math.max(0, e.avantages || 0);
+    var retraite = Math.max(0, e.retraite || 0);
+    var fonction = Math.max(0, e.fonction || 0);
+    var enfants = Math.min(10, Math.max(0, e.enfants || 0));
+    var marie = !!e.marie;
+
+    // Article 7-a : la retenue retraite n'est déductible qu'à hauteur de 4 %
+    // du brut. Au-delà, l'excès reste dans l'assiette.
+    var plafondRetraite = brut * 0.04;
+    var retraiteDeduite = Math.min(retraite, plafondRetraite);
+
+    // Article 6 : les avantages en nature entrent pour la moitié de leur
+    // valeur réelle.
+    var anImposable = an * 0.5;
+
+    var imposableMensuel = Math.max(0, brut + anImposable - retraiteDeduite - fonction);
+    var imposableAnnuel = imposableMensuel * 12;
+
+    // Article 10, note : un salaire au niveau du SMIG n'est pas soumis.
+    var auSmig = brut > 0 && brut <= SMIG_MENSUEL;
+
+    var b = bareme(imposableAnnuel);
+
+    // Article 11 : réductions pour charges de famille, appliquées sur l'impôt.
+    var tauxFamille = (marie ? 0.1 : 0) + enfants * 0.025;
+    var reductionFamille = b.total * tauxFamille;
+    var apresFamille = b.total - reductionFamille;
+
+    // Articles 12-A et 12-B : deux points de moins sur le taux effectif.
+    var reductionDeuxPoints = imposableAnnuel * 0.02;
+    var duAnnuel = auSmig ? 0 : Math.max(0, apresFamille - reductionDeuxPoints);
+
+    return {
+      brut: brut,
+      anImposable: anImposable,
+      plafondRetraite: plafondRetraite,
+      retraiteDeduite: retraiteDeduite,
+      retraiteRejetee: retraite - retraiteDeduite,
+      fonction: fonction,
+      imposableMensuel: imposableMensuel,
+      imposableAnnuel: imposableAnnuel,
+      auSmig: auSmig,
+      bareme: b,
+      marie: marie,
+      enfants: enfants,
+      tauxFamille: tauxFamille,
+      reductionFamille: reductionFamille,
+      reductionDeuxPoints: reductionDeuxPoints,
+      duAnnuel: duAnnuel,
+      duMensuel: duAnnuel / 12,
+      tauxReel: imposableAnnuel > 0 ? b.total / imposableAnnuel : 0,
+      tauxEffectif: imposableAnnuel > 0 ? duAnnuel / imposableAnnuel : 0,
+    };
+  }
+
+  // Exposé pour les tests hors navigateur.
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { calculerIts: calculerIts, bareme: bareme };
+  }
+  if (typeof window !== 'undefined') {
+    window.calculerIts = calculerIts;
+  }
+
+  function initSimulateurIts() {
+    var form = document.getElementById('its-form');
+    if (!form) return;
+
+    var sortie = document.getElementById('its-resultat');
+    var detail = document.getElementById('its-detail');
+
+    function val(id) {
+      var el = document.getElementById(id);
+      return el ? Math.max(0, Number(el.value) || 0) : 0;
+    }
+
+    function afficher() {
+      var r = calculerIts({
+        brut: val('its-brut'),
+        avantages: val('its-an'),
+        retraite: val('its-retraite'),
+        fonction: val('its-fonction'),
+        enfants: val('its-enfants'),
+        marie: document.getElementById('its-situation').value === 'marie',
+      });
+
+      sortie.innerHTML =
+        '<div class="its-total">' +
+        '<span class="its-total__label">Retenue mensuelle</span>' +
+        '<span class="its-total__valeur">' + fcfa(r.duMensuel) + '</span>' +
+        '</div>' +
+        '<dl class="its-cles">' +
+        '<div><dt>Sur l’année</dt><dd>' + fcfa(r.duAnnuel) + '</dd></div>' +
+        '<div><dt>Revenu imposable annuel</dt><dd>' + fcfa(r.imposableAnnuel) + '</dd></div>' +
+        '<div><dt>Taux effectif</dt><dd>' + pct(r.tauxEffectif) + '</dd></div>' +
+        '</dl>' +
+        (r.auSmig
+          ? '<p class="its-note its-note--smig">Salaire au niveau du SMIG, 40 000 F par mois : non soumis à l’ITS.</p>'
+          : r.duAnnuel === 0 && r.imposableAnnuel > 0
+            ? '<p class="its-note its-note--smig">Aucun ITS à retenir. En dessous d’environ 45 800 F de revenu imposable par mois, la réduction de deux points de l’article 12-A dépasse l’impôt calculé au barème.</p>'
+            : '');
+
+      var lignes = r.bareme.lignes
+        .map(function (l) {
+          return (
+            '<tr><td>' +
+            (l.a === null ? 'Au-delà de ' + fcfa(l.de) : fcfa(l.de) + ' à ' + fcfa(l.a)) +
+            '</td><td class="num">' + fcfa(l.assiette) +
+            '</td><td class="num">' + pct(l.taux) +
+            '</td><td class="num">' + fcfa(l.droit) + '</td></tr>'
+          );
+        })
+        .join('');
+
+      var ligneRejet =
+        r.retraiteRejetee > 0
+          ? '<tr><td class="muted">dont non déductible, au-delà du plafond de ' +
+            fcfa(r.plafondRetraite) + '</td><td class="num muted">' + fcfa(r.retraiteRejetee) + '</td></tr>'
+          : '';
+
+      var libelleFamille =
+        (r.marie ? 'marié, 10 %' : 'célibataire, 0 %') +
+        (r.enfants ? ', ' + r.enfants + ' enfant' + (r.enfants > 1 ? 's' : '') + ' à 2,5 %' : '');
+
+      detail.innerHTML =
+        '<h3>Le détail du calcul</h3>' +
+        '<h4>1. Le revenu imposable</h4>' +
+        '<div class="table-wrap"><table class="data-table"><tbody>' +
+        '<tr><td>Salaire brut mensuel</td><td class="num">' + fcfa(r.brut) + '</td></tr>' +
+        '<tr><td>Avantages en nature, retenus pour 50 % <span class="muted">(art. 6)</span></td><td class="num">' +
+        (r.anImposable ? '+ ' + fcfa(r.anImposable) : '0 F') + '</td></tr>' +
+        '<tr><td>Retenue retraite déduite, plafonnée à 4 % du brut <span class="muted">(art. 7-a)</span></td><td class="num">' +
+        (r.retraiteDeduite ? '− ' + fcfa(r.retraiteDeduite) : '0 F') + '</td></tr>' +
+        ligneRejet +
+        '<tr><td>Indemnités de fonction justifiées <span class="muted">(art. 7-b)</span></td><td class="num">' +
+        (r.fonction ? '− ' + fcfa(r.fonction) : '0 F') + '</td></tr>' +
+        '<tr><td><strong>Revenu imposable mensuel</strong></td><td class="num"><strong>' + fcfa(r.imposableMensuel) + '</strong></td></tr>' +
+        '<tr><td><strong>Revenu imposable annuel</strong></td><td class="num"><strong>' + fcfa(r.imposableAnnuel) + '</strong></td></tr>' +
+        '</tbody></table></div>' +
+        '<h4>2. Le barème progressif <span class="muted">(art. 10)</span></h4>' +
+        '<div class="table-wrap"><table class="data-table">' +
+        '<thead><tr><th>Tranche</th><th class="num">Assiette</th><th class="num">Taux</th><th class="num">Impôt</th></tr></thead>' +
+        '<tbody>' + lignes +
+        '<tr><td><strong>Impôt au barème</strong></td><td class="num"></td><td class="num"></td><td class="num"><strong>' +
+        fcfa(r.bareme.total) + '</strong></td></tr>' +
+        '</tbody></table></div>' +
+        '<h4>3. Les réductions</h4>' +
+        '<div class="table-wrap"><table class="data-table"><tbody>' +
+        '<tr><td>Impôt au barème</td><td class="num">' + fcfa(r.bareme.total) + '</td></tr>' +
+        '<tr><td>Charges de famille : ' + libelleFamille + ' <span class="muted">(art. 11)</span></td><td class="num">' +
+        (r.reductionFamille ? '− ' + fcfa(r.reductionFamille) : '0 F') + '</td></tr>' +
+        '<tr><td>Deux points sur le taux effectif, soit 2 % du revenu imposable <span class="muted">(art. 12-A et 12-B)</span></td><td class="num">− ' +
+        fcfa(r.reductionDeuxPoints) + '</td></tr>' +
+        '<tr><td><strong>Impôt annuel dû</strong></td><td class="num"><strong>' + fcfa(r.duAnnuel) + '</strong></td></tr>' +
+        '</tbody></table></div>' +
+        '<p class="its-note">Taux réel avant réductions : ' + pct(r.tauxReel) +
+        '. Taux effectif après : ' + pct(r.tauxEffectif) +
+        '. L’écart de deux points est exactement ce que prévoit l’article 12-A.</p>';
+    }
+
+    form.addEventListener('input', afficher);
+    form.addEventListener('change', afficher);
+    afficher();
+  }
+
+  if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', initSimulateurIts);
+  }
+})();

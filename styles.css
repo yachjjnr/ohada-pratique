@@ -1360,3 +1360,66 @@ body[data-level="approfondi"] .level-debutant { display: none; }
   .table-wrap .data-table { min-width: 0; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #666; }
 }
+
+/* ============================================================
+   SIMULATEUR ITS
+   Le resultat doit se lire d'un coup d'oeil, le detail doit
+   pouvoir se relire ligne a ligne. D'ou un montant unique en
+   grand, puis des tableaux denses et sobres en dessous.
+   ============================================================ */
+
+.its-total {
+  display: flex; flex-direction: column; gap: 2px;
+  padding-bottom: 14px; margin-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.its-total__label {
+  font-family: var(--font-mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-muted);
+}
+.its-total__valeur {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 40px); line-height: 1.05;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.its-cles { margin: 0; display: grid; gap: 7px; }
+.its-cles > div { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+.its-cles dt { font-size: 14px; color: var(--text-muted); margin: 0; }
+.its-cles dd {
+  margin: 0; font-family: var(--font-mono); font-size: 14px;
+  font-variant-numeric: tabular-nums; text-align: right;
+}
+
+.its-note {
+  margin: 12px 0 0; font-size: 13px; line-height: 1.55;
+  color: var(--text-muted);
+}
+/* Le cas du SMIG est une reponse en soi, pas une note de bas de page :
+   « tu ne paies pas » merite d'etre vu avant le detail du calcul. */
+.its-note--smig {
+  margin-top: 14px; padding: 10px 12px;
+  border: 1px solid var(--accent); border-radius: var(--radius-sm);
+  color: var(--accent); background: transparent;
+  font-size: 14px;
+}
+
+.its-detail h3 {
+  font-size: 19px; margin: 0 0 4px;
+  padding-top: 20px; border-top: 1px solid var(--border);
+}
+.its-detail h4 {
+  font-family: var(--font-mono); font-size: 12px;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-muted);
+  margin: 26px 0 0; font-weight: 500;
+}
+.its-detail .table-wrap { margin-top: 8px; }
+.its-detail .data-table { font-size: 14px; }
+.its-detail .data-table td { padding: 8px 12px; }
+.its-detail .data-table .num {
+  text-align: right; font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}

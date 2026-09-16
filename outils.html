@@ -159,6 +159,75 @@
   </div>
 </section>
 
+<!-- ===================== SIMULATEUR ITS ===================== -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-title-row">
+      <div>
+        <span class="eyebrow">Calculatrice 02</span>
+        <h2 class="h2" id="its">Impôt sur les traitements et salaires.</h2>
+      </div>
+      <a href="fiscalite-its.html" class="btn btn-ghost btn-sm">Lire la page ITS →</a>
+    </div>
+
+    <p class="lead" style="max-width:70ch">Saisis un bulletin de paie mensuel, le calcul se fait sur l'année comme le prévoit le barème. Chaque étape est détaillée sous le résultat, avec l'article du Code général des impôts qui la fonde, pour que tu puisses refaire la ligne qui te surprend.</p>
+
+    <div class="calc">
+      <form id="its-form" class="calc-grid" onsubmit="event.preventDefault()">
+
+        <div class="calc-form">
+          <div>
+            <label class="label" for="its-brut">Salaire brut mensuel (FCFA)</label>
+            <input id="its-brut" class="input" type="number" step="1000" min="0" value="125000" required />
+            <p class="help">Brut imposable, avant retenues. Un salaire au niveau du SMIG, 40 000 F, n'est pas soumis.</p>
+          </div>
+          <div>
+            <label class="label" for="its-an">Avantages en nature (FCFA par mois)</label>
+            <input id="its-an" class="input" type="number" step="1000" min="0" value="0" />
+            <p class="help">Valeur réelle du logement, du véhicule, de la domesticité. Ils entrent dans l'assiette pour la moitié (art. 6).</p>
+          </div>
+          <div>
+            <label class="label" for="its-retraite">Retenue pour retraite (FCFA par mois)</label>
+            <input id="its-retraite" class="input" type="number" step="500" min="0" value="0" />
+            <p class="help">Déductible dans la limite de 4 % du brut (art. 7-a). Au-delà, l'excédent reste imposable.</p>
+          </div>
+          <div>
+            <label class="label" for="its-fonction">Indemnités de fonction (FCFA par mois)</label>
+            <input id="its-fonction" class="input" type="number" step="1000" min="0" value="0" />
+            <p class="help">Uniquement celles qui couvrent des frais réels de la fonction et sont effectivement utilisées (art. 7-b).</p>
+          </div>
+          <div>
+            <label class="label" for="its-situation">Situation de famille</label>
+            <select id="its-situation" class="select">
+              <option value="celibataire">Célibataire, divorcé ou veuf</option>
+              <option value="marie">Marié</option>
+            </select>
+            <p class="help">Situation au 1<sup>er</sup> janvier de l'année d'imposition (art. 12).</p>
+          </div>
+          <div>
+            <label class="label" for="its-enfants">Enfants à charge</label>
+            <input id="its-enfants" class="input" type="number" min="0" max="10" step="1" value="0" />
+            <p class="help">2,5 % de réduction par enfant, jusqu'au dixième (art. 11).</p>
+          </div>
+        </div>
+
+        <div class="calc-result" id="its-resultat">
+          <!-- rempli par JS -->
+        </div>
+      </form>
+
+      <div class="its-detail mt-8" id="its-detail">
+        <!-- rempli par JS -->
+      </div>
+
+      <div class="callout mt-8">
+        <p><strong>Ce que ce simulateur ne couvre pas.</strong> Il traite le cas courant du salarié résident. Sont hors de sa portée : l'indemnité de dépaysement des cadres expatriés, dont le plafond relève d'un arrêté ministériel (art. 8), la majoration pour enfant majeur infirme, l'imposition séparée des époux, et les régularisations de fin d'année quand le salaire a varié d'un mois à l'autre. Le calcul suppose un salaire constant sur douze mois.</p>
+        <p class="mt-3">Il ne calcule pas non plus les cotisations sociales INPS et AMO, dont les taux ne sont pas publiés sur ce site faute d'accès au texte qui les fixe. Voir <a href="sources-et-methode.html">Sources et méthode</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== APPLICATIONS EN LIGNE =====================
      Deux outils réels, gratuits et sans inscription, mis en ligne en août 2026.
      Ils sont placés avant les simulateurs « Bientôt » : ce qui existe doit se
@@ -221,15 +290,9 @@
     </div>
     <div class="guide-cards">
       <div class="guide-card" style="cursor:default; opacity:.85">
-        <span class="guide-card__num">CALC 02</span>
+        <span class="guide-card__num">CALC 03</span>
         <h3 class="guide-card__title">Simulateur IRF</h3>
         <p class="guide-card__excerpt">Calcule l'impôt sur les revenus fonciers à partir du loyer brut annuel. Barème malien.</p>
-        <div class="guide-card__meta"><span class="badge badge-outline">Bientôt</span></div>
-      </div>
-      <div class="guide-card" style="cursor:default; opacity:.85">
-        <span class="guide-card__num">CALC 03</span>
-        <h3 class="guide-card__title">Simulateur ITS Mali</h3>
-        <p class="guide-card__excerpt">Calcule l'ITS sur un bulletin de paie : barème progressif, abattements, prise en compte des AN.</p>
         <div class="guide-card__meta"><span class="badge badge-outline">Bientôt</span></div>
       </div>
       <div class="guide-card" style="cursor:default; opacity:.85">
