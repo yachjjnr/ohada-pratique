@@ -597,11 +597,6 @@ body[data-level="approfondi"] .level-debutant { display: none; }
 .article-body th { font-family: var(--font-mono); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); }
 .article-body tr:last-child td { border-bottom: none; }
 .article-body td.num { text-align: right; font-variant-numeric: tabular-nums; }
-/* En mobile, les tableaux larges défilent horizontalement au lieu d'élargir toute la page */
-@media (max-width: 640px) {
-  .article-body table, .data-table { display: block; overflow-x: auto; }
-}
-
 /* Tableaux de données / écritures comptables (.data-table) */
 .data-table {
   width: 100%;
@@ -638,6 +633,13 @@ body[data-level="approfondi"] .level-debutant { display: none; }
   white-space: nowrap;
   border-left: 1px solid var(--border-soft);
   width: 1%;
+}
+/* En mobile, les tableaux larges défilent horizontalement au lieu d'élargir
+   toute la page. Cette règle doit rester APRÈS .data-table : placée avant,
+   son overflow-x était écrasé par le overflow: hidden ci-dessus, et le bout
+   des tableaux larges était coupé sans barre de défilement. */
+@media (max-width: 640px) {
+  .article-body table, .data-table { display: block; overflow-x: auto; }
 }
 
 .toc {
@@ -1423,3 +1425,19 @@ body[data-level="approfondi"] .level-debutant { display: none; }
   text-align: right; font-family: var(--font-mono);
   font-variant-numeric: tabular-nums; white-space: nowrap;
 }
+
+/* ============================================================
+   LA REPONSE COURTE
+   Retenue apres l'audit externe d'aout : un comptable qui cherche
+   quel compte porte une operation veut la reponse avant le cours.
+   Placee sous le titre, avant le sommaire, elle donne en trois
+   phrases ce que le guide demontre ensuite. C'est aussi le passage
+   que les moteurs de recherche extraient.
+   ============================================================ */
+.reponse-courte { margin: 0 0 32px; }
+.reponse-courte__titre {
+  font-family: var(--font-mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: var(--accent); margin: 0 0 6px;
+}
+.reponse-courte p:last-child { margin-bottom: 0; }
